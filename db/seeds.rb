@@ -57,7 +57,7 @@ PlaylistRequest.create!([
     member_id: 1
   },
   {
-    bio: "Looking for chill, oceanic songs to listen to."
+    bio: "XX"
     member_id: 2
   }
 ])
