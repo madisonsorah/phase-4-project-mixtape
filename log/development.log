@@ -72,3 +72,45 @@ Processing by ApplicationController#hello_world as */*
 Completed 200 OK in 2ms (Views: 0.7ms | Allocations: 330)
 
 
+Started GET "/hello" for 127.0.0.1 at 2022-01-24 11:41:47 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 13ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 2539)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-24 11:47:43 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 448)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-24 11:52:50 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 441)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-24 11:55:08 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 2530)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-24 12:07:17 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 10ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 2526)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-24 12:07:20 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 334)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-24 12:07:23 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 330)
+
+
