@@ -1,2 +1,38 @@
   [1m[35m (102.1ms)[0m  [1m[35mCREATE DATABASE "phase_4_project_development" ENCODING = 'unicode'[0m
   [1m[35m (31.2ms)[0m  [1m[35mCREATE DATABASE "phase_4_project_test" ENCODING = 'unicode'[0m
+Started GET "/hello" for ::1 at 2022-01-23 18:55:16 -0500
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 11ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 3862)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-23 18:55:19 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 330)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-23 18:55:20 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-23 18:55:23 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 317)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-24 10:29:52 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.4ms)
+Completed 200 OK in 11ms (Views: 3.3ms | Allocations: 335)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-24 10:29:53 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 5ms (Views: 3.9ms | Allocations: 332)
+
+
