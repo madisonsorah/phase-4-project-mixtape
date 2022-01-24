@@ -18,16 +18,16 @@ Member.create!([
   {
     first_name: "Lyrik",
     last_name: "Houston",
-    username: "XX",
-    email: "XX",
-    password: "XX"
+    username: "Straigus",
+    email: "kirylmitch@gmail.com",
+    password: "Straigus1"
   }
 ])
 
 # Member Profile
 MemberProfile.create!([
   {
-    bio: "Hi there! I am a cat lover and front-end developer living in Brooklyn, NY. My favorite music genres are dance, disco and pop."
+    bio: "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY. My favorite music genres are dance, disco and pop."
     avatar_url: "XX"
   },
   {
@@ -53,7 +53,7 @@ Ownership.create!([
 # Playlist Request
 PlaylistRequest.create!([
   {
-    description: "I would love a video game-themed playlist."
+    description: "Looking for a playlist with soft, dreamy vibes."
     member_id: 1
   },
   {
