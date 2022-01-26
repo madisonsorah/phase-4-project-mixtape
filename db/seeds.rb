@@ -14,6 +14,8 @@ Member.create!([
     username: "mochipancake",
     email: "madisonsorah@gmail.com",
     password: "catsarecute1"
+    bio: "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY. My favorite music genres are dance, disco and pop."
+    avatar_url: "XX"
   },
   {
     first_name: "Lyrik",
@@ -21,44 +23,8 @@ Member.create!([
     username: "Straigus",
     email: "kirylmitch@gmail.com",
     password: "Straigus1"
-  }
-])
-
-# Member Profile
-MemberProfile.create!([
-  {
-    bio: "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY. My favorite music genres are dance, disco and pop."
-    avatar_url: "XX"
-  },
-  {
     bio: "XX"
     avatar_url: "XX"
-  }
-])
-
-# Ownership
-Ownership.create!([
-  {
-    member_id: 1,
-    playlist_id: 1,
-    member_profile_id: 1
-  },
-  {
-    member_id: 2,
-    playlist_id: 2,
-    member_profile_id: 2
-  }
-])
-
-# Playlist Request
-PlaylistRequest.create!([
-  {
-    description: "Looking for a playlist with soft, dreamy vibes."
-    member_id: 1
-  },
-  {
-    bio: "XX"
-    member_id: 2
   }
 ])
 
@@ -67,11 +33,17 @@ Playlist.create!([
   {
     title: "XX",
     cover_url: "XX",
-    playlist_url: "XX"
+    playlist_url: "XX",
+    description: "Looking for a playlist with soft, dreamy vibes.",
+    requester_id: 1,
+    creator_id: 2
   },
   {
     title: "XX",
     cover_url: "XX",
-    playlist_url: "XX"
+    playlist_url: "XX",
+    description: "XX",
+    requester_id: 2,
+    creator_id: 1
   }
 ])
