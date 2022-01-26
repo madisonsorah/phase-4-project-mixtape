@@ -29,7 +29,7 @@ class MembersController < ApplicationController
     end
 
     def member_params
-        params.permit(:first_name, :last_name, :username, :email, :password)
+        params.permit(:first_name, :last_name, :username, :email, :password, :bio, :avatar_url)
     end
 
     def render_not_found_response

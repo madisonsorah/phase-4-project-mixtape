@@ -1,5 +1,4 @@
 class Member < ApplicationRecord
-    has_many :ownerships
-    has_many :member_profiles, through: :ownerships
-    has_many :playlists, through: :ownerships
+    has_many :created_playlists, class_name: :Playlist, foreign_key: :creator_id
+    has_many :requested_playlists, class_name: :Playlist, foreign_key: :requester_id
 end

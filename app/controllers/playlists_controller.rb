@@ -36,7 +36,7 @@ class PlaylistsController < ApplicationController
     end
 
     def playlist_params
-        params.permit(:title, :cover_url, :playlist_url)
+        params.permit(:title, :cover_url, :playlist_url, :description)
     end
 
     def render_not_found_response
