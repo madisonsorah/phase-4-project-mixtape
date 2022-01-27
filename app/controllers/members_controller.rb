@@ -12,10 +12,23 @@ class MembersController < ApplicationController
         render json: member
     end
 
-    def create
-        member = Member.create!(member_params)
-        render json: member, status: :created
+    def currentmember
+        member = Member.find_by(id: session[:member_id])
+        if member
+            render json: member
+        else
+            render json: { error: "Not authorized" }, status: :unauthorized
+        end
     end
+
+    def create
+        member = Member.create(member_params)
+        if member.valid?
+          render json: member, status: :created
+        else
+          render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+        end
+      end
 
     def update
         member = find_member

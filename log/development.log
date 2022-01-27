@@ -945,3 +945,50 @@ Processing by CreatedPlaylistsController#show as */*
 Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 865)
 
 
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4541536756016869980)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to UpdateMemberPasswordParam (20220127231202)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.7ms)[0m  [1m[35mALTER TABLE "members" RENAME COLUMN "password" TO "password_digest"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220127231202"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4541536756016869980)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMember Load (1.2ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Destroy (5.4ms)[0m  [1m[31mDELETE FROM "members" WHERE "members"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Destroy (0.2ms)[0m  [1m[31mDELETE FROM "members" WHERE "members"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylist Destroy (1.0ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Create (2.4ms)[0m  [1m[32mINSERT INTO "members" ("first_name", "last_name", "username", "email", "password_digest", "bio", "avatar_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Madison"], ["last_name", "Sorah"], ["username", "mochipancake"], ["email", "madisonsorah@gmail.com"], ["password_digest", "$2a$12$N3s95z9UB.zIrQdbodOaJuji0ftM7SF4cEV26KcCo0hxX0SLj0FH6"], ["bio", "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY. My favorite music genres are dance, disco and pop."], ["avatar_url", "XX"], ["created_at", "2022-01-27 23:22:50.119581"], ["updated_at", "2022-01-27 23:22:50.119581"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Create (0.4ms)[0m  [1m[32mINSERT INTO "members" ("first_name", "last_name", "username", "email", "password_digest", "bio", "avatar_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Lyrik"], ["last_name", "Houston"], ["username", "Straigus"], ["email", "kirylmitch@gmail.com"], ["password_digest", "Straigus1"], ["bio", "XX"], ["avatar_url", "XX"], ["created_at", "2022-01-27 23:22:50.125079"], ["updated_at", "2022-01-27 23:22:50.125079"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPlaylist Create (0.4ms)[0m  [1m[32mINSERT INTO "playlists" ("title", "cover_url", "playlist_url", "description", "requester_id", "creator_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "XX"], ["cover_url", "XX"], ["playlist_url", "XX"], ["description", "Looking for a playlist with soft, dreamy vibes."], ["requester_id", 12], ["creator_id", 13], ["created_at", "2022-01-27 23:22:50.138205"], ["updated_at", "2022-01-27 23:22:50.138205"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPlaylist Create (0.2ms)[0m  [1m[32mINSERT INTO "playlists" ("title", "cover_url", "playlist_url", "description", "requester_id", "creator_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "XX"], ["cover_url", "XX"], ["playlist_url", "XX"], ["description", "XX"], ["requester_id", 13], ["creator_id", 12], ["created_at", "2022-01-27 23:22:50.144978"], ["updated_at", "2022-01-27 23:22:50.144978"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPlaylist Create (0.3ms)[0m  [1m[32mINSERT INTO "playlists" ("description", "requester_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "XX"], ["requester_id", 13], ["created_at", "2022-01-27 23:22:50.150486"], ["updated_at", "2022-01-27 23:22:50.150486"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
