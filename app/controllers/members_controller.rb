@@ -17,6 +17,13 @@ class MembersController < ApplicationController
         render json: member, status: :created
     end
 
+    def update
+        member = find_member
+        member.update!(member_params)
+        render json: member
+    end
+
+
     def destroy
         member = find_member
         member.destroy

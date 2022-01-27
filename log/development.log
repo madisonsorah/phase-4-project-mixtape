@@ -632,3 +632,203 @@ Processing by RequestedPlaylistsController#index as HTML
 Completed 200 OK in 9ms (Views: 1.6ms | ActiveRecord: 1.9ms | Allocations: 811)
 
 
+Started GET "/members" for 127.0.0.1 at 2022-01-27 14:54:41 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MembersController#index as */*
+  [1m[36mMember Load (7.9ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/members_controller.rb:7:in `index'
+No serializer found for resource: #<Member id: 9, first_name: "Madison", last_name: "Sorah", username: "mochipancake", email: "madisonsorah@gmail.com", password: [FILTERED], bio: "Hi there! I am a cat lover, anime watcher and fron...", avatar_url: "XX", created_at: "2022-01-27 19:25:09.891888000 +0000", updated_at: "2022-01-27 19:25:09.891888000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Member::ActiveRecord_Relation (0.57ms)
+Completed 200 OK in 49ms (Views: 18.2ms | ActiveRecord: 18.3ms | Allocations: 10182)
+
+
+Started POST "/members" for 127.0.0.1 at 2022-01-27 14:57:41 -0500
+Processing by MembersController#create as */*
+  Parameters: {"first_name"=>"Peter", "last_name"=>"Pan", "username"=>"tinkerbell", "email"=>"peterpan@gmail.com", "password"=>"[FILTERED]", "bio"=>"I live in Neverland.", "avatar_url"=>"XX", "member"=>{"first_name"=>"Peter", "last_name"=>"Pan", "username"=>"tinkerbell", "email"=>"peterpan@gmail.com", "password"=>"[FILTERED]", "bio"=>"I live in Neverland.", "avatar_url"=>"XX"}}
+[31mUnpermitted parameter: :member[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/members_controller.rb:16:in `create'
+  [1m[36mMember Create (7.8ms)[0m  [1m[32mINSERT INTO "members" ("first_name", "last_name", "username", "email", "password", "bio", "avatar_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Peter"], ["last_name", "Pan"], ["username", "tinkerbell"], ["email", "peterpan@gmail.com"], ["password", "hookistheworst"], ["bio", "I live in Neverland."], ["avatar_url", "XX"], ["created_at", "2022-01-27 19:57:41.675335"], ["updated_at", "2022-01-27 19:57:41.675335"]]
+  ↳ app/controllers/members_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/members_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.53ms)
+Completed 201 Created in 68ms (Views: 19.9ms | ActiveRecord: 21.2ms | Allocations: 3967)
+
+
+Started PATCH "/members/11" for 127.0.0.1 at 2022-01-27 14:59:20 -0500
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for MembersController
+Did you mean?  create
+               index
+               destroy
+               hello_world):
+  
+actionpack (6.1.4.4) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/members/11" for 127.0.0.1 at 2022-01-27 15:00:38 -0500
+Processing by MembersController#update as */*
+  Parameters: {"first_name"=>"Elmo", "id"=>"11", "member"=>{"first_name"=>"Elmo"}}
+  [1m[36mMember Load (5.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:35:in `find_member'
+[31mUnpermitted parameters: :id, :member[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/members_controller.rb:22:in `update'
+  [1m[36mMember Update (1.6ms)[0m  [1m[33mUPDATE "members" SET "first_name" = $1, "updated_at" = $2 WHERE "members"."id" = $3[0m  [["first_name", "Elmo"], ["updated_at", "2022-01-27 20:00:38.506862"], ["id", 11]]
+  ↳ app/controllers/members_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/members_controller.rb:22:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.17ms)
+Completed 200 OK in 22ms (Views: 0.7ms | ActiveRecord: 16.3ms | Allocations: 6841)
+
+
+Started DELETE "/members/11" for 127.0.0.1 at 2022-01-27 15:02:07 -0500
+Processing by MembersController#destroy as */*
+  Parameters: {"first_name"=>"Elmo", "id"=>"11", "last_name"=>"Pan", "username"=>"tinkerbell", "email"=>"peterpan@gmail.com", "password"=>"[FILTERED]", "bio"=>"I live in Neverland.", "avatar_url"=>"XX", "created_at"=>"2022-01-27T19:57:41.675Z", "updated_at"=>"2022-01-27T20:00:38.506Z", "member"=>{"id"=>"11", "first_name"=>"Elmo", "last_name"=>"Pan", "username"=>"tinkerbell", "email"=>"peterpan@gmail.com", "password"=>"[FILTERED]", "bio"=>"I live in Neverland.", "avatar_url"=>"XX", "created_at"=>"2022-01-27T19:57:41.675Z", "updated_at"=>"2022-01-27T20:00:38.506Z"}}
+  [1m[36mMember Load (9.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:35:in `find_member'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/members_controller.rb:29:in `destroy'
+  [1m[36mMember Destroy (4.4ms)[0m  [1m[31mDELETE FROM "members" WHERE "members"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/members_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/members_controller.rb:29:in `destroy'
+Completed 204 No Content in 49ms (ActiveRecord: 19.8ms | Allocations: 1758)
+
+
+Started GET "/members" for 127.0.0.1 at 2022-01-27 15:02:20 -0500
+Processing by MembersController#index as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/members_controller.rb:7:in `index'
+No serializer found for resource: #<Member id: 9, first_name: "Madison", last_name: "Sorah", username: "mochipancake", email: "madisonsorah@gmail.com", password: [FILTERED], bio: "Hi there! I am a cat lover, anime watcher and fron...", avatar_url: "XX", created_at: "2022-01-27 19:25:09.891888000 +0000", updated_at: "2022-01-27 19:25:09.891888000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Member::ActiveRecord_Relation (3.64ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.5ms | Allocations: 1111)
+
+
+Started GET "/created_playlists" for 127.0.0.1 at 2022-01-27 15:03:21 -0500
+Processing by CreatedPlaylistsController#index as */*
+  [1m[36mPlaylist Load (1.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NOT NULL[0m
+  ↳ app/controllers/created_playlists_controller.rb:7:in `index'
+No serializer found for resource: #<Playlist id: 7, title: "XX", cover_url: "XX", playlist_url: "XX", description: "Looking for a playlist with soft, dreamy vibes.", requester_id: 9, creator_id: 10, created_at: "2022-01-27 19:25:09.906099000 +0000", updated_at: "2022-01-27 19:25:09.906099000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Playlist::ActiveRecord_Relation (0.49ms)
+Completed 200 OK in 73ms (Views: 12.3ms | ActiveRecord: 34.4ms | Allocations: 5929)
+
+
+Started GET "/requested_playlists" for 127.0.0.1 at 2022-01-27 15:03:47 -0500
+Processing by RequestedPlaylistsController#index as */*
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (1.07ms)
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 862)
+
+
+Started POST "/requested_playlists" for 127.0.0.1 at 2022-01-27 15:06:19 -0500
+Processing by RequestedPlaylistsController#create as */*
+  Parameters: {"description"=>"XX", "requester_id"=>9, "requested_playlist"=>{"description"=>"XX", "requester_id"=>9}}
+[31mUnpermitted parameter: :requested_playlist[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/requested_playlists_controller.rb:21:in `create'
+  [1m[36mMember Load (9.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:21:in `create'
+  [1m[36mPlaylist Create (6.3ms)[0m  [1m[32mINSERT INTO "playlists" ("description", "requester_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "XX"], ["requester_id", 9], ["created_at", "2022-01-27 20:06:19.203652"], ["updated_at", "2022-01-27 20:06:19.203652"]]
+  ↳ app/controllers/requested_playlists_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/requested_playlists_controller.rb:21:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.38ms)
+Completed 201 Created in 83ms (Views: 1.3ms | ActiveRecord: 16.6ms | Allocations: 5493)
+
+
+Started GET "/requested_playlists" for 127.0.0.1 at 2022-01-27 15:06:32 -0500
+Processing by RequestedPlaylistsController#index as */*
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.68ms)
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 816)
+
+
+Started GET "/requested_playlists/9" for 127.0.0.1 at 2022-01-27 15:07:04 -0500
+Processing by RequestedPlaylistsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mPlaylist Load (0.8ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL AND "playlists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:40:in `find_requestedplaylist'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (10.75ms)
+Completed 200 OK in 39ms (Views: 18.1ms | ActiveRecord: 0.8ms | Allocations: 855)
+
+
+Started GET "/requested_playlists/10" for 127.0.0.1 at 2022-01-27 15:07:12 -0500
+Processing by RequestedPlaylistsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mPlaylist Load (1.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL AND "playlists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:40:in `find_requestedplaylist'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.48ms)
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 1.4ms | Allocations: 849)
+
+
+Started GET "/requested_playlists" for 127.0.0.1 at 2022-01-27 15:07:19 -0500
+Processing by RequestedPlaylistsController#index as */*
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.44ms)
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 816)
+
+
+Started GET "/requested_playlists/10" for 127.0.0.1 at 2022-01-27 15:07:45 -0500
+Processing by RequestedPlaylistsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mPlaylist Load (0.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL AND "playlists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:40:in `find_requestedplaylist'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.45ms)
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 0.5ms | Allocations: 849)
+
+
+Started GET "/requested_playlists" for 127.0.0.1 at 2022-01-27 15:08:28 -0500
+Processing by RequestedPlaylistsController#index as */*
+  [1m[36mPlaylist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL[0m
+  ↳ app/controllers/requested_playlists_controller.rb:7:in `index'
+No serializer found for resource: #<Playlist id: 9, title: nil, cover_url: nil, playlist_url: nil, description: "XX", requester_id: 10, creator_id: nil, created_at: "2022-01-27 19:25:09.914397000 +0000", updated_at: "2022-01-27 19:25:09.914397000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Playlist::ActiveRecord_Relation (0.43ms)
+Completed 200 OK in 27ms (Views: 13.6ms | ActiveRecord: 8.5ms | Allocations: 5582)
+
+

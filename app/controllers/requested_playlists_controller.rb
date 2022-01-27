@@ -3,7 +3,7 @@ class RequestedPlaylistsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
     def index
-        requestedplaylists = Playlist.find_by(creator_id: nil)
+        requestedplaylists = Playlist.where(creator_id: nil)
         render json: requestedplaylists
     end
 
@@ -37,7 +37,7 @@ class RequestedPlaylistsController < ApplicationController
 
     private
     def find_requestedplaylist
-        requestedplaylists = Playlist.find_by(creator_id: nil, id: params[:id])
+        requestedplaylists = Playlist.where(creator_id: nil, id: params[:id])
     end
 
     def requestedplaylist_params
