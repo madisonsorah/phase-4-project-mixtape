@@ -24,7 +24,7 @@ class RequestedPlaylistsController < ApplicationController
 
     def update
         requestedplaylist = find_requestedplaylist
-        requestedplaylist.update!(requestedplaylist_params)
+        requestedplaylist.update(requestedplaylist_params)
         render json: requestedplaylist
     end
 
@@ -37,7 +37,7 @@ class RequestedPlaylistsController < ApplicationController
 
     private
     def find_requestedplaylist
-        requestedplaylists = Playlist.where(creator_id: nil, id: params[:id])
+        requestedplaylists = Playlist.find_by(creator_id: nil, id: params[:id])
     end
 
     def requestedplaylist_params

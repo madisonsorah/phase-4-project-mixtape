@@ -832,3 +832,89 @@ No serializer found for resource: #<Playlist id: 9, title: nil, cover_url: nil, 
 Completed 200 OK in 27ms (Views: 13.6ms | ActiveRecord: 8.5ms | Allocations: 5582)
 
 
+Started PATCH "/requested_playlists/10" for 127.0.0.1 at 2022-01-27 15:10:40 -0500
+Processing by RequestedPlaylistsController#update as */*
+  Parameters: {"description"=>"Chill, ambient beats.", "id"=>"10", "requested_playlist"=>{"description"=>"Chill, ambient beats."}}
+[31mUnpermitted parameters: :id, :requested_playlist[0m
+  [1m[36mPlaylist Load (0.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL AND "playlists"."id" = $1 /* loading for inspect */ LIMIT $2[0m  [["id", 10], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 2741)
+
+
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL AND "playlists"."id" = $1 /* loading for inspect */ LIMIT $2[0m  [["id", 10], ["LIMIT", 11]]
+  
+NoMethodError (undefined method `update!' for #<Playlist::ActiveRecord_Relation:0x00007fd32d090e90>
+Did you mean?  update):
+  
+app/controllers/requested_playlists_controller.rb:27:in `update'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL AND "playlists"."id" = $1 /* loading for inspect */ LIMIT $2[0m  [["id", 10], ["LIMIT", 11]]
+Started PATCH "/requested_playlists/10" for 127.0.0.1 at 2022-01-27 15:11:13 -0500
+Processing by RequestedPlaylistsController#update as */*
+  Parameters: {"description"=>"Chill, ambient beats.", "id"=>"10", "requested_playlist"=>{"description"=>"Chill, ambient beats."}}
+[31mUnpermitted parameters: :id, :requested_playlist[0m
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL AND "playlists"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/requested_playlists_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/requested_playlists_controller.rb:27:in `update'
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:27:in `update'
+  [1m[36mPlaylist Update (1.7ms)[0m  [1m[33mUPDATE "playlists" SET "description" = $1, "updated_at" = $2 WHERE "playlists"."id" = $3[0m  [["description", "Chill, ambient beats."], ["updated_at", "2022-01-27 20:11:13.771561"], ["id", 10]]
+  ↳ app/controllers/requested_playlists_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/requested_playlists_controller.rb:27:in `update'
+No serializer found for resource: #<Playlist id: 10, title: nil, cover_url: nil, playlist_url: nil, description: "Chill, ambient beats.", requester_id: 9, creator_id: nil, created_at: "2022-01-27 20:06:19.203652000 +0000", updated_at: "2022-01-27 20:11:13.771561000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Playlist::ActiveRecord_Relation (0.18ms)
+Completed 200 OK in 52ms (Views: 1.0ms | ActiveRecord: 13.1ms | Allocations: 13465)
+
+
+Started DELETE "/requested_playlists/10" for 127.0.0.1 at 2022-01-27 15:11:37 -0500
+Processing by RequestedPlaylistsController#destroy as */*
+  Parameters: {"description"=>"Chill, ambient beats.", "id"=>"10", "title"=>nil, "cover_url"=>nil, "playlist_url"=>nil, "requester_id"=>9, "creator_id"=>nil, "created_at"=>"2022-01-27T20:06:19.203Z", "updated_at"=>"2022-01-27T20:11:13.771Z", "requested_playlist"=>{"description"=>"Chill, ambient beats.", "id"=>"10", "title"=>nil, "cover_url"=>nil, "playlist_url"=>nil, "requester_id"=>9, "creator_id"=>nil, "created_at"=>"2022-01-27T20:06:19.203Z", "updated_at"=>"2022-01-27T20:11:13.771Z"}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 229)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/requested_playlists_controller.rb:33:in `destroy'
+Started DELETE "/requested_playlists/10" for 127.0.0.1 at 2022-01-27 15:13:42 -0500
+Processing by RequestedPlaylistsController#destroy as */*
+  Parameters: {"id"=>"10"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 162)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/requested_playlists_controller.rb:33:in `destroy'
+Started DELETE "/requested_playlists/10" for 127.0.0.1 at 2022-01-27 15:15:05 -0500
+Processing by RequestedPlaylistsController#destroy as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL AND "playlists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:40:in `find_requestedplaylist'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/requested_playlists_controller.rb:33:in `destroy'
+  [1m[36mPlaylist Destroy (0.7ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/requested_playlists_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/requested_playlists_controller.rb:33:in `destroy'
+Completed 204 No Content in 28ms (ActiveRecord: 12.9ms | Allocations: 6229)
+
+
+Started GET "/requested_playlists" for 127.0.0.1 at 2022-01-27 15:15:12 -0500
+Processing by RequestedPlaylistsController#index as */*
+  [1m[36mPlaylist Load (0.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL[0m
+  ↳ app/controllers/requested_playlists_controller.rb:7:in `index'
+No serializer found for resource: #<Playlist id: 9, title: nil, cover_url: nil, playlist_url: nil, description: "XX", requester_id: 10, creator_id: nil, created_at: "2022-01-27 19:25:09.914397000 +0000", updated_at: "2022-01-27 19:25:09.914397000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Playlist::ActiveRecord_Relation (1.05ms)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 0.6ms | Allocations: 1162)
+
+
+Started GET "/requested_playlists/9" for 127.0.0.1 at 2022-01-27 15:15:19 -0500
+Processing by RequestedPlaylistsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mPlaylist Load (0.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL AND "playlists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:40:in `find_requestedplaylist'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.99ms)
+Completed 200 OK in 21ms (Views: 2.4ms | ActiveRecord: 0.9ms | Allocations: 848)
+
+
