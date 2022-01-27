@@ -12,6 +12,11 @@ class CreatedPlaylistsController < ApplicationController
         render json: createdplaylist
     end
 
+     # def mycreatedplaylists
+    #     mycreatedplaylists = Playlist.where(creator_id: params[:creator_id])
+    #     render json: myplaylists
+    # end
+
     def update
         createdplaylist = find_createdplaylist
         createdplaylist.update!(createdplaylist_params)
