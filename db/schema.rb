@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_24_182941) do
+ActiveRecord::Schema.define(version: 2022_01_26_171802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "member_profiles", force: :cascade do |t|
-    t.string "bio"
-    t.string "avatar_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "members", force: :cascade do |t|
     t.string "first_name"
@@ -28,21 +21,8 @@ ActiveRecord::Schema.define(version: 2022_01_24_182941) do
     t.string "username"
     t.string "email"
     t.string "password"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "ownerships", force: :cascade do |t|
-    t.integer "member_id"
-    t.integer "playlist_id"
-    t.integer "member_profile_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "playlist_requests", force: :cascade do |t|
-    t.string "description"
-    t.integer "member_id"
+    t.string "bio"
+    t.string "avatar_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -52,6 +32,8 @@ ActiveRecord::Schema.define(version: 2022_01_24_182941) do
     t.string "cover_url"
     t.string "playlist_url"
     t.string "description"
+    t.integer "requester_id"
+    t.integer "creator_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
