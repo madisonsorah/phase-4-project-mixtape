@@ -401,3 +401,234 @@ Processing by ApplicationController#hello_world as */*
 Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 321)
 
 
+Started GET "/hello" for 127.0.0.1 at 2022-01-27 14:16:14 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 16ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 2531)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-27 14:16:18 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 326)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-01-27 14:16:21 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 330)
+
+
+Started GET "/members" for ::1 at 2022-01-27 14:16:24 -0500
+Processing by MembersController#index as HTML
+  [1m[36mMember Load (5.9ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/members_controller.rb:7:in `index'
+No serializer found for resource: #<Member id: 5, first_name: "Madison", last_name: "Sorah", username: "mochipancake", email: "madisonsorah@gmail.com", password: [FILTERED], bio: "Hi there! I am a cat lover, anime watcher and fron...", avatar_url: "XX", created_at: "2022-01-27 16:15:39.580207000 +0000", updated_at: "2022-01-27 16:15:39.580207000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Member::ActiveRecord_Relation (0.47ms)
+Completed 200 OK in 89ms (Views: 37.8ms | ActiveRecord: 34.7ms | Allocations: 8233)
+
+
+Started GET "/createdplaylists" for ::1 at 2022-01-27 14:16:59 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"createdplaylists"}
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1919)
+
+
+Started GET "/created_playlists" for ::1 at 2022-01-27 14:17:06 -0500
+Processing by CreatedPlaylistsController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.33ms)
+Completed 404 Not Found in 34ms (Views: 3.1ms | ActiveRecord: 11.1ms | Allocations: 2187)
+
+
+Started GET "/requested_playlists" for ::1 at 2022-01-27 14:17:13 -0500
+Processing by RequestedPlaylistsController#index as HTML
+  [1m[36mPlaylist Load (1.7ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 200 OK in 39ms (Views: 10.4ms | ActiveRecord: 12.6ms | Allocations: 2534)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Destroy (7.5ms)[0m  [1m[31mDELETE FROM "members" WHERE "members"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Destroy (0.2ms)[0m  [1m[31mDELETE FROM "members" WHERE "members"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlaylist Load (0.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylist Destroy (0.4ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Create (2.6ms)[0m  [1m[32mINSERT INTO "members" ("first_name", "last_name", "username", "email", "password", "bio", "avatar_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Madison"], ["last_name", "Sorah"], ["username", "mochipancake"], ["email", "madisonsorah@gmail.com"], ["password", "catsarecute1"], ["bio", "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY. My favorite music genres are dance, disco and pop."], ["avatar_url", "XX"], ["created_at", "2022-01-27 19:17:53.893704"], ["updated_at", "2022-01-27 19:17:53.893704"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Create (0.4ms)[0m  [1m[32mINSERT INTO "members" ("first_name", "last_name", "username", "email", "password", "bio", "avatar_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Lyrik"], ["last_name", "Houston"], ["username", "Straigus"], ["email", "kirylmitch@gmail.com"], ["password", "Straigus1"], ["bio", "XX"], ["avatar_url", "XX"], ["created_at", "2022-01-27 19:17:53.899534"], ["updated_at", "2022-01-27 19:17:53.899534"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mPlaylist Create (0.3ms)[0m  [1m[32mINSERT INTO "playlists" ("title", "cover_url", "playlist_url", "description", "requester_id", "creator_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "XX"], ["cover_url", "XX"], ["playlist_url", "XX"], ["description", "Looking for a playlist with soft, dreamy vibes."], ["requester_id", 7], ["creator_id", 8], ["created_at", "2022-01-27 19:17:53.910108"], ["updated_at", "2022-01-27 19:17:53.910108"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mPlaylist Create (0.4ms)[0m  [1m[32mINSERT INTO "playlists" ("title", "cover_url", "playlist_url", "description", "requester_id", "creator_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "XX"], ["cover_url", "XX"], ["playlist_url", "XX"], ["description", "XX"], ["requester_id", 8], ["creator_id", 7], ["created_at", "2022-01-27 19:17:53.919816"], ["updated_at", "2022-01-27 19:17:53.919816"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Destroy (0.7ms)[0m  [1m[31mDELETE FROM "members" WHERE "members"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Destroy (0.3ms)[0m  [1m[31mDELETE FROM "members" WHERE "members"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlaylist Load (0.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylist Destroy (0.3ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Create (0.7ms)[0m  [1m[32mINSERT INTO "members" ("first_name", "last_name", "username", "email", "password", "bio", "avatar_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Madison"], ["last_name", "Sorah"], ["username", "mochipancake"], ["email", "madisonsorah@gmail.com"], ["password", "catsarecute1"], ["bio", "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY. My favorite music genres are dance, disco and pop."], ["avatar_url", "XX"], ["created_at", "2022-01-27 19:25:09.891888"], ["updated_at", "2022-01-27 19:25:09.891888"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Create (0.2ms)[0m  [1m[32mINSERT INTO "members" ("first_name", "last_name", "username", "email", "password", "bio", "avatar_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Lyrik"], ["last_name", "Houston"], ["username", "Straigus"], ["email", "kirylmitch@gmail.com"], ["password", "Straigus1"], ["bio", "XX"], ["avatar_url", "XX"], ["created_at", "2022-01-27 19:25:09.895633"], ["updated_at", "2022-01-27 19:25:09.895633"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mPlaylist Create (0.7ms)[0m  [1m[32mINSERT INTO "playlists" ("title", "cover_url", "playlist_url", "description", "requester_id", "creator_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "XX"], ["cover_url", "XX"], ["playlist_url", "XX"], ["description", "Looking for a playlist with soft, dreamy vibes."], ["requester_id", 9], ["creator_id", 10], ["created_at", "2022-01-27 19:25:09.906099"], ["updated_at", "2022-01-27 19:25:09.906099"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mPlaylist Create (0.3ms)[0m  [1m[32mINSERT INTO "playlists" ("title", "cover_url", "playlist_url", "description", "requester_id", "creator_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "XX"], ["cover_url", "XX"], ["playlist_url", "XX"], ["description", "XX"], ["requester_id", 10], ["creator_id", 9], ["created_at", "2022-01-27 19:25:09.910877"], ["updated_at", "2022-01-27 19:25:09.910877"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mPlaylist Create (0.2ms)[0m  [1m[32mINSERT INTO "playlists" ("description", "requester_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "XX"], ["requester_id", 10], ["created_at", "2022-01-27 19:25:09.914397"], ["updated_at", "2022-01-27 19:25:09.914397"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/requested_playlists" for ::1 at 2022-01-27 14:25:15 -0500
+Processing by RequestedPlaylistsController#index as HTML
+  [1m[36mPlaylist Load (0.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.3ms)
+Completed 200 OK in 45ms (Views: 1.3ms | ActiveRecord: 10.0ms | Allocations: 8715)
+
+
+Started GET "/created_playlists" for ::1 at 2022-01-27 14:29:18 -0500
+Processing by CreatedPlaylistsController#index as HTML
+  [1m[36mPlaylist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE NOT (("playlists"."creator_id" = $1 OR "playlists"."creator_id" IS NULL))[0m  [["creator_id", nil]]
+  ↳ app/controllers/created_playlists_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 13ms (Views: 3.0ms | ActiveRecord: 5.5ms | Allocations: 2243)
+
+
+Started GET "/created_playlists" for ::1 at 2022-01-27 14:29:20 -0500
+Processing by CreatedPlaylistsController#index as HTML
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE NOT (("playlists"."creator_id" = $1 OR "playlists"."creator_id" IS NULL))[0m  [["creator_id", nil]]
+  ↳ app/controllers/created_playlists_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.4ms | Allocations: 821)
+
+
+Started GET "/created_playlists" for ::1 at 2022-01-27 14:30:49 -0500
+Processing by CreatedPlaylistsController#index as HTML
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NOT NULL[0m
+  ↳ app/controllers/created_playlists_controller.rb:7:in `index'
+No serializer found for resource: #<Playlist id: 7, title: "XX", cover_url: "XX", playlist_url: "XX", description: "Looking for a playlist with soft, dreamy vibes.", requester_id: 9, creator_id: 10, created_at: "2022-01-27 19:25:09.906099000 +0000", updated_at: "2022-01-27 19:25:09.906099000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Playlist::ActiveRecord_Relation (0.46ms)
+Completed 200 OK in 30ms (Views: 9.3ms | ActiveRecord: 16.4ms | Allocations: 5712)
+
+
+Started GET "/created_playlists/7" for ::1 at 2022-01-27 14:30:59 -0500
+Processing by CreatedPlaylistsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPlaylist Load (0.7ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NOT NULL AND "playlists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/created_playlists_controller.rb:31:in `find_createdplaylist'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.94ms)
+Completed 200 OK in 13ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 870)
+
+
+Started GET "/created_playlists/8" for ::1 at 2022-01-27 14:31:03 -0500
+Processing by CreatedPlaylistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPlaylist Load (0.7ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NOT NULL AND "playlists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/created_playlists_controller.rb:31:in `find_createdplaylist'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.47ms)
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 0.7ms | Allocations: 861)
+
+
+Started GET "/requested_playlists/7" for ::1 at 2022-01-27 14:31:15 -0500
+Processing by RequestedPlaylistsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPlaylist Load (0.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:39:in `find_requestedplaylist'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms | Allocations: 3003)
+
+
+  
+NoMethodError (undefined method `find' for #<Playlist:0x00007fde1482ac18>):
+  
+app/controllers/requested_playlists_controller.rb:40:in `find_requestedplaylist'
+app/controllers/requested_playlists_controller.rb:11:in `show'
+Started GET "/requested_playlists/" for ::1 at 2022-01-27 14:31:18 -0500
+Processing by RequestedPlaylistsController#index as HTML
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.71ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1041)
+
+
+Started GET "/requested_playlists/9" for ::1 at 2022-01-27 14:31:21 -0500
+Processing by RequestedPlaylistsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlaylist Load (0.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:39:in `find_requestedplaylist'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms | Allocations: 2961)
+
+
+  
+NoMethodError (undefined method `find' for #<Playlist:0x00007fddf002ee20>):
+  
+app/controllers/requested_playlists_controller.rb:40:in `find_requestedplaylist'
+app/controllers/requested_playlists_controller.rb:11:in `show'
+Started GET "/requested_playlists/9" for ::1 at 2022-01-27 14:33:07 -0500
+Processing by RequestedPlaylistsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:39:in `find_requestedplaylist'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 6.1ms | Allocations: 7455)
+
+
+  
+NoMethodError (undefined method `find' for #<Playlist:0x00007fde1406c8c8>):
+  
+app/controllers/requested_playlists_controller.rb:40:in `find_requestedplaylist'
+app/controllers/requested_playlists_controller.rb:11:in `show'
+Started GET "/requested_playlists/9" for ::1 at 2022-01-27 14:34:20 -0500
+Processing by RequestedPlaylistsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlaylist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL AND "playlists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:39:in `find_requestedplaylist'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.4ms)
+Completed 200 OK in 25ms (Views: 1.2ms | ActiveRecord: 11.5ms | Allocations: 5436)
+
+
+Started GET "/requested_playlists" for ::1 at 2022-01-27 14:34:25 -0500
+Processing by RequestedPlaylistsController#index as HTML
+  [1m[36mPlaylist Load (1.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."creator_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/requested_playlists_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Playlist (0.61ms)
+Completed 200 OK in 9ms (Views: 1.6ms | ActiveRecord: 1.9ms | Allocations: 811)
+
+

@@ -55,4 +55,10 @@ Playlist.create!(
     creator_id: madison.id
   })
 
+  Playlist.create!(
+  {
+    description: "XX",
+    requester_id: lyrik.id,
+  })
+
 puts "Seeding Done!"
