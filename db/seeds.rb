@@ -29,7 +29,7 @@ lyrik = Member.create!(
     last_name: "Houston",
     username: "Straigus",
     email: "kirylmitch@gmail.com",
-    password_digest: "Straigus1",
+    password: "Straigus1",
     bio: "XX",
     avatar_url: "XX"
   })
