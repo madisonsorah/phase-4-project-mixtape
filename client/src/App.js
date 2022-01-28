@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+import './App.css';
+
+
+import NavBar from './Components/NavBar'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,10 +21,10 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/testing">
-            <h1>Test Route</h1>
+            <h1>Hello</h1>
           </Route>
           <Route path="/">
-            <h1>Page Count: {count}</h1>
+            <NavBar />
           </Route>
         </Switch>
       </div>
