@@ -5,7 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
 
-import NavBar from './Components/NavBar'
+
+import LoginPage from './Components/LoginPage'
+import PlaylistPage from "./Components/PlaylistPage";
+import RequestPage from "./Components/RequestPage";
+import SignupPage from "./Components/SignupPage";
+import NavBar from "./Components/NavBar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,12 +24,19 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <NavBar/>
         <Switch>
-          <Route path="/testing">
-            <h1>Hello</h1>
+          <Route path="/login">
+            <LoginPage />
           </Route>
-          <Route path="/">
-            <NavBar />
+          <Route path="/playlists">
+            <PlaylistPage />
+          </Route>
+          <Route path="/requests">
+            <RequestPage />
+          </Route>
+          <Route path="/signup">
+            <SignupPage />
           </Route>
         </Switch>
       </div>

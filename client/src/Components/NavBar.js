@@ -21,7 +21,7 @@ function NavBar() {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav id="navalign" className="navbarml-auto">
         <Nav.Item className="navpages">
-          <Nav.Link href="/"  >Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
         </Nav.Item>
         <Nav.Item className="navpages">
           <Nav.Link href="/playlists" >Playlists</Nav.Link>
