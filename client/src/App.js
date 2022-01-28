@@ -13,13 +13,23 @@ import SignupPage from "./Components/SignupPage";
 import NavBar from "./Components/NavBar";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [playlists, setPlaylists] = useState([]);
+  const [requests, setRequests] = useState([]);
+  
 
   useEffect(() => {
-    fetch("/hello")
+    fetch("http://localhost:3000/created_playlists")
       .then((r) => r.json())
-      .then((data) => setCount(data.count));
+      .then((playlists) => setPlaylists(playlists));
   }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/requested_playlists")
+      .then((r) => r.json())
+      .then((requests) => setRequests(requests));
+  }, []);
+
+  
 
   return (
     <BrowserRouter>
@@ -30,10 +40,10 @@ function App() {
             <LoginPage />
           </Route>
           <Route path="/playlists">
-            <PlaylistPage />
+            <PlaylistPage playlists={playlists} />
           </Route>
           <Route path="/requests">
-            <RequestPage />
+            <RequestPage requests={requests} />
           </Route>
           <Route path="/signup">
             <SignupPage />

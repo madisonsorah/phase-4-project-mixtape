@@ -1,18 +1,23 @@
 import React from 'react'
-import note from '../images/note.jpg'
 import { Card } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
-function PlaylistCard() {
+function PlaylistCard({playlist}) {
+
+  
+
     return(
         <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={note} />
+  <Card.Img variant="top" src={playlist.cover_url} />
   <Card.Body>
-    <Card.Title>Good Vibes</Card.Title>
+    <Card.Title>{playlist.title}</Card.Title>
     <Card.Text>
-      A quick mockup for potential playlist cards.
+      {playlist.description}
     </Card.Text>
-    <Button variant="primary">Link to Playlist</Button>
+    <Button variant="primary" >Link to Playlist
+      <Link to={`/playlists/${playlist.id}`} ></Link>
+    </Button>
   </Card.Body>
 </Card>
     )

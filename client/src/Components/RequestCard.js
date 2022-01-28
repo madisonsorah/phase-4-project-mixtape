@@ -1,18 +1,20 @@
 import React from 'react'
-import note from '../images/RAd1s5.jpg'
 import { Card } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
-function RequestCard() {
+function RequestCard({request}) {
     return(
         <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={note} />
+  <Card.Img variant="top" src={request.cover_url} />
   <Card.Body>
-    <Card.Title>Request Card</Card.Title>
+    <Card.Title>{request.title}</Card.Title>
     <Card.Text>
-      A quick mockup for potential request cards.
+      {request.description}
     </Card.Text>
-    <Button variant="primary">Link to Request</Button>
+    <Button variant="primary" >Link to Request
+    <Link to={`playlists/${request.id}`}></Link>
+    </Button>
   </Card.Body>
 </Card>
     )
