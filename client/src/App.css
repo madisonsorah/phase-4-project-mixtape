@@ -1,38 +1,88 @@
-.App {
+body {
+  background-color: #1A1D29;
+}
+
+#log-body {
+  background-color: azure;
+}
+
+#log-body .navbar {
+  display: none;
+  visibility: hidden
+}
+
+.navbar {
+  background-color: #5c0353;
+  
+
+}
+#navalign {
+  margin-left: auto;
   text-align: center;
+  right: 100%;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  height: 100% !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+@keyframes navpage {
+  from {background-color: #991AFD}
+  to {background-color: #00F0FF;}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes navlink {
+  from {background-color:#FF00E5 ;}
+  to {background-color:#00F0FF ;}
 }
 
-.App-link {
-  color: #61dafb;
+.navpages {
+  background-color: #991AFD;
+  border-bottom: solid 1px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navpages:hover {
+  animation-name: navpage;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+  
+}
+
+.navlogin {
+  background-color: #FF00E5;
+  border-bottom: solid 1px black;
+}
+
+.navlogin:hover {
+  animation-name: navlink;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: bold;
+  
+  
+}
+
+#logo {
+  width: 200px;
+  height: 50px
+}
+
+form {
+  margin: auto;
+  width: 50%;
+  
+  padding: 100px;
+  
+}
+
+.form-label {
+  color: white !important;
+  font-weight: bold;
 }
