@@ -230,3 +230,32 @@ Processing by MembersController#currentmember as */*
 Completed 401 Unauthorized in 45ms (Views: 0.8ms | ActiveRecord: 7.2ms | Allocations: 797)
 
 
+Started GET "/me" for 127.0.0.1 at 2022-01-28 16:29:35 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 154ms (Views: 0.6ms | ActiveRecord: 55.8ms | Allocations: 3944)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 16:32:21 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 401 Unauthorized in 17ms (Views: 3.6ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 16:35:58 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (1.0ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 31ms (Views: 1.3ms | ActiveRecord: 8.8ms | Allocations: 6137)
+
+
+Started OPTIONS "/login" for 127.0.0.1 at 2022-01-28 16:36:46 -0500
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/login"):
+  

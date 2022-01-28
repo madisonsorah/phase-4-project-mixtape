@@ -9,7 +9,7 @@ function SignUp({setMember}) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://127.0.0.1:3000/signup", {
+    fetch("/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

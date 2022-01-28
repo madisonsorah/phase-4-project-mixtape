@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap'
 
 function NavBar({member, setMember}) {
   function handleLogoutClick() {
-    fetch("http://127.0.0.1:3000/logout", { method: "DELETE" }).then((r) => {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setMember(null);
       }
