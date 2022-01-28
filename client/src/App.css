@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+body {
+  background-color: #0F0038;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background-color: #5c0353;
+  
+
+}
+#navalign {
+  margin-left: auto;
+  right: 100%;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  height: 100% !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navpages {
+  background-color: #991AFD;
+ 
+  
+  
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes navpage {
+  from {background-color: #991AFD}
+  to {background-color: #00F0FF;}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes navlink {
+  from {background-color:#FF00E5 ;}
+  to {background-color:#00F0FF ;}
+}
+.navpages:hover {
+  animation-name: navpage;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+  
+}
+
+.navlogin {
+  background-color: #FF00E5;
+}
+
+.navlogin:hover {
+  animation-name: navlink;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: bold;
+  
+  
+}
+
+#logo {
+  width: 200px;
+  height: 50px
 }
