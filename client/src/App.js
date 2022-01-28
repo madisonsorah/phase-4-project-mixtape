@@ -26,16 +26,16 @@ function App() {
         <NavBar member={member} setMember={setMember}/>
         <Switch>
           <Route path="/memberlogin">
-            <LoginPage setMember={setMember} />
+            <LoginPage setMember={setMember}/>
           </Route>
           <Route path="/playlists">
-            <PlaylistPage />
+            <PlaylistPage/>
           </Route>
           <Route path="/requests">
-            <RequestPage />
+            <RequestPage/>
           </Route>
           <Route path="/membersignup">
-            <SignupPage setMember={setMember} />
+            <SignupPage setMember={setMember}/>
           </Route>
         </Switch>
       </div>
