@@ -3,12 +3,21 @@ import logo from '../images/logo.png'
 import { Navbar } from 'react-bootstrap'
 import { Nav } from 'react-bootstrap'
 import { Container } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 
 
-function NavBar() {
-    return(
-    <Navbar  id="navbar" expand="md">
-    <Container >
+function NavBar({member, setMember}) {
+  function handleLogoutClick() {
+    fetch("http://127.0.0.1:3000/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setMember(null);
+      }
+    });
+  }
+  
+  return (
+    <Navbar id="navbar" expand="md">
+    <Container>
     <Navbar.Brand href="/">
       <img
       src={logo}
@@ -17,8 +26,8 @@ function NavBar() {
       alt="logo"
       />
       </Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
       <Nav id="navalign" className="navbarml-auto">
         <Nav.Item className="navpages">
           <Nav.Link href="/">Home</Nav.Link>
@@ -27,15 +36,27 @@ function NavBar() {
           <Nav.Link href="/playlists" >Playlists</Nav.Link>
         </Nav.Item>
         <Nav.Item className="navpages">
-          <Nav.Link href="/requests" >Requests</Nav.Link>
+          <Nav.Link href="/requests">Requests</Nav.Link>
         </Nav.Item>
-        <Nav.Item className="navlogin">
-          <Nav.Link href="/login" >Log In</Nav.Link>
+      {member ? (
+        <Nav.Item>
+          <Nav.Item>
+            <h1>Welcome {member.username}!</h1>
+          </Nav.Item>
+          <Nav.Item>
+            <Button onClick={handleLogoutClick}>Logout</Button>
+          </Nav.Item>
         </Nav.Item>
-        <Nav.Item className="navlogin">
-          <Nav.Link href="/signup" >Sign Up</Nav.Link>
+      ) : (
+        <Nav.Item>
+          <Nav.Item className="navlogin">
+            <Nav.Link href="/login" >Log In</Nav.Link>
+          </Nav.Item>
+          <Nav.Item className="navlogin">
+            <Nav.Link href="/signup" >Sign Up</Nav.Link>
+          </Nav.Item>
         </Nav.Item>
-        
+      )}
       </Nav>
     </Navbar.Collapse>
   </Container>

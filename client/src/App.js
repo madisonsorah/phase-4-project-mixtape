@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
-
 import './App.css';
-
-
-
 import LoginPage from './Components/LoginPage'
 import PlaylistPage from "./Components/PlaylistPage";
 import RequestPage from "./Components/RequestPage";
@@ -13,21 +9,24 @@ import SignupPage from "./Components/SignupPage";
 import NavBar from "./Components/NavBar";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [member, setMember] = useState(null);
 
   useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
+    // auto-login
+    fetch("http://127.0.0.1:3000/me").then((r) => {
+      if (r.ok) {
+        r.json().then((member) => setMember(member));
+      }
+    });
   }, []);
 
   return (
     <BrowserRouter>
       <div className="App">
-        <NavBar/>
+        <NavBar member={member} setMember={setMember}/>
         <Switch>
           <Route path="/login">
-            <LoginPage />
+            <LoginPage setMember={setMember} />
           </Route>
           <Route path="/playlists">
             <PlaylistPage />
@@ -36,7 +35,7 @@ function App() {
             <RequestPage />
           </Route>
           <Route path="/signup">
-            <SignupPage />
+            <SignupPage setMember={setMember} />
           </Route>
         </Switch>
       </div>
