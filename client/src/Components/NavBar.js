@@ -33,10 +33,10 @@ function NavBar({member, setMember}) {
             <Nav.Link href="/">Home</Nav.Link>
           </Nav.Item>
           <Nav.Item className="navpages">
-            <Nav.Link href="/playlists" >Playlists</Nav.Link>
+            <Nav.Link href="/browseplaylists" >Browse Playlists</Nav.Link>
           </Nav.Item>
           <Nav.Item className="navpages">
-            <Nav.Link href="/requests">Requests</Nav.Link>
+            <Nav.Link href="/browserequests">Browse Requests</Nav.Link>
           </Nav.Item>
         {member ? (
           <Nav.Item>
