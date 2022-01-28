@@ -1,5 +1,14 @@
 body {
-  background-color: #0F0038;
+  background-color: #1A1D29;
+}
+
+#log-body {
+  background-color: azure;
+}
+
+#log-body .navbar {
+  display: none;
+  visibility: hidden
 }
 
 .navbar {
@@ -9,6 +18,7 @@ body {
 }
 #navalign {
   margin-left: auto;
+  text-align: center;
   right: 100%;
   
 }
@@ -17,12 +27,7 @@ body {
   height: 100% !important;
 }
 
-.navpages {
-  background-color: #991AFD;
- 
-  
-  
-}
+
 
 @keyframes navpage {
   from {background-color: #991AFD}
@@ -33,6 +38,12 @@ body {
   from {background-color:#FF00E5 ;}
   to {background-color:#00F0FF ;}
 }
+
+.navpages {
+  background-color: #991AFD;
+  border-bottom: solid 1px black;
+}
+
 .navpages:hover {
   animation-name: navpage;
   animation-duration: .3s;
@@ -42,6 +53,7 @@ body {
 
 .navlogin {
   background-color: #FF00E5;
+  border-bottom: solid 1px black;
 }
 
 .navlogin:hover {
@@ -60,4 +72,17 @@ body {
 #logo {
   width: 200px;
   height: 50px
+}
+
+form {
+  margin: auto;
+  width: 50%;
+  
+  padding: 100px;
+  
+}
+
+.form-label {
+  color: white !important;
+  font-weight: bold;
 }
