@@ -25,7 +25,7 @@ function App() {
       <div className="App">
         <NavBar member={member} setMember={setMember}/>
         <Switch>
-          <Route path="/login">
+          <Route path="/memberlogin">
             <LoginPage setMember={setMember} />
           </Route>
           <Route path="/playlists">
@@ -34,7 +34,7 @@ function App() {
           <Route path="/requests">
             <RequestPage />
           </Route>
-          <Route path="/signup">
+          <Route path="/membersignup">
             <SignupPage setMember={setMember} />
           </Route>
         </Switch>

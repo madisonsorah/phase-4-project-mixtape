@@ -50,10 +50,10 @@ function NavBar({member, setMember}) {
       ) : (
         <Nav.Item>
           <Nav.Item className="navlogin">
-            <Nav.Link href="/login" >Log In</Nav.Link>
+            <Nav.Link href="/memberlogin" >Log In</Nav.Link>
           </Nav.Item>
           <Nav.Item className="navlogin">
-            <Nav.Link href="/signup" >Sign Up</Nav.Link>
+            <Nav.Link href="/membersignup" >Sign Up</Nav.Link>
           </Nav.Item>
         </Nav.Item>
       )}
