@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-import NavBar from "./Components/NavBar";
 import HomePage from "./Components/HomePage";
 import LoginPage from './Components/LoginPage'
 import PlaylistPage from "./Components/PlaylistPage";
@@ -25,25 +24,24 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <NavBar member={member} setMember={setMember}/>
         <Switch>
           <Route path="/home">
-            <HomePage/>
+            <HomePage member={member} setMember={setMember}/>
           </Route>
           <Route path="/memberlogin">
-            <LoginPage setMember={setMember}/>
+            <LoginPage member={member} setMember={setMember}/>
           </Route>
           <Route path="/browseplaylists">
-            <PlaylistPage/>
+            <PlaylistPage member={member} setMember={setMember}/>
           </Route>
           <Route path="/browserequests">
-            <RequestPage/>
+            <RequestPage member={member} setMember={setMember}/>
           </Route>
           <Route path="/profile">
-            <MemberProfile/>
+            <MemberProfile member={member} setMember={setMember}/>
           </Route>
           <Route path="/membersignup">
-            <SignupPage setMember={setMember}/>
+            <SignupPage member={member} setMember={setMember}/>
           </Route>
         </Switch>
       </div>

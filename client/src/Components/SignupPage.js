@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Form } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
+import NavBar from './NavBar'
 
-function SignUp({setMember}) {
+function SignUp({member, setMember}) {
   const [username, setUsername] = useState("");
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");
@@ -34,6 +35,7 @@ function SignUp({setMember}) {
 
   return (
     <div>
+      <NavBar member={member} setMember={setMember}/>
       <Form onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <Form.Label>First Name</Form.Label>

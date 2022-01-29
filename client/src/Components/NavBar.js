@@ -17,49 +17,69 @@ function NavBar({member, setMember}) {
   
   return (
     <Navbar id="navbar" expand="md">
-      <Container>
-        <Navbar.Brand href="/">
-          <img
-          src={logo}
-          id="logo"
-          className= "d-inline-block align-top"
-          alt="logo"
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-        <Nav id="navalign" className="navbarml-auto">
-          <Nav.Item className="navpages">
-            <Nav.Link href="/">Home</Nav.Link>
-          </Nav.Item>
-          <Nav.Item className="navpages">
-            <Nav.Link href="/browseplaylists" >Browse Playlists</Nav.Link>
-          </Nav.Item>
-          <Nav.Item className="navpages">
-            <Nav.Link href="/browserequests">Browse Requests</Nav.Link>
-          </Nav.Item>
         {member ? (
-          <Nav.Item>
-            <Nav.Item>
-              <h1>Welcome {member.username}!</h1>
+          <Container>
+          <Navbar.Brand href="/home">
+            <img
+            src={logo}
+            id="logo"
+            className= "d-inline-block align-top"
+            alt="logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+          <Navbar.Collapse id="basic-navbar-nav">
+          <Nav id="navalign" className="navbarml-auto">
+            <Nav.Item className="navpages">
+              <Nav.Link href="/home">Home</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Button onClick={handleLogoutClick}>Logout</Button>
+            <Nav.Item className="navpages">
+              <Nav.Link href="/browseplaylists" >Browse Playlists</Nav.Link>
             </Nav.Item>
-          </Nav.Item>
+            <Nav.Item className="navpages">
+              <Nav.Link href="/browserequests">Browse Requests</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navlogin">
+              <Nav.Link href="/profile">My Profile</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navlogin">
+              <button className="logoutButton" onClick={handleLogoutClick}>Logout</button>
+            </Nav.Item>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
         ) : (
-          <Nav.Item>
+          <Container>
+          <Navbar.Brand href="/home">
+            <img
+            src={logo}
+            id="logo"
+            className= "d-inline-block align-top"
+            alt="logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+          <Navbar.Collapse id="basic-navbar-nav">
+          <Nav id="navalign" className="navbarml-auto">
+            <Nav.Item className="navpages">
+              <Nav.Link href="/home">Home</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navpages">
+              <Nav.Link href="/browseplaylists" >Browse Playlists</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navpages">
+              <Nav.Link href="/browserequests">Browse Requests</Nav.Link>
+            </Nav.Item>
             <Nav.Item className="navlogin">
               <Nav.Link href="/memberlogin" >Log In</Nav.Link>
             </Nav.Item>
             <Nav.Item className="navlogin">
               <Nav.Link href="/membersignup" >Sign Up</Nav.Link>
             </Nav.Item>
-          </Nav.Item>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
         )}
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
 </Navbar>
 )}
 

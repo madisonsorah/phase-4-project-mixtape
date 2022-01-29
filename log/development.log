@@ -565,3 +565,938 @@ Processing by MembersController#currentmember as */*
 Completed 401 Unauthorized in 17ms (Views: 2.7ms | ActiveRecord: 0.9ms | Allocations: 866)
 
 
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:03:11 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 401 Unauthorized in 22ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 861)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:04:09 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 12ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 876)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:13:03 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (3.0ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Completed 401 Unauthorized in 163ms (Views: 0.9ms | ActiveRecord: 61.6ms | Allocations: 4022)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:21:15 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (1.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.85ms)
+Completed 401 Unauthorized in 166ms (Views: 4.5ms | ActiveRecord: 47.0ms | Allocations: 3990)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:21:18 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (1.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 401 Unauthorized in 17ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 873)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:21:20 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 866)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:21:21 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 873)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:21:23 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:22:48 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 19ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 875)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:22:50 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 865)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:22:50 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (2.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 8ms (Views: 0.8ms | ActiveRecord: 2.3ms | Allocations: 869)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:22:52 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 401 Unauthorized in 5ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 871)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:24:37 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 10ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 867)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:25:40 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 11ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 873)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:25:42 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 869)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:25:43 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 867)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:25:43 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 6ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 859)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:25:44 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 867)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:26:11 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 861)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:26:50 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (1.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 13ms (Views: 0.8ms | ActiveRecord: 1.3ms | Allocations: 867)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:26:51 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 865)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:26:53 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 5ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 865)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:26:54 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 869)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:27:36 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 14ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 877)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:27:42 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 4ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 865)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:27:46 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.41ms)
+Completed 401 Unauthorized in 6ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 875)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:27:48 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:27:48 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 401 Unauthorized in 6ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 867)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:27:49 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.4ms)
+Completed 401 Unauthorized in 5ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:27:50 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 4ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 873)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:27:51 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 5ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 864)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:27:52 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 869)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:27:53 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 6ms (Views: 0.8ms | ActiveRecord: 0.8ms | Allocations: 865)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:28:13 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 401 Unauthorized in 6ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 885)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:28:14 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 861)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:28:16 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 401 Unauthorized in 7ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 871)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:28:16 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 6ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 869)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:28:17 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:28:18 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:28:19 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 859)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:28:40 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (12.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 401 Unauthorized in 24ms (Views: 0.6ms | ActiveRecord: 12.6ms | Allocations: 873)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:29:01 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 6ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 867)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:29:02 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 401 Unauthorized in 12ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 869)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:29:02 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:29:03 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:29:04 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 875)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:29:05 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 875)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:29:36 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 10ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 873)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:29:40 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (1.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 861)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:29:40 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 859)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:29:41 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 6ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 873)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:29:42 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 401 Unauthorized in 6ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 875)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:30:26 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 401 Unauthorized in 21ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 875)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:30:34 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 9ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 859)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:30:35 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 5ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 869)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:30:36 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 879)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:30:37 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 6ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 875)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:30:38 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 861)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:30:38 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 6ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:40:52 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (7.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.72ms)
+Completed 401 Unauthorized in 108ms (Views: 2.1ms | ActiveRecord: 50.2ms | Allocations: 3994)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:43:17 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 13ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 869)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:43:21 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 9ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 871)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:43:22 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 39ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 864)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:43:24 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 6ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 861)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:45:13 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 401 Unauthorized in 14ms (Views: 0.9ms | ActiveRecord: 0.9ms | Allocations: 869)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:45:19 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.51ms)
+Completed 401 Unauthorized in 6ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 879)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:45:37 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 6ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 871)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:45:40 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.28ms)
+Completed 401 Unauthorized in 23ms (Views: 0.9ms | ActiveRecord: 0.5ms | Allocations: 873)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:45:43 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 401 Unauthorized in 10ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:45:44 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.79ms)
+Completed 401 Unauthorized in 10ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 873)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:45:45 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:45:45 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 867)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:46:27 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 401 Unauthorized in 15ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:46:35 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 7ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 873)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:46:36 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 8ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:46:39 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.39ms)
+Completed 401 Unauthorized in 6ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 859)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:46:40 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 7ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 865)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:46:42 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 7ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:49:41 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 401 Unauthorized in 16ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 865)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:52:43 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 10ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 873)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:52:47 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 871)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:53:01 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 401 Unauthorized in 8ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 865)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:53:11 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 401 Unauthorized in 9ms (Views: 2.3ms | ActiveRecord: 0.6ms | Allocations: 864)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:53:13 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 859)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:53:14 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.34ms)
+Completed 401 Unauthorized in 5ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 877)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:53:16 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 6ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 869)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:53:17 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 869)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:53:34 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 30ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 867)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:54:04 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.48ms)
+Completed 401 Unauthorized in 9ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 859)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:54:31 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (4.7ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 27ms (Views: 1.0ms | ActiveRecord: 4.7ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:54:32 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (4.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 10ms (Views: 0.4ms | ActiveRecord: 4.2ms | Allocations: 865)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:54:33 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:54:34 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 6ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:54:50 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 18ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 868)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:54:52 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 4ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 867)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-28 18:55:04 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"mochipancake", "password"=>"[FILTERED]", "session"=>{"username"=>"mochipancake", "password"=>"[FILTERED]"}}
+  [1m[36mMember Load (7.9ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."username" = $1 LIMIT $2[0m  [["username", "mochipancake"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 344ms (Views: 0.8ms | ActiveRecord: 7.9ms | Allocations: 646)
+
+
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMember Load (1.1ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Destroy (8.5ms)[0m  [1m[31mDELETE FROM "members" WHERE "members"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Destroy (0.2ms)[0m  [1m[31mDELETE FROM "members" WHERE "members"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Destroy (0.2ms)[0m  [1m[31mDELETE FROM "members" WHERE "members"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlaylist Load (5.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylist Destroy (0.5ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Create (58.0ms)[0m  [1m[32mINSERT INTO "members" ("first_name", "last_name", "username", "email", "password_digest", "bio", "avatar_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Madison"], ["last_name", "Sorah"], ["username", "mochipancake"], ["email", "madisonsorah@gmail.com"], ["password_digest", "$2a$12$MZSuNsYdI4stFjqNNlqfqugmFldQoI2D3H/au4ozDcQuciKbKzskO"], ["bio", "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY. My favorite music genres are dance, disco and pop."], ["avatar_url", "XX"], ["created_at", "2022-01-28 23:56:12.942357"], ["updated_at", "2022-01-28 23:56:12.942357"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Create (0.6ms)[0m  [1m[32mINSERT INTO "members" ("first_name", "last_name", "username", "email", "password_digest", "bio", "avatar_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Lyrik"], ["last_name", "Houston"], ["username", "Straigus"], ["email", "kirylmitch@gmail.com"], ["password_digest", "$2a$12$pEMiq1SbdmKFPUbrSmmZBei7Q7GXIVRtRCMRTyhGmjobMyOU/NHw6"], ["bio", "XX"], ["avatar_url", "XX"], ["created_at", "2022-01-28 23:56:13.271246"], ["updated_at", "2022-01-28 23:56:13.271246"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mPlaylist Create (0.4ms)[0m  [1m[32mINSERT INTO "playlists" ("title", "cover_url", "playlist_url", "description", "requester_id", "creator_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "XX"], ["cover_url", "XX"], ["playlist_url", "XX"], ["description", "Looking for a playlist with soft, dreamy vibes."], ["requester_id", 19], ["creator_id", 20], ["created_at", "2022-01-28 23:56:13.281129"], ["updated_at", "2022-01-28 23:56:13.281129"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mPlaylist Create (0.4ms)[0m  [1m[32mINSERT INTO "playlists" ("title", "cover_url", "playlist_url", "description", "requester_id", "creator_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "XX"], ["cover_url", "XX"], ["playlist_url", "XX"], ["description", "XX"], ["requester_id", 20], ["creator_id", 19], ["created_at", "2022-01-28 23:56:13.284678"], ["updated_at", "2022-01-28 23:56:13.284678"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mPlaylist Create (0.5ms)[0m  [1m[32mINSERT INTO "playlists" ("description", "requester_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "XX"], ["requester_id", 20], ["created_at", "2022-01-28 23:56:13.288486"], ["updated_at", "2022-01-28 23:56:13.288486"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:56:35 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 26ms (Views: 1.5ms | ActiveRecord: 2.9ms | Allocations: 6128)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-28 18:57:04 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"mochipancake", "password"=>"[FILTERED]", "session"=>{"username"=>"mochipancake", "password"=>"[FILTERED]"}}
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."username" = $1 LIMIT $2[0m  [["username", "mochipancake"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (4.48ms)
+Completed 201 Created in 312ms (Views: 5.5ms | ActiveRecord: 10.7ms | Allocations: 5259)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:57:08 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.45ms)
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 0.9ms | Allocations: 1015)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:57:12 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.28ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 885)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:57:13 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (1.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.86ms)
+Completed 200 OK in 10ms (Views: 1.5ms | ActiveRecord: 1.8ms | Allocations: 895)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:57:14 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.26ms)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 885)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:57:16 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (17.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.26ms)
+Completed 200 OK in 33ms (Views: 0.7ms | ActiveRecord: 17.2ms | Allocations: 904)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 18:57:55 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.57ms)
+Completed 200 OK in 13ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 889)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 19:00:05 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (8.7ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.51ms)
+Completed 200 OK in 59ms (Views: 1.4ms | ActiveRecord: 8.7ms | Allocations: 885)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 19:00:06 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.28ms)
+Completed 200 OK in 8ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 906)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 19:00:07 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.36ms)
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 895)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 19:00:09 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (1.53ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 889)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 19:01:32 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.47ms)
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 885)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 19:01:34 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.27ms)
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 883)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-28 19:05:11 -0500
+Processing by MembersController#currentmember as */*
+  [1m[36mMember Load (6.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:16:in `currentmember'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Member (0.68ms)
+Completed 200 OK in 39ms (Views: 2.9ms | ActiveRecord: 6.4ms | Allocations: 895)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-28 19:15:46 -0500
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 2ms (Allocations: 182)
+
+

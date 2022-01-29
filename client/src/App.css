@@ -13,14 +13,16 @@ body {
 
 .navbar {
   background-color: #5c0353;
-  
-
+  position: fixed;
+   top: 0;
+   z-index: 100;
+  width: 100%;
 }
+
 #navalign {
   margin-left: auto;
   text-align: center;
   right: 100%;
-  
 }
 
 .container {
@@ -48,7 +50,6 @@ body {
   animation-name: navpage;
   animation-duration: .3s;
   animation-fill-mode: forwards;
-  
 }
 
 .navlogin {
@@ -62,11 +63,23 @@ body {
   animation-fill-mode: forwards;
 }
 
+.logoutButton {
+  background-color: #FF00E5;
+  border: none;
+  padding: 7.3px;
+  color: white !important;
+  font-weight: bold;
+}
+
+.logoutButton:hover {
+  animation-name: navlink;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
 .nav-link {
   color: white !important;
   font-weight: bold;
-  
-  
 }
 
 #logo {
@@ -77,12 +90,16 @@ body {
 form {
   margin: auto;
   width: 50%;
-  
   padding: 100px;
-  
 }
 
 .form-label {
   color: white !important;
   font-weight: bold;
+}
+
+.homePageDiv {
+  margin: auto;
+  padding-top: 100px;
+  color: white;
 }
