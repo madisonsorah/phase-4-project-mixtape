@@ -18,6 +18,12 @@ class CreatedPlaylistsController < ApplicationController
         render json: membercreatedplaylists
     end
 
+    def myreceivedplaylists
+        allcreatedplaylists = Playlist.where.not(creator_id: nil)
+        memberreceivedplaylists = allcreatedplaylists.where(requester_id: params[:requester_id])
+        render json: memberreceivedplaylists
+    end
+
     def update
         createdplaylist = find_createdplaylist
         createdplaylist.update!(createdplaylist_params)

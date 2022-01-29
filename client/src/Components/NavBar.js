@@ -43,7 +43,7 @@ function NavBar({member, setMember}) {
               <Nav.Link href="/browserequests">Browse Requests</Nav.Link>
             </Nav.Item>
             <Nav.Item className="navlogin">
-              <Nav.Link href="/profile">My Profile</Nav.Link>
+              <Nav.Link href="/account">Account</Nav.Link>
             </Nav.Item>
             <Nav.Item className="navlogin">
               <button className="logoutButton" onClick={handleLogoutClick}>Logout</button>

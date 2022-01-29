@@ -7,9 +7,9 @@ function MyRequestedPlaylists({playlistRequest}) {
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top"/>
       <Card.Body>
-        <Card.Title>Open Request</Card.Title>
+        <Card.Title>Active Request</Card.Title>
         <Card.Text>{playlistRequest.description}</Card.Text>
-        <Button variant="primary">Submit created playlist</Button>
+        <Button variant="primary" onClick={handleDeleteRequest}>Delete</Button>
       </Card.Body>
     </Card>
   )

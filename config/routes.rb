@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   get "/me", to: "members#currentmember"
   get '/members/:requester_id/requested_playlists', to: 'requested_playlists#myrequestedplaylists'
+  get '/members/:requester_id/received_playlists', to: 'created_playlists#myreceivedplaylists'
   get '/members/:creator_id/created_playlists', to: 'created_playlists#mycreatedplaylists'
 
   resources :members, only: [:index, :show, :create, :update, :destroy]

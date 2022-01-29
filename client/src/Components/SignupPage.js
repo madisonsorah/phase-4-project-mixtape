@@ -33,7 +33,7 @@ function SignUp({member, setMember}) {
         r.json().then((member) => setMember(member));
       }
     });
-    history.push("/profile");
+    history.push("/account");
   }
 
   return (

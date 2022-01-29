@@ -7,7 +7,7 @@ import LoginPage from './Components/LoginPage'
 import CreatedPlaylists from "./Components/CreatedPlaylists";
 import PlaylistRequests from "./Components/PlaylistRequests";
 import SignupPage from "./Components/SignupPage";
-import MemberProfile from "./Components/MemberProfile";
+import MemberAccount from "./Components/MemberAccount";
 
 function App() {
   const [member, setMember] = useState(null);
@@ -52,8 +52,8 @@ function App() {
           <Route path="/browserequests">
             <PlaylistRequests member={member} setMember={setMember} allPlaylistRequests={allPlaylistRequests}/>
           </Route>
-          <Route path="/profile">
-            <MemberProfile member={member} setMember={setMember}/>
+          <Route path="/account">
+            <MemberAccount member={member} setMember={setMember}/>
           </Route>
           <Route path="/membersignup">
             <SignupPage member={member} setMember={setMember}/>
