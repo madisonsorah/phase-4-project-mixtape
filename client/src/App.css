@@ -29,8 +29,6 @@ body {
   height: 100% !important;
 }
 
-
-
 @keyframes navpage {
   from {background-color: #991AFD}
   to {background-color: #00F0FF;}
@@ -44,23 +42,27 @@ body {
 .navpages {
   background-color: #991AFD;
   border-bottom: solid 1px black;
+  height: 100%;
 }
 
 .navpages:hover {
   animation-name: navpage;
   animation-duration: .3s;
   animation-fill-mode: forwards;
+  height: 100%;
 }
 
 .navlogin {
   background-color: #FF00E5;
   border-bottom: solid 1px black;
+  height: 100%;
 }
 
 .navlogin:hover {
   animation-name: navlink;
   animation-duration: .3s;
   animation-fill-mode: forwards;
+  height: 100%;
 }
 
 .logoutButton {

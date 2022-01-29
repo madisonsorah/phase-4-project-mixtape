@@ -3,7 +3,6 @@ import logo from '../images/logo.png'
 import { Navbar } from 'react-bootstrap'
 import { Nav } from 'react-bootstrap'
 import { Container } from 'react-bootstrap'
-import { Button } from 'react-bootstrap'
 
 
 function NavBar({member, setMember}) {

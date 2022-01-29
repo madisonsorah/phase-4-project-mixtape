@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from './NavBar'
 
-function MemberPage({member, setMember}) {
+function MemberProfile({member, setMember}) {
     return (
         <div>
         <NavBar member={member} setMember={setMember}/>
@@ -14,4 +14,4 @@ function MemberPage({member, setMember}) {
     )
   }
   
-  export default MemberPage;
+  export default MemberProfile;

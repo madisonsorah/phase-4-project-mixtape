@@ -11,15 +11,30 @@ import MemberProfile from "./Components/MemberProfile";
 
 function App() {
   const [member, setMember] = useState(null);
+  const [allCreatedPlaylists, setAllCreatedPlaylists] = useState([]);
+  const [allRequestedPlaylists, setAllRequestedPlaylists] = useState([]);
 
   useEffect(() => {
     // auto-login
-    fetch("/me").then((r) => {
+    fetch("/me")
+    .then((r) => {
       if (r.ok) {
         r.json().then((member) => setMember(member));
       }
     });
   }, []);
+
+  useEffect(() => {
+    fetch("/created_playlists")
+    .then((r) => r.json())
+    .then((createdPlaylistsData) => setAllCreatedPlaylists(createdPlaylistsData))
+  }, [])
+
+  useEffect(() => {
+    fetch("/requested_playlists")
+    .then((r) => r.json())
+    .then((requestedPlaylistsData) => setAllRequestedPlaylists(requestedPlaylistsData))
+  }, [])
 
   return (
     <BrowserRouter>
@@ -32,10 +47,10 @@ function App() {
             <LoginPage member={member} setMember={setMember}/>
           </Route>
           <Route path="/browseplaylists">
-            <PlaylistPage member={member} setMember={setMember}/>
+            <PlaylistPage member={member} setMember={setMember} allCreatedPlaylists={allCreatedPlaylists}/>
           </Route>
           <Route path="/browserequests">
-            <RequestPage member={member} setMember={setMember}/>
+            <RequestPage member={member} setMember={setMember} allRequestedPlaylists={allRequestedPlaylists}/>
           </Route>
           <Route path="/profile">
             <MemberProfile member={member} setMember={setMember}/>
