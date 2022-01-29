@@ -1,22 +1,24 @@
-import {useEffect, useState} from 'react'
+import {useState} from 'react'
 import RequestCard from './RequestCard'
+import NavBar from './NavBar'
 import SearchBar from './SearchBar'
 
-function RequestPage ({requests}) {
+function RequestPage({member, setMember, allRequestedPlaylists}) {
     const [search, setSearch] = useState("")
 
-    const searchedRequests = requests.filter(request =>
-    request.title.toLowerCase().includes(search.toLowerCase()))
+    const playlistRequests = allRequestedPlaylists.map((playlistRequest) => (
+        <RequestCard playlistRequest={playlistRequest} key={playlistRequest.id}/>
+    ))
 
-    const displayedRequests = searchedRequests.map(request =>
-    <RequestCard request={request} key={request.id}/>)
+    const filteredPlaylistRequests = playlistRequests.filter(request =>
+        request.title.toLowerCase().includes(search.toLowerCase()))
+    
     return (
-        <>
-        <SearchBar onSearch={setSearch}/>
-        {displayedRequests}
-        
-        </>
-        
+        <div>
+            <NavBar member={member} setMember={setMember}/>
+            <SearchBar onSearch={setSearch}/>
+            {filteredPlaylistRequests}
+        </div>
     )
 }
 export default RequestPage

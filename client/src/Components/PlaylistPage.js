@@ -1,23 +1,25 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
+import NavBar from './NavBar'
 import PlaylistCard from './PlaylistCard'
 import SearchBar from './SearchBar'
 
 
-function PlaylistPage ({playlists}) {
+function PlaylistPage ({member, setMember, allCreatedPlaylists}) {
     const [search, setSearch] = useState("")
 
-    const searchedPlaylists = playlists.filter(request =>
-    request.title.toLowerCase().includes(search.toLowerCase()))
+    const createdPlaylists = allCreatedPlaylists.map((createdPlaylist) => (
+        <PlaylistCard createdPlaylist={createdPlaylist} key={createdPlaylist.id}/>
+    ))
 
-    const displayedPlaylists = searchedPlaylists.map(request =>
-    <PlaylistCard request={request} key={request.id}/>)
+    const filteredPlaylists = createdPlaylists.filter(createdPlaylist =>
+    createdPlaylist.title.toLowerCase().includes(search.toLowerCase()))
 
     return (
-        <>
+    <div>
+        <NavBar member={member} setMember={setMember}/>
         <SearchBar onSearch={setSearch}/>
-        {displayedPlaylists}
-        </>
-        
+        {filteredPlaylists}
+    </div>
     )
 }
 export default PlaylistPage

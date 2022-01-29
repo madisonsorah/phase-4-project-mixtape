@@ -5,42 +5,81 @@ import { Nav } from 'react-bootstrap'
 import { Container } from 'react-bootstrap'
 
 
-function NavBar() {
-    return(
-    <Navbar  id="navbar" expand="md">
-    <Container >
-    <Navbar.Brand href="/">
-      <img
-      src={logo}
-      id="logo"
-      className= "d-inline-block align-top"
-      alt="logo"
-      />
-      </Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav id="navalign" className="navbarml-auto">
-        <Nav.Item className="navpages">
-          <Nav.Link href="/">Home</Nav.Link>
-        </Nav.Item>
-        <Nav.Item className="navpages">
-          <Nav.Link href="/playlists" >Playlists</Nav.Link>
-        </Nav.Item>
-        <Nav.Item className="navpages">
-          <Nav.Link href="/requests" >Requests</Nav.Link>
-        </Nav.Item>
-        <Nav.Item className="navlogin">
-          <Nav.Link href="/login" >Log In</Nav.Link>
-        </Nav.Item>
-        <Nav.Item className="navlogin">
-          <Nav.Link href="/signup" >Sign Up</Nav.Link>
-        </Nav.Item>
-        
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
+function NavBar({member, setMember}) {
+  function handleLogoutClick() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setMember(null);
+      }
+    });
+  }
+  
+  return (
+    <Navbar id="navbar" expand="md">
+        {member ? (
+          <Container>
+          <Navbar.Brand href="/home">
+            <img
+            src={logo}
+            id="logo"
+            className= "d-inline-block align-top"
+            alt="logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+          <Navbar.Collapse id="basic-navbar-nav">
+          <Nav id="navalign" className="navbarml-auto">
+            <Nav.Item className="navpages">
+              <Nav.Link href="/home">Home</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navpages">
+              <Nav.Link href="/browseplaylists" >Browse Playlists</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navpages">
+              <Nav.Link href="/browserequests">Browse Requests</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navlogin">
+              <Nav.Link href="/profile">My Profile</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navlogin">
+              <button className="logoutButton" onClick={handleLogoutClick}>Logout</button>
+            </Nav.Item>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+        ) : (
+          <Container>
+          <Navbar.Brand href="/home">
+            <img
+            src={logo}
+            id="logo"
+            className= "d-inline-block align-top"
+            alt="logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+          <Navbar.Collapse id="basic-navbar-nav">
+          <Nav id="navalign" className="navbarml-auto">
+            <Nav.Item className="navpages">
+              <Nav.Link href="/home">Home</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navpages">
+              <Nav.Link href="/browseplaylists" >Browse Playlists</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navpages">
+              <Nav.Link href="/browserequests">Browse Requests</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navlogin">
+              <Nav.Link href="/memberlogin" >Log In</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navlogin">
+              <Nav.Link href="/membersignup" >Sign Up</Nav.Link>
+            </Nav.Item>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+        )}
 </Navbar>
-
-    )}
+)}
 
 export default NavBar

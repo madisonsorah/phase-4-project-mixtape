@@ -18,7 +18,7 @@ madison = Member.create!(
     last_name: "Sorah",
     username: "mochipancake",
     email: "madisonsorah@gmail.com",
-    password: "catsarecute1'",
+    password: "catsarecute1",
     bio: "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY. My favorite music genres are dance, disco and pop.",
     avatar_url: "XX"
   })

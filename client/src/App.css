@@ -13,21 +13,21 @@ body {
 
 .navbar {
   background-color: #5c0353;
-  
-
+  position: fixed;
+   top: 0;
+   z-index: 100;
+  width: 100%;
 }
+
 #navalign {
   margin-left: auto;
   text-align: center;
   right: 100%;
-  
 }
 
 .container {
   height: 100% !important;
 }
-
-
 
 @keyframes navpage {
   from {background-color: #991AFD}
@@ -42,21 +42,38 @@ body {
 .navpages {
   background-color: #991AFD;
   border-bottom: solid 1px black;
+  height: 100%;
 }
 
 .navpages:hover {
   animation-name: navpage;
   animation-duration: .3s;
   animation-fill-mode: forwards;
-  
+  height: 100%;
 }
 
 .navlogin {
   background-color: #FF00E5;
   border-bottom: solid 1px black;
+  height: 100%;
 }
 
 .navlogin:hover {
+  animation-name: navlink;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+  height: 100%;
+}
+
+.logoutButton {
+  background-color: #FF00E5;
+  border: none;
+  padding: 7.3px;
+  color: white !important;
+  font-weight: bold;
+}
+
+.logoutButton:hover {
   animation-name: navlink;
   animation-duration: .3s;
   animation-fill-mode: forwards;
@@ -65,8 +82,6 @@ body {
 .nav-link {
   color: white !important;
   font-weight: bold;
-  
-  
 }
 
 #logo {
@@ -77,12 +92,16 @@ body {
 form {
   margin: auto;
   width: 600px;
-  
   padding: 100px;
-  
 }
 
 .form-label {
   color: white !important;
   font-weight: bold;
+}
+
+.homePageDiv {
+  margin: auto;
+  padding-top: 100px;
+  color: white;
 }
