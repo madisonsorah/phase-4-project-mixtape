@@ -11,7 +11,7 @@ Member.destroy_all
 Playlist.destroy_all
 puts "🌱 Seeding data..."
 
-# Member
+# Sample members
 madison = Member.create!(
   {
     first_name: "Madison",
@@ -34,7 +34,7 @@ lyrik = Member.create!(
     avatar_url: "XX"
   })
 
-# Playlist
+# Sample created/received playlists
 Playlist.create!(
   {
     title: "Cloud Puff",
@@ -55,13 +55,14 @@ Playlist.create!(
     creator_id: madison.id
   })
 
-  Playlist.create!(
+# Sample playlist requests
+Playlist.create!(
   {
     description: "I'd love a video game-themed mix.",
     requester_id: lyrik.id,
   })
 
-  Playlist.create!(
+Playlist.create!(
   {
     description: "Looking for an energetic, female vocalist playlist.",
     requester_id: madison.id,

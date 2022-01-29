@@ -36,7 +36,6 @@ class CreatedPlaylistsController < ApplicationController
         head :no_content
     end
     
-
     private
     def find_createdplaylist
         createdplaylists = Playlist.where.not(creator_id: nil)

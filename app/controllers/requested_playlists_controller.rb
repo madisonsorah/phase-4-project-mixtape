@@ -33,8 +33,7 @@ class RequestedPlaylistsController < ApplicationController
         requestedplaylist = find_requestedplaylist
         requestedplaylist.destroy
         head :no_content
-    end
-    
+    end 
 
     private
     def find_requestedplaylist

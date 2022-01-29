@@ -36,7 +36,6 @@ class MembersController < ApplicationController
         render json: member
     end
 
-
     def destroy
         member = find_member
         member.destroy
