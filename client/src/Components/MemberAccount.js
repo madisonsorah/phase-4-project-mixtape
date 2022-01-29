@@ -34,29 +34,29 @@ function MemberAccount({member, setMember}) {
   };
 
   const createdPlaylists = myCreatedPlaylists.map((createdPlaylist) => (
-    <Card key={createdPlaylist.id} style={{ width: '18rem' }}>
+    <Card className="memberAccountCard" key={createdPlaylist.id} style={{ width: '18rem' }}>
       <Card.Img variant="top" src={createdPlaylist.cover_url}/>
       <Card.Body>
         <Card.Title>{createdPlaylist.title}</Card.Title>
-        <Card.Text>{createdPlaylist.description}</Card.Text>
-        <Button variant="primary"><a href={createdPlaylist.playlist_url}>Link to Playlist</a></Button>
+        <Card.Text><p className="fulfilledRequestP">Fulfilled Request</p>{createdPlaylist.description}</Card.Text>
+        <a className="createdPlaylistURL" href={createdPlaylist.playlist_url}>Link to Playlist</a>
       </Card.Body>
     </Card>
   ))
 
   const receivedPlaylists = myReceivedPlaylists.map((receivedPlaylist) => (
-    <Card key={receivedPlaylist.id} style={{ width: '18rem' }}>
+    <Card className="memberAccountCard" key={receivedPlaylist.id} style={{ width: '18rem' }}>
       <Card.Img variant="top" src={receivedPlaylist.cover_url}/>
       <Card.Body>
         <Card.Title>{receivedPlaylist.title}</Card.Title>
-        <Card.Text>{receivedPlaylist.description}</Card.Text>
-        <Button variant="primary"><a href={receivedPlaylist.playlist_url}>Link to Playlist</a></Button>
+        <Card.Text><p className="fulfilledRequestP">Fulfilled Request</p>{receivedPlaylist.description}</Card.Text>
+        <a className="receivedPlaylistURL" href={receivedPlaylist.playlist_url}>Link to Playlist</a>
       </Card.Body>
     </Card>
   ))
 
   const requestedPlaylists = myRequestedPlaylists.map((requestedPlaylist) => (
-    <Card key={requestedPlaylist.id} style={{ width: '18rem' }}>
+    <Card className="memberAccountCard" key={requestedPlaylist.id} style={{ width: '18rem' }}>
       <Card.Img variant="top"/>
       <Card.Body>
         <Card.Title>Active Request</Card.Title>

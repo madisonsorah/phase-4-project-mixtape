@@ -16,7 +16,7 @@ function PlaylistRequests({member, setMember, allPlaylistRequests}) {
     }
 
     const displayedPlaylistRequests = searchedPlaylistRequests().map((playlistRequest) => (
-        <PlaylistRequestsCard playlistRequest={playlistRequest} key={playlistRequest.id}/>
+        <PlaylistRequestsCard playlistRequest={playlistRequest} key={playlistRequest.id} member={member}/>
     ))
 
     

@@ -105,3 +105,25 @@ form {
   padding-top: 100px;
   color: white;
 }
+
+.memberAccountCard {
+  color: black;
+}
+
+.createdPlaylistURL {
+  text-decoration:none;
+  color: black;
+  font-weight: 700;
+}
+
+.receivedPlaylistURL {
+  text-decoration:none;
+  color: black;
+  font-weight: 700;
+}
+
+.fulfilledRequestP {
+  color: black;
+  font-weight: 700;
+}
+

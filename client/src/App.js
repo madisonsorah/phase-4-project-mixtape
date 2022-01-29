@@ -7,6 +7,7 @@ import LoginPage from './Components/LoginPage'
 import CreatedPlaylists from "./Components/CreatedPlaylists";
 import PlaylistRequests from "./Components/PlaylistRequests";
 import SubmitRequest from "./Components/SubmitRequest";
+import SubmitPlaylist from "./Components/SubmitPlaylist";
 import SignupPage from "./Components/SignupPage";
 import MemberAccount from "./Components/MemberAccount";
 
@@ -55,6 +56,9 @@ function App() {
           </Route>
           <Route path="/submitrequest">
             <SubmitRequest member={member} setMember={setMember}/>
+          </Route>
+          <Route path="/submitplaylist">
+            <SubmitPlaylist member={member} setMember={setMember}/>
           </Route>
           <Route path="/account">
             <MemberAccount member={member} setMember={setMember}/>

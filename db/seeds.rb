@@ -37,7 +37,7 @@ lyrik = Member.create!(
 # Playlist
 Playlist.create!(
   {
-    title: "XX",
+    title: "Cloud Puff",
     cover_url: "XX",
     playlist_url: "XX",
     description: "Looking for a playlist with soft, dreamy vibes.",
@@ -47,18 +47,24 @@ Playlist.create!(
 
 Playlist.create!(
   {
-    title: "XX",
+    title: "Otakus Only",
     cover_url: "XX",
     playlist_url: "XX",
-    description: "XX",
+    description: "I'd love a mix with anime intro songs.",
     requester_id: lyrik.id,
     creator_id: madison.id
   })
 
   Playlist.create!(
   {
-    description: "XX",
+    description: "I'd love a video game-themed mix.",
     requester_id: lyrik.id,
+  })
+
+  Playlist.create!(
+  {
+    description: "Looking for an energetic, female vocalist playlist.",
+    requester_id: madison.id,
   })
 
 puts "Seeding Done!"
