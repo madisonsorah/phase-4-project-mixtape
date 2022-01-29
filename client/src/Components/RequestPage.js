@@ -1,23 +1,29 @@
-import {useState} from 'react'
+import React, {useState} from 'react'
 import RequestCard from './RequestCard'
 import NavBar from './NavBar'
 import SearchBar from './SearchBar'
 
-function RequestPage({member, setMember, allRequestedPlaylists}) {
+function RequestPage({member, setMember, allPlaylistRequests}) {
     const [search, setSearch] = useState("")
 
-    const playlistRequests = allRequestedPlaylists.map((playlistRequest) => (
+    function searchedPlaylistRequests() {
+        if (search === ""){
+            return allPlaylistRequests
+        } else {
+            return allPlaylistRequests.filter(requestedPlaylist => requestedPlaylist.description.toLowerCase().includes(search.toLowerCase()))
+        }
+    }
+
+    const displayedPlaylistRequests = searchedPlaylistRequests().map((playlistRequest) => (
         <RequestCard playlistRequest={playlistRequest} key={playlistRequest.id}/>
     ))
 
-    const filteredPlaylistRequests = playlistRequests.filter(request =>
-        request.title.toLowerCase().includes(search.toLowerCase()))
     
     return (
         <div>
             <NavBar member={member} setMember={setMember}/>
             <SearchBar onSearch={setSearch}/>
-            {filteredPlaylistRequests}
+            {displayedPlaylistRequests}
         </div>
     )
 }

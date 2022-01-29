@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap'
 function RequestCard({playlistRequest}) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={note}/>
+      <Card.Img variant="top"/>
       <Card.Body>
         <Card.Title>Open Request</Card.Title>
         <Card.Text>{playlistRequest.description}</Card.Text>

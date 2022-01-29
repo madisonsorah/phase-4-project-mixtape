@@ -12,7 +12,7 @@ import MemberProfile from "./Components/MemberProfile";
 function App() {
   const [member, setMember] = useState(null);
   const [allCreatedPlaylists, setAllCreatedPlaylists] = useState([]);
-  const [allRequestedPlaylists, setAllRequestedPlaylists] = useState([]);
+  const [allPlaylistRequests, setAllPlaylistRequests] = useState([]);
 
   useEffect(() => {
     // auto-login
@@ -33,7 +33,7 @@ function App() {
   useEffect(() => {
     fetch("/requested_playlists")
     .then((r) => r.json())
-    .then((requestedPlaylistsData) => setAllRequestedPlaylists(requestedPlaylistsData))
+    .then((requestedPlaylistsData) => setAllPlaylistRequests(requestedPlaylistsData))
   }, [])
 
   return (
@@ -50,7 +50,7 @@ function App() {
             <PlaylistPage member={member} setMember={setMember} allCreatedPlaylists={allCreatedPlaylists}/>
           </Route>
           <Route path="/browserequests">
-            <RequestPage member={member} setMember={setMember} allRequestedPlaylists={allRequestedPlaylists}/>
+            <RequestPage member={member} setMember={setMember} allPlaylistRequests={allPlaylistRequests}/>
           </Route>
           <Route path="/profile">
             <MemberProfile member={member} setMember={setMember}/>

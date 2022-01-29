@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import NavBar from './NavBar'
 import PlaylistCard from './PlaylistCard'
 import SearchBar from './SearchBar'
@@ -7,18 +7,23 @@ import SearchBar from './SearchBar'
 function PlaylistPage ({member, setMember, allCreatedPlaylists}) {
     const [search, setSearch] = useState("")
 
-    const createdPlaylists = allCreatedPlaylists.map((createdPlaylist) => (
+    function searchedCreatedPlaylists() {
+        if (search === ""){
+            return allCreatedPlaylists
+        } else {
+            return allCreatedPlaylists.filter(createdPlaylist => createdPlaylist.description.toLowerCase().includes(search.toLowerCase()))
+        }
+    }
+
+    const displayedCreatedPlaylists = searchedCreatedPlaylists().map((createdPlaylist) => (
         <PlaylistCard createdPlaylist={createdPlaylist} key={createdPlaylist.id}/>
     ))
-
-    const filteredPlaylists = createdPlaylists.filter(createdPlaylist =>
-    createdPlaylist.title.toLowerCase().includes(search.toLowerCase()))
 
     return (
     <div>
         <NavBar member={member} setMember={setMember}/>
         <SearchBar onSearch={setSearch}/>
-        {filteredPlaylists}
+        {displayedCreatedPlaylists}
     </div>
     )
 }
