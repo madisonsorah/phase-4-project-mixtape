@@ -1,11 +1,9 @@
-import React, {useEffect, useState } from 'react'
+import React from 'react'
 import { Form } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import { FormControl } from 'react-bootstrap'
 
 function SearchBar({onSearch}) {
-
-
     return (
         <Form className="d-flex">
         <FormControl
