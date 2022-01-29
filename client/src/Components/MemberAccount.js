@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import NavBar from './NavBar';
-import MyCreatedPlaylists from './MyCreatedPlaylists';
-import MyReceivedPlaylists from './MyReceivedPlaylists';
-import MyRequestedPlaylists from './MyRequestedPlaylists';
+import { Card } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 
 function MemberAccount({member, setMember}) {
   const [myCreatedPlaylists, setMyCreatedPlaylists] = useState([]);
@@ -25,16 +24,46 @@ function MemberAccount({member, setMember}) {
     }
   }, [member])
 
+  function handleDeleteRequest(id) {
+    let updatedPlaylistRequests = myRequestedPlaylists.filter((playlistRequest) => playlistRequest.id !== id)
+    setMyRequestedPlaylists(updatedPlaylistRequests);
+    const config = {
+      method: "DELETE",
+    }
+    fetch(`/requested_playlists/${id}`, config)
+  };
+
   const createdPlaylists = myCreatedPlaylists.map((createdPlaylist) => (
-    <MyCreatedPlaylists createdPlaylist={createdPlaylist} key={createdPlaylist.id}/>
+    <Card key={createdPlaylist.id} style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={createdPlaylist.cover_url}/>
+      <Card.Body>
+        <Card.Title>{createdPlaylist.title}</Card.Title>
+        <Card.Text>{createdPlaylist.description}</Card.Text>
+        <Button variant="primary"><a href={createdPlaylist.playlist_url}>Link to Playlist</a></Button>
+      </Card.Body>
+    </Card>
   ))
 
   const receivedPlaylists = myReceivedPlaylists.map((receivedPlaylist) => (
-    <MyReceivedPlaylists receivedPlaylist={receivedPlaylist} key={receivedPlaylist.id}/>
+    <Card key={receivedPlaylist.id} style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={receivedPlaylist.cover_url}/>
+      <Card.Body>
+        <Card.Title>{receivedPlaylist.title}</Card.Title>
+        <Card.Text>{receivedPlaylist.description}</Card.Text>
+        <Button variant="primary"><a href={receivedPlaylist.playlist_url}>Link to Playlist</a></Button>
+      </Card.Body>
+    </Card>
   ))
 
   const requestedPlaylists = myRequestedPlaylists.map((requestedPlaylist) => (
-    <MyRequestedPlaylists requestedPlaylist={requestedPlaylist} key={requestedPlaylist.id}/>
+    <Card key={requestedPlaylist.id} style={{ width: '18rem' }}>
+      <Card.Img variant="top"/>
+      <Card.Body>
+        <Card.Title>Active Request</Card.Title>
+        <Card.Text>{requestedPlaylist.description}</Card.Text>
+        <Button variant="primary" onClick={() => handleDeleteRequest(requestedPlaylist.id)}>Delete</Button>
+      </Card.Body>
+    </Card>
   ))
 
     return (

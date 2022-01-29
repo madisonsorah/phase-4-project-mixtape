@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import PlaylistRequestsCard from './PlaylistRequestsCard'
 import NavBar from './NavBar'
 import SearchBar from './SearchBar'
@@ -22,8 +23,18 @@ function PlaylistRequests({member, setMember, allPlaylistRequests}) {
     return (
         <div>
             <NavBar member={member} setMember={setMember}/>
-            <SearchBar onSearch={setSearch}/>
-            {displayedPlaylistRequests}
+            {member ? (
+                <div>
+                    <SearchBar onSearch={setSearch}/>
+                    <Link to="/submitrequest">Submit Playlist Request</Link>
+                    {displayedPlaylistRequests}
+                </div>
+            ) : (
+                <div>
+                    <SearchBar onSearch={setSearch}/>
+                    {displayedPlaylistRequests} 
+                </div>
+            )}
         </div>
     )
 }
