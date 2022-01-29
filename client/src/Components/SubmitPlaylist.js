@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import NavBar from './NavBar'
 
-function SubmitPlaylist({member, setMember, request}) {
+function SubmitPlaylist({member, setMember, playlistRequest}) {
   const [title, setTitle] = useState("");
   const [cover_url, setCoverUrl] = useState("");
   const [playlist_url, setPlaylistUrl] = useState("");
@@ -12,7 +12,7 @@ function SubmitPlaylist({member, setMember, request}) {
 
   function handleSubmitPlaylist(e) {
     e.preventDefault();
-    fetch(`/requested_playlists/${request.id}`, {
+    fetch(`/requested_playlists/${playlistRequest.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

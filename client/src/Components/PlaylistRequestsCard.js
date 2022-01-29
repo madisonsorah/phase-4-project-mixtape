@@ -7,19 +7,11 @@ import SubmitPlaylist from './SubmitPlaylist'
 function PlaylistRequestsCard({playlistRequest, member}) {
 const history = useHistory();
 const [error, setError] = useState("");
-const [currentPlaylistRequest, setCurrentPlaylistRequest] = useState([]);
 
 function handleLoggedIn() {
   if (member.id != playlistRequest.requester_id) {
-    fetch(`/requested_playlists/${playlistRequest.id}`)
-      .then((r) => r.json())
-      .then ((playlistRequest) => setCurrentPlaylistRequest(playlistRequest))
-
-    currentPlaylistRequest.map((request) => (
-      <SubmitPlaylist key={request.id} request={request}/>))
-
+    <SubmitPlaylist playlistRequest={playlistRequest}/>
     history.push("/submitplaylist");
-
   } else {
     setError("You cannot submit a playlist for your own request.")
   }
