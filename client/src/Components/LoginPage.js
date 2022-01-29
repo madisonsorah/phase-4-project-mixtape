@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import { Form } from 'react-bootstrap'
-import { Button } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
-import NavBar from './NavBar'
+import React, {useState} from 'react';
+import {Form} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
+import {useNavigate} from 'react-router-dom';
+import NavBar from './NavBar';
 
 function LoginPage ({member, setMember}) {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/login", {
+    fetch('/login', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,36 +22,37 @@ function LoginPage ({member, setMember}) {
         r.json().then((member) => setMember(member));
       }
     });
-    navigate("/account", { replace: true })
+    navigate("/account", { replace: true });
   }
 
   return (
     <div>
       <NavBar member={member} setMember={setMember}/>
       <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className='mb-3' controlId='formBasicEmail'>
           <Form.Label>Username:</Form.Label>
           <Form.Control 
-          type="text"
-          placeholder="Enter Username"
-          autoComplete="off"
+          type='text'
+          placeholder='Enter Username'
+          autoComplete='off'
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           />
-          <Form.Text className="text-muted"></Form.Text>
+          <Form.Text className='text-muted'></Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className='mb-3' controlId='formBasicPassword'>
           <Form.Label>Password:</Form.Label>
           <Form.Control 
-          type="password"
-          placeholder="Enter Password"
-          autoComplete="off"
+          type='password'
+          placeholder='Enter Password'
+          autoComplete='off'
           value={password}
           onChange={(e) => setPassword(e.target.value)} />
         </Form.Group>
-        <Button variant="primary" type="submit">Submit</Button>
+        <Button variant='primary' type='submit'>Submit</Button>
       </Form>
     </div>
   )
 }
-export default LoginPage
+
+export default LoginPage;

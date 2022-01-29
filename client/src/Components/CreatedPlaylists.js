@@ -1,21 +1,20 @@
-import React, {useState, useEffect} from 'react'
-import NavBar from './NavBar'
-import CreatedPlaylistsCard from './CreatedPlaylistsCard'
-import SearchBar from './SearchBar'
-
+import React, {useState, useEffect} from 'react';
+import NavBar from './NavBar';
+import CreatedPlaylistsCard from './CreatedPlaylistsCard';
+import SearchBar from './SearchBar';
 
 function CreatedPlaylists ({member, setMember}) {
-    const [search, setSearch] = useState("")
+    const [search, setSearch] = useState('');
     const [allCreatedPlaylists, setAllCreatedPlaylists] = useState([]);
 
     useEffect(() => {
-        fetch("/created_playlists")
+        fetch('/created_playlists')
         .then((r) => r.json())
         .then((createdPlaylistsData) => setAllCreatedPlaylists(createdPlaylistsData))
-      }, [])
+      }, []);
 
     function searchedCreatedPlaylists() {
-        if (search === ""){
+        if (search === ''){
             return allCreatedPlaylists
         } else {
             return allCreatedPlaylists.filter(createdPlaylist => createdPlaylist.description.toLowerCase().includes(search.toLowerCase()))
@@ -24,7 +23,7 @@ function CreatedPlaylists ({member, setMember}) {
 
     const displayedCreatedPlaylists = searchedCreatedPlaylists().map((createdPlaylist) => (
         <CreatedPlaylistsCard createdPlaylist={createdPlaylist} key={createdPlaylist.id}/>
-    ))
+    ));
 
     return (
     <div>
@@ -34,4 +33,5 @@ function CreatedPlaylists ({member, setMember}) {
     </div>
     )
 }
+
 export default CreatedPlaylists;

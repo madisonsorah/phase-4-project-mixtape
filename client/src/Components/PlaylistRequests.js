@@ -1,21 +1,21 @@
-import React, {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
-import PlaylistRequestsCard from './PlaylistRequestsCard'
-import NavBar from './NavBar'
-import SearchBar from './SearchBar'
+import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
+import PlaylistRequestsCard from './PlaylistRequestsCard';
+import NavBar from './NavBar';
+import SearchBar from './SearchBar';
 
 function PlaylistRequests({member, setMember}) {
-    const [search, setSearch] = useState("")
+    const [search, setSearch] = useState('')
     const [allPlaylistRequests, setAllPlaylistRequests] = useState([]);
 
     useEffect(() => {
-        fetch("/requested_playlists")
+        fetch('/requested_playlists')
         .then((r) => r.json())
         .then((requestedPlaylistsData) => setAllPlaylistRequests(requestedPlaylistsData))
-      }, [])
+      }, []);
 
     function searchedPlaylistRequests() {
-        if (search === ""){
+        if (search === ''){
             return allPlaylistRequests
         } else {
             return allPlaylistRequests.filter(requestedPlaylist => requestedPlaylist.description.toLowerCase().includes(search.toLowerCase()))
@@ -24,7 +24,7 @@ function PlaylistRequests({member, setMember}) {
 
     const displayedPlaylistRequests = searchedPlaylistRequests().map((playlistRequest) => (
         <PlaylistRequestsCard playlistRequest={playlistRequest} key={playlistRequest.id} member={member}/>
-    ))
+    ));
 
     
     return (
@@ -33,7 +33,7 @@ function PlaylistRequests({member, setMember}) {
             {member ? (
                 <div>
                     <SearchBar onSearch={setSearch}/>
-                    <Link to="/submitrequest">Submit Playlist Request</Link>
+                    <Link to='/submitrequest'>Submit Playlist Request</Link>
                     {displayedPlaylistRequests}
                 </div>
             ) : (
@@ -45,4 +45,5 @@ function PlaylistRequests({member, setMember}) {
         </div>
     )
 }
+
 export default PlaylistRequests;
