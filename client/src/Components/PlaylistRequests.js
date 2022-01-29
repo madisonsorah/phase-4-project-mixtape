@@ -1,11 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import PlaylistRequestsCard from './PlaylistRequestsCard'
 import NavBar from './NavBar'
 import SearchBar from './SearchBar'
 
-function PlaylistRequests({member, setMember, allPlaylistRequests}) {
+function PlaylistRequests({member, setMember}) {
     const [search, setSearch] = useState("")
+    const [allPlaylistRequests, setAllPlaylistRequests] = useState([]);
+
+    useEffect(() => {
+        fetch("/requested_playlists")
+        .then((r) => r.json())
+        .then((requestedPlaylistsData) => setAllPlaylistRequests(requestedPlaylistsData))
+      }, [])
 
     function searchedPlaylistRequests() {
         if (search === ""){

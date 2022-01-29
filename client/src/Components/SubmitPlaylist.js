@@ -24,8 +24,10 @@ function SubmitPlaylist({member, setMember}) {
           playlist_url,
           creator_id: member.id 
         }),
-    });
-    navigate("/browseplaylists", { replace: true })
+    })
+    .then(() => {
+      navigate("/browseplaylists", { replace: true })
+    })
   }
 
   return (

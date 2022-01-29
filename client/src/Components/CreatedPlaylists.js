@@ -1,11 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import NavBar from './NavBar'
 import CreatedPlaylistsCard from './CreatedPlaylistsCard'
 import SearchBar from './SearchBar'
 
 
-function CreatedPlaylists ({member, setMember, allCreatedPlaylists}) {
+function CreatedPlaylists ({member, setMember}) {
     const [search, setSearch] = useState("")
+    const [allCreatedPlaylists, setAllCreatedPlaylists] = useState([]);
+
+    useEffect(() => {
+        fetch("/created_playlists")
+        .then((r) => r.json())
+        .then((createdPlaylistsData) => setAllCreatedPlaylists(createdPlaylistsData))
+      }, [])
 
     function searchedCreatedPlaylists() {
         if (search === ""){

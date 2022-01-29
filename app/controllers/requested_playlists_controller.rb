@@ -25,7 +25,7 @@ class RequestedPlaylistsController < ApplicationController
 
     def update
         requestedplaylist = find_requestedplaylist
-        requestedplaylist.update(requestedplaylist_params)
+        requestedplaylist.update(updatetocreatedplaylist_params)
         render json: requestedplaylist
     end
 
@@ -38,11 +38,16 @@ class RequestedPlaylistsController < ApplicationController
 
     private
     def find_requestedplaylist
+        puts params
         requestedplaylists = Playlist.find_by(creator_id: nil, id: params[:id])
     end
 
     def requestedplaylist_params
         params.permit(:description, :requester_id)
+    end
+
+    def updatetocreatedplaylist_params
+        params.permit(:creator_id, :title, :playlist_url, :cover_url)
     end
 
     def render_not_found_response
