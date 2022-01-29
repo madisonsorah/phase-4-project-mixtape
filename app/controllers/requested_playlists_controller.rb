@@ -12,10 +12,11 @@ class RequestedPlaylistsController < ApplicationController
         render json: requestedplaylist
     end
 
-    # def myrequestedplaylists
-    #     myrequestedplaylists = Playlist.where(requestor_id: params[:requestor_id], creator_id: nil)
-    #     render json: myrequestedplaylists
-    # end
+    def myrequestedplaylists
+        allrequestedplaylists = Playlist.where(creator_id: nil)
+        memberrequestedplaylists = allrequestedplaylists.where(requester_id: params[:requester_id])
+        render json: memberrequestedplaylists
+    end
 
     def create
         requestedplaylist = Playlist.create!(requestedplaylist_params)

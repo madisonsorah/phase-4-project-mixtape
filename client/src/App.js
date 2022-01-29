@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import HomePage from "./Components/HomePage";
 import LoginPage from './Components/LoginPage'
-import PlaylistPage from "./Components/PlaylistPage";
-import RequestPage from "./Components/RequestPage";
+import CreatedPlaylists from "./Components/CreatedPlaylists";
+import PlaylistRequests from "./Components/PlaylistRequests";
 import SignupPage from "./Components/SignupPage";
 import MemberProfile from "./Components/MemberProfile";
 
@@ -47,10 +47,10 @@ function App() {
             <LoginPage member={member} setMember={setMember}/>
           </Route>
           <Route path="/browseplaylists">
-            <PlaylistPage member={member} setMember={setMember} allCreatedPlaylists={allCreatedPlaylists}/>
+            <CreatedPlaylists member={member} setMember={setMember} allCreatedPlaylists={allCreatedPlaylists}/>
           </Route>
           <Route path="/browserequests">
-            <RequestPage member={member} setMember={setMember} allPlaylistRequests={allPlaylistRequests}/>
+            <PlaylistRequests member={member} setMember={setMember} allPlaylistRequests={allPlaylistRequests}/>
           </Route>
           <Route path="/profile">
             <MemberProfile member={member} setMember={setMember}/>

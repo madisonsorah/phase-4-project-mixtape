@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   get "/me", to: "members#currentmember"
-  # get '/members/:id/requests', to 'requested_playlists#myrequestedplaylists'
+  get '/members/:requester_id/requested_playlists', to: 'requested_playlists#myrequestedplaylists'
+  get '/members/:creator_id/created_playlists', to: 'created_playlists#mycreatedplaylists'
 
   resources :members, only: [:index, :show, :create, :update, :destroy]
   resources :requested_playlists, only: [:index, :show, :create, :update, :destroy]

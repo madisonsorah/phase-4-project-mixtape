@@ -1,17 +1,21 @@
 import React from 'react'
 import logo from '../images/logo.png'
+import { useHistory } from 'react-router-dom'
 import { Navbar } from 'react-bootstrap'
 import { Nav } from 'react-bootstrap'
 import { Container } from 'react-bootstrap'
 
 
 function NavBar({member, setMember}) {
+  const history = useHistory();
+
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setMember(null);
       }
     });
+    history.push("/memberlogin");
   }
   
   return (
