@@ -1,5 +1,4 @@
 import React from 'react'
-import note from '../images/RAd1s5.jpg'
 import { Card } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 

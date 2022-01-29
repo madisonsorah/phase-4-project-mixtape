@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Form } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
+=======
 import React, { useState } from "react";
 import { Form } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import NavBar from './NavBar'
+>>>>>>> main
 
 function SignUp({member, setMember}) {
   const [username, setUsername] = useState("");
@@ -11,6 +17,29 @@ function SignUp({member, setMember}) {
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
+<<<<<<< HEAD
+function SignupPage () {
+    return (
+        <Form>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Enter your email</Form.Label>
+          <Form.Control type="email" placeholder="Email" />
+          <Form.Text className="text-muted">
+            
+          </Form.Text>
+        </Form.Group>
+      
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Create a Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Continue
+        </Button>
+      </Form>
+        
+    )
+=======
   function handleSubmit(e) {
     e.preventDefault();
     fetch("/members", {
@@ -84,6 +113,7 @@ function SignUp({member, setMember}) {
       </Form>
     </div>
   );
+>>>>>>> main
 }
 
 export default SignUp;
