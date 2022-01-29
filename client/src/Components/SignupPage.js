@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import NavBar from './NavBar'
 
 function SignUp({member, setMember}) {
@@ -11,7 +11,7 @@ function SignUp({member, setMember}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -33,7 +33,7 @@ function SignUp({member, setMember}) {
         r.json().then((member) => setMember(member));
       }
     });
-    history.push("/account");
+    navigate("/account", { replace: true })
   }
 
   return (

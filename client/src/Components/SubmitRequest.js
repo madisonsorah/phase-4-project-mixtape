@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import NavBar from './NavBar'
 
 function SubmitRequest({member, setMember}) {
   const [description, setDescription] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
 
   function handleSubmitRequest(e) {
     e.preventDefault();
@@ -20,7 +20,7 @@ function SubmitRequest({member, setMember}) {
           requester_id: member.id 
         }),
     });
-    history.push("/browserequests");
+    navigate("/browserequests", { replace: true })
   }
 
   return (

@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
-import { useHistory } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import NavBar from './NavBar'
 
-function SubmitPlaylist({member, setMember, playlistRequest}) {
+function SubmitPlaylist({member, setMember}) {
+  const {id} = useParams();
   const [title, setTitle] = useState("");
   const [cover_url, setCoverUrl] = useState("");
   const [playlist_url, setPlaylistUrl] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
 
   function handleSubmitPlaylist(e) {
     e.preventDefault();
-    fetch(`/requested_playlists/${playlistRequest.id}`, {
+    fetch(`/requested_playlists/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +25,7 @@ function SubmitPlaylist({member, setMember, playlistRequest}) {
           creator_id: member.id 
         }),
     });
-    history.push("/browseplaylists");
+    navigate("/browseplaylists", { replace: true })
   }
 
   return (

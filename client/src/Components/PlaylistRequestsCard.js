@@ -1,24 +1,22 @@
 import React, {useState} from 'react'
 import { Card } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
-import { useHistory } from 'react-router-dom'
-import SubmitPlaylist from './SubmitPlaylist'
+import { useNavigate } from 'react-router-dom'
 
 function PlaylistRequestsCard({playlistRequest, member}) {
-const history = useHistory();
-const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
 
 function handleLoggedIn() {
-  if (member.id != playlistRequest.requester_id) {
-    <SubmitPlaylist playlistRequest={playlistRequest}/>
-    history.push("/submitplaylist");
+  if (member.id !== playlistRequest.requester_id) {
+    navigate(`/submitplaylist/${playlistRequest.id}`, { replace: true });
   } else {
     setError("You cannot submit a playlist for your own request.")
   }
 }
 
 function handleNotLoggedIn() {
-  history.push("/memberlogin");
+  navigate("/memberlogin", { replace: true })
 }
   
   return (

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import HomePage from "./Components/HomePage";
@@ -39,36 +39,20 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Switch>
-          <Route path="/home">
-            <HomePage member={member} setMember={setMember}/>
-          </Route>
-          <Route path="/memberlogin">
-            <LoginPage member={member} setMember={setMember}/>
-          </Route>
-          <Route path="/browseplaylists">
-            <CreatedPlaylists member={member} setMember={setMember} allCreatedPlaylists={allCreatedPlaylists}/>
-          </Route>
-          <Route path="/browserequests">
-            <PlaylistRequests member={member} setMember={setMember} allPlaylistRequests={allPlaylistRequests}/>
-          </Route>
-          <Route path="/submitrequest">
-            <SubmitRequest member={member} setMember={setMember}/>
-          </Route>
-          <Route path="/submitplaylist">
-            <SubmitPlaylist member={member} setMember={setMember}/>
-          </Route>
-          <Route path="/account">
-            <MemberAccount member={member} setMember={setMember}/>
-          </Route>
-          <Route path="/membersignup">
-            <SignupPage member={member} setMember={setMember}/>
-          </Route>
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/home" element={<HomePage member={member} setMember={setMember}/>}/>
+          <Route path="/memberlogin" element={<LoginPage member={member} setMember={setMember}/>}/>
+          <Route path="/browseplaylists" element={<CreatedPlaylists member={member} setMember={setMember} allCreatedPlaylists={allCreatedPlaylists}/>} />
+          <Route path="/browserequests" element={<PlaylistRequests member={member} setMember={setMember} allPlaylistRequests={allPlaylistRequests}/>} />
+          <Route path="/submitrequest" element={<SubmitRequest member={member} setMember={setMember}/>} />
+          <Route path="/submitplaylist/:id" element={<SubmitPlaylist member={member} setMember={setMember}/>} />
+          <Route path="/account" element={<MemberAccount member={member} setMember={setMember}/>} />
+          <Route path="/membersignup" element={<SignupPage member={member} setMember={setMember}/>} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
