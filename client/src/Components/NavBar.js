@@ -21,7 +21,7 @@ function NavBar({member, setMember}) {
   return (
     <Navbar id='navbar' expand='md'>
         {member ? (
-          <Container>
+          <Container id='navalign'>
           <Navbar.Brand href='/home'>
             <img
             src={logo}
@@ -31,8 +31,8 @@ function NavBar({member, setMember}) {
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav'/>
-          <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav id='navalign' className='navbarml-auto'>
+          <Navbar.Collapse id='basic-navbar-nav' className='navBarTabs'>
+          <Nav className='navalign'>
             <Nav.Item className='navpages'>
               <Nav.Link href='/home'>Home</Nav.Link>
             </Nav.Item>
@@ -46,10 +46,13 @@ function NavBar({member, setMember}) {
               <Nav.Link href='/playlistcreators'>Playlist Creators</Nav.Link>
             </Nav.Item>
             <Nav.Item className='navlogin'>
+              <h3 className="navH1">|</h3>
+            </Nav.Item>
+            <Nav.Item className='navlogin'>
               <Nav.Link href='/account'>Account</Nav.Link>
             </Nav.Item>
             <Nav.Item className='navlogin'>
-              <button className='logoutButton' onClick={handleLogoutClick}>Logout</button>
+              <Nav.Link onClick={handleLogoutClick}>Logout</Nav.Link>
             </Nav.Item>
             </Nav>
           </Navbar.Collapse>
@@ -75,6 +78,9 @@ function NavBar({member, setMember}) {
             </Nav.Item>
             <Nav.Item className='navpages'>
               <Nav.Link href='/browserequests'>Browse Requests</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className='navlogin'>
+              <h3 className="navH1">|</h3>
             </Nav.Item>
             <Nav.Item className='navlogin'>
               <Nav.Link href='/memberlogin' >Log In</Nav.Link>

@@ -21,50 +21,66 @@ function HomePage({member, setMember}) {
       }, []);
 
       const createdPlaylists = allCreatedPlaylists.map((createdPlaylist) => (
+        <div className='playlistCards'>
         <Card className='memberAccountCard' key={createdPlaylist.id} style={{ width: '18rem' }}>
-          <Card.Img variant='top' src={createdPlaylist.cover_url}/>
+          <Card.Img className="coverImage" variant='top' src={createdPlaylist.cover_url}/>
           <Card.Body>
-            <Link to={`/playlist/${createdPlaylist.id}`}>{createdPlaylist.title}</Link>
-            <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>{createdPlaylist.description}</Card.Text>
+            <Link className='playlistTitle' to={`/playlist/${createdPlaylist.id}`}>{createdPlaylist.title}</Link>
+            <Card.Text className='playlistDescription'><h6 className='fulfilledRequestP'>Fulfilled Request</h6>"{createdPlaylist.description}"</Card.Text>
             <a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a>
           </Card.Body>
         </Card>
+        </div>
       ));
 
 
       const requestedPlaylists = allPlaylistRequests.map((requestedPlaylist) => (
+        <div className='playlistCards'>
         <Card className='memberAccountCard' key={requestedPlaylist.id} style={{ width: '18rem' }}>
           <Card.Img variant='top'/>
           <Card.Body>
-            <Card.Title>Active Request</Card.Title>
-            <Card.Text>{requestedPlaylist.description}</Card.Text>
+            <Card.Title className='playlistTitle'>Active Request</Card.Title>
+            <Card.Text className='playlistDescription'>{requestedPlaylist.description}</Card.Text>
           </Card.Body>
         </Card>
+        </div>
       ));
   
   return (
-    <div className='homePageDiv'>
+    <div className='homePage'>
       <NavBar member={member} setMember={setMember}/>
         {member ? (
-          <div>
-            <h1>Welcome back to Mixtape, {member.username}!</h1>
-            <div>
-              <h2>Recently Created Playlists</h2>
+          <div className='homePageFloatContainer'>
+            <h1 className='homePageWelcomeHeader'>Welcome back to MixTape, <Link className="welcomeUsername" to="/account">{member.username}</Link>!</h1>
+            <div className='homePageCreatedContainer'>
+              <h4 className='homePageh2'>Recently Created Playlists</h4>
+              <div className='playlistContainer'>
               {createdPlaylists}
+              </div>
             </div>
-            <div>Recently Submitted Requests</div>
+            <div className='homePageRequestedContainer'>
+              <h4 className='homePageh2'>Recently Submitted Requests</h4>
+              <div className='playlistContainer'>
               {requestedPlaylists}
+              </div>
+            </div>
           </div>
         ) : (
-          <div>
-            <h1>Welcome to Mixtape</h1>
-            <Link to='/login'>Login</Link> | <Link to='/signup'>Sign Up</Link>
+          <div className='homePageFloatContainer'>
+            <h1 className='homePageWelcomeHeader2'>Welcome to MixTape!</h1>
+            <Link className="welcomeUsername2" to='/login'>Login</Link> or <Link className="welcomeUsername2" to='/signup'>Sign Up</Link>
             <div>
-              <h2>Recently Created Playlists</h2>
+              <h4 className='homePageh2'>Recently Created Playlists</h4>
+              <div className='playlistContainer'>
               {createdPlaylists}
+              </div>
             </div>
-            <div>Recently Submitted Requests</div>
+            <div>
+              <h4 className='homePageh2'>Recently Submitted Requests</h4>
+              <div className='playlistContainer'>
               {requestedPlaylists}
+              </div>
+            </div>
           </div>
         )}
     </div>

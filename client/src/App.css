@@ -1,5 +1,7 @@
 body {
-  background-color: #1A1D29;
+  background-color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  background-repeat: no-repeat;
 }
 
 #log-body {
@@ -12,81 +14,64 @@ body {
 }
 
 .navbar {
-  background-color: #5c0353;
+  background-color: #000;
   position: fixed;
    top: 0;
    z-index: 100;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
 }
 
-#navalign {
-  margin-left: auto;
-  text-align: center;
-  right: 100%;
+.navBarTabs {
+  float:right;
 }
 
-.container {
-  height: 100% !important;
-}
-
-@keyframes navpage {
-  from {background-color: #991AFD}
-  to {background-color: #00F0FF;}
-}
-
-@keyframes navlink {
-  from {background-color:#FF00E5 ;}
-  to {background-color:#00F0FF ;}
+.navalign { 
+  height: 100%
 }
 
 .navpages {
-  background-color: #991AFD;
-  border-bottom: solid 1px black;
-  height: 100%;
+  padding: 20px;
 }
 
 .navpages:hover {
   animation-name: navpage;
   animation-duration: .3s;
   animation-fill-mode: forwards;
-  height: 100%;
+  padding: 20px;
+}
+
+.navH1 {
+  color: #fff !important;
+  padding-top: 3px;
 }
 
 .navlogin {
-  background-color: #FF00E5;
-  border-bottom: solid 1px black;
-  height: 100%;
+  padding: 20px;
 }
 
 .navlogin:hover {
   animation-name: navlink;
   animation-duration: .3s;
   animation-fill-mode: forwards;
-  height: 100%;
-}
-
-.logoutButton {
-  background-color: #FF00E5;
-  border: none;
-  padding: 7.3px;
-  color: white !important;
-  font-weight: bold;
-}
-
-.logoutButton:hover {
-  animation-name: navlink;
-  animation-duration: .3s;
-  animation-fill-mode: forwards;
+  padding: 20px;
 }
 
 .nav-link {
-  color: white !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: rgb(194, 41, 186) !important;
   font-weight: bold;
 }
 
 #logo {
-  width: 200px;
-  height: 50px
+  width: 250px;
+  height: 70px;
+  margin-right: 50px;
 }
 
 form {
@@ -103,17 +88,58 @@ form {
 .homePageDiv {
   margin: auto;
   padding-top: 100px;
-  color: white;
+  color: rgb(231, 231, 231);
 }
 
 .memberAccountCard {
-  color: black;
+  color: #fff;
+  background-color: #000;
+  border-radius: 25px;
+  border-color: #000;
+  margin: 20px;
+  height: 300px;
+}
+
+.coverImage {
+  width: 50px;
+  height: 50px;
+}
+
+.playlistTitle {
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(194, 41, 186);
+}
+
+.playlistTitle:hover {
+  text-decoration: underline;
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(194, 41, 186);
+}
+
+.playlistContainer {
+  display: inline-block;
+}
+
+.playlistCards {
+  display: inline-block;
+  flex-wrap: wrap;
 }
 
 .createdPlaylistURL {
-  text-decoration:none;
-  color: black;
-  font-weight: 700;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  color:#fff;
+}
+
+.createdPlaylistURL:hover {
+  text-decoration: underline;
+  font-size: large;
+  font-weight: bold;
+  color: rgb(194, 41, 186);
 }
 
 .receivedPlaylistURL {
@@ -122,8 +148,87 @@ form {
   font-weight: 700;
 }
 
+.playlistDescription {
+  color: #fff;
+}
+
 .fulfilledRequestP {
-  color: black;
+  color: #fff;
+  font-weight: 700;
+  font-size: medium;
+  padding-top: 10px;
+}
+
+.homePage {
+  text-align: center;
+}
+
+.homePageWelcomeHeader {
+  color: #000;
+  padding-bottom: 50px;
+  font-weight: bold;
+}
+
+.homePageWelcomeHeader2 {
+  color: #000;
+  font-weight: bold;
+}
+
+.welcomeUsername {
+  color: #000;
+}
+
+.welcomeUsername2 {
+  color: #000;
+  font-size: x-large;
+}
+
+.welcomeUsername:hover {
+  color: #000;
+}
+
+.homePageh2 {
   font-weight: 700;
 }
+
+.homePageFloatContainer {
+  margin: auto;
+  padding-top: 175px;
+}
+
+.homePageHaveAccount {
+  font-size: small;
+}
+
+.homePageLogin {
+  font-weight: 700;
+}
+
+.homePageLogin:hover {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.homePageSignUp {
+  font-weight: 700;
+}
+
+.homePageSignUp:hover {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.homePageCreatedContainer {
+  height: 400px;
+  background-color: #fff;
+  color: #000;
+}
+
+.homePageRequestedContainer {
+  height: 400px;
+  background-color: #fff;
+  color: #000;
+}
+
+
 
