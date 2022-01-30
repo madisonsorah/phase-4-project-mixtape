@@ -13,17 +13,19 @@ function CreatedPlaylistsCard({createdPlaylist}) {
 }, [createdPlaylist]) 
   
   return (
-    <Card style={{ width: '18rem' }}>
+    <div className='playlistCards'>
+    <Card className='memberAccountCard' style={{ width: '18rem' }}>
       <Card.Img variant='top' src={createdPlaylist.cover_url}/>
       <Card.Body>
-        <Link to={`/playlist/${createdPlaylist.id}`}>{createdPlaylist.title}</Link>
+        <Link className='playlistTitle' to={`/playlist/${createdPlaylist.id}`}>{createdPlaylist.title}</Link>
         <p>Creator</p>
-        <Link to={`/profile/${playlistCreator.id}`}>{playlistCreator.username}</Link>
-        <p>Fulfilled Request</p>
-        <p>{createdPlaylist.description}</p>
-        <Button variant='primary'><a href={createdPlaylist.playlist_url}>Link to Playlist</a></Button>
+        <Link className='playlistDescription' to={`/profile/${playlistCreator.id}`}>{playlistCreator.username}</Link>
+        <p className='playlistDescription'>Fulfilled Request</p>
+        <p className='playlistDescription'>{createdPlaylist.description}</p>
+        <Button className='createdPlaylistButton' variant='primary'><a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a></Button>
       </Card.Body>
     </Card>
+    </div>
   )
 }
 

@@ -94,6 +94,7 @@ form {
   align-items: center;
   color: #000;
   background-color: #fff;
+  border-color: #fff;
   margin: 20px;
   height: 200px;
 }
@@ -121,7 +122,16 @@ form {
 .playlistContainer {
   display: inline-block;
   height: 500px;
-  width: 1000px;
+  width: 100%;
+  margin: 30px;
+  background-color: #fff;
+  color: #000;
+}
+
+.playlistContainer {
+  display: inline-block;
+  height: 300px;
+  width: 100%;
   margin: 30px;
   background-color: #fff;
   color: #000;
@@ -136,14 +146,14 @@ form {
   text-decoration: none;
   font-size: large;
   font-weight: bold;
-  color:#000;
+  color:#fff;
 }
 
 .createdPlaylistURL:hover {
   text-decoration: underline;
   font-size: large;
   font-weight: bold;
-  color: rgb(194, 41, 186);
+  color:#fff;
 }
 
 .receivedPlaylistURL {
@@ -167,33 +177,61 @@ form {
   text-align: center;
 }
 
+.welcomeDiv {
+  background-color: #000;
+  width: 100%;
+  height: 250px;
+  text-align: center;
+}
+
+.welcomeDiv1 {
+  background-color: #000;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+}
+
+.homepageFooter {
+  background-color: #000;
+  width: 100%;
+  height: 250px;
+}
+
 .homePageWelcomeHeader {
-  color: #000;
+  color: #fff;
+  padding-top: 50px;
   padding-bottom: 50px;
   font-weight: bold;
 }
 
 .homePageWelcomeHeader2 {
-  color: #000;
+  color: #fff;
   font-weight: bold;
+  padding-top: 20px;
 }
 
 .welcomeUsername {
-  color: #000;
+  color: #fff;
 }
 
 .welcomeUsername2 {
-  color: #000;
+  color: #fff;
   font-size: large;
 }
 
 .welcomeUsername2:hover {
-  color: #000;
+  color: #fff;
   font-size: large;
 }
 
 .welcomeUsername:hover {
-  color: #000;
+  color: #fff;
+}
+
+.joinCommunity {
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .homePageh2 {
@@ -208,7 +246,7 @@ form {
 
 .homePageFloatContainer {
   margin: auto;
-  padding-top: 175px;
+  padding-top: 100px;
 }
 
 .homePageHaveAccount {
@@ -231,6 +269,46 @@ form {
 .homePageSignUp:hover {
   font-weight: 700;
   text-decoration: underline;
+}
+
+.createdPlaylistButton {
+  background-color: #000;
+  border-color: #000;
+}
+
+.searchBar {
+  padding-top: 5px;
+  background-color: #000;
+  border-color: #fff;
+  color: #fff;
+}
+
+.createdPlaylistsH2 {
+  padding-top: 120px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.createdPlaylistsP {
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.createdPlaylistsDiv {
+  background-color: #000;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+}
+
+.createdPlaylistsContainer {
+  display: inline-block;
+  height: 600px;
+  width: 100%;
+  margin: 30px;
+  background-color: #fff;
+  color: #000;
 }
 
 

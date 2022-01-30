@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import NavBar from './NavBar';
 import {Card} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-
 
 function HomePage({member, setMember}) {
   const [allCreatedPlaylists, setAllCreatedPlaylists] = useState([]);
@@ -22,12 +22,12 @@ function HomePage({member, setMember}) {
 
       const createdPlaylists = allCreatedPlaylists.map((createdPlaylist) => (
         <div className='playlistCards'>
-        <Card className='memberAccountCard' key={createdPlaylist.id} style={{ width: '18rem' }}>
-          <Card.Img className="coverImage" variant='top' src={createdPlaylist.cover_url}/>
+          <Card className='memberAccountCard' style={{ width: '18rem' }}>
           <Card.Body>
             <Link className='playlistTitle' to={`/playlist/${createdPlaylist.id}`}>{createdPlaylist.title}</Link>
-            <Card.Text className='playlistDescription'><h6 className='fulfilledRequestP'>Fulfilled Request</h6>"{createdPlaylist.description}"</Card.Text>
-            <a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a>
+            <p className='playlistDescription'>Fulfilled Request</p>
+            <p className='playlistDescription'>{createdPlaylist.description}</p>
+            <Button className='createdPlaylistButton' variant='primary'><a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a></Button>
           </Card.Body>
         </Card>
         </div>
@@ -50,7 +50,9 @@ function HomePage({member, setMember}) {
       <NavBar member={member} setMember={setMember}/>
         {member ? (
           <div className='homePageFloatContainer'>
+            <div className='welcomeDiv1'>
             <h1 className='homePageWelcomeHeader'>Welcome back to MixTape, <Link className="welcomeUsername" to="/account">{member.username}</Link>!</h1>
+            </div>
             <div className='homePageCreatedContainer'>
               <div className='playlistContainer'>
               <h4 className='homePageh2'>Recently Created Playlists</h4>
@@ -63,17 +65,20 @@ function HomePage({member, setMember}) {
               {requestedPlaylists}
               </div>
             </div>
+            <div className='homepageFooter'></div>
           </div>
         ) : (
           <div className='homePageFloatContainer'>
+            <div className='welcomeDiv'>
             <h1 className='homePageWelcomeHeader2'>Welcome to MixTape!</h1>
-            <h6>Join our local community of audio lovers and share personalized playlists.</h6>
+            <h6 className='joinCommunity'>Join our local community of audio lovers and share personalized playlists.</h6>
             <div>
             <Link className="welcomeUsername2" to='/login'>Login</Link>
             </div>
             <div>
             <Link className="welcomeUsername2" to='/signup'>Sign Up</Link>
             </div>  
+            </div>
             <div>
               <div className='playlistContainer'>
               <h4 className='homePageh4'>Recently Created Playlists</h4>
@@ -81,11 +86,12 @@ function HomePage({member, setMember}) {
               </div>
             </div>
             <div>
-              <div className='playlistContainer'>
+              <div className='requestContainer'>
               <h4 className='homePageh4'>Recently Submitted Requests</h4>
               {requestedPlaylists}
               </div>
             </div>
+            <div className='homepageFooter'></div>
           </div>
         )}
     </div>

@@ -28,8 +28,15 @@ function CreatedPlaylists ({member, setMember}) {
     return (
     <div>
         <NavBar member={member} setMember={setMember}/>
-        <SearchBar onSearch={setSearch}/>
+        <div className="createdPlaylistsDiv">
+            <h2 className="createdPlaylistsH2">Created Playlists</h2>
+            <p className="createdPlaylistsP">Explore thousands of mixes created by passionate creators.</p>
+            <input className='searchBar' value={search} placeholder="Search for Playlists" onChange={(e) => setSearch(e.target.value)}></input>
+        </div>
+        <div className='createdPlaylistsContainer'>
         {displayedCreatedPlaylists}
+        </div>
+        <div className='homepageFooter'></div>
     </div>
     )
 }
