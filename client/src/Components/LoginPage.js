@@ -7,6 +7,7 @@ import NavBar from './NavBar';
 function LoginPage ({member, setMember}) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
   function handleSubmit(e) {
@@ -20,9 +21,11 @@ function LoginPage ({member, setMember}) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((member) => setMember(member));
+        navigate("/account", { replace: true });
+      } else {
+        setErrorMessage("Incorrect username or password.")
       }
     });
-    navigate("/account", { replace: true });
   }
 
   return (
@@ -51,6 +54,7 @@ function LoginPage ({member, setMember}) {
           onChange={(e) => setPassword(e.target.value)} />
         </Form.Group>
         <Button variant='primary' type='submit'>Submit</Button>
+        {errorMessage ? (<p className='errorMessage'>{errorMessage}</p>) : null}
       </Form>
       </div>
     </div>

@@ -11,6 +11,7 @@ function SignUp({member, setMember}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
   function handleSubmit(e) {
@@ -31,9 +32,11 @@ function SignUp({member, setMember}) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((member) => setMember(member));
+        navigate('/account', { replace: true })
+      } else {
+        setErrorMessage("An account with these credentials already exists.")
       }
     });
-    navigate('/account', { replace: true })
   }
 
   return (
@@ -85,6 +88,7 @@ function SignUp({member, setMember}) {
           autoComplete='current-password'
         />
         <Button type='submit'>Sign Up</Button>
+        {errorMessage ? (<p className='errorMessage'>{errorMessage}</p>) : null}
       </Form>
       </div>
     </div>

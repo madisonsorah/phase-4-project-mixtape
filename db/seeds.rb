@@ -20,7 +20,7 @@ madison = Member.create!(
     email: "madisonsorah@gmail.com",
     password: "catsarecute1",
     bio: "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY. My favorite music genres are dance, disco and pop.",
-    avatar_url: "XX"
+    avatar_url: "https://www.dropbox.com/s/7qu52q69z50yh1b/Screen%20Shot%202021-09-27%20at%203.11.26%20PM.jpg?dl=0"
   })
 
 lyrik = Member.create!(
@@ -30,8 +30,8 @@ lyrik = Member.create!(
     username: "Straigus",
     email: "kirylmitch@gmail.com",
     password: "Straigus1",
-    bio: "XX",
-    avatar_url: "XX"
+    bio: "I'm a gamer with a wide-ranging library for music.",
+    avatar_url: "https://www.dropbox.com/s/b9041qbd4rec9g8/steamuserimages-a.akamaihd.jpg?dl=0"
   })
 
 # Sample created/received playlists
@@ -45,15 +45,35 @@ Playlist.create!(
     creator_id: lyrik.id
   })
 
-Playlist.create!(
-  {
-    title: "Otakus Only",
-    cover_url: "XX",
-    playlist_url: "XX",
-    description: "I'd love a mix with anime intro songs.",
-    requester_id: lyrik.id,
-    creator_id: madison.id
-  })
+  Playlist.create!(
+    {
+      title: "Disco Ball",
+      cover_url: "XX",
+      playlist_url: "XX",
+      description: "Looking for an 80s-inspired disco playlist.",
+      requester_id: madison.id,
+      creator_id: lyrik.id
+    })
+
+  Playlist.create!(
+    {
+      title: "Otakus Only",
+      cover_url: "XX",
+      playlist_url: "XX",
+      description: "I'd love a mix with anime intro songs.",
+      requester_id: lyrik.id,
+      creator_id: madison.id
+    })
+
+  Playlist.create!(
+    {
+      title: "Zen Ambience",
+      cover_url: "XX",
+      playlist_url: "XX",
+      description: "I'd love a chill playlist to work to.",
+      requester_id: lyrik.id,
+      creator_id: madison.id
+    })
 
 # Sample playlist requests
 Playlist.create!(
@@ -64,7 +84,7 @@ Playlist.create!(
 
 Playlist.create!(
   {
-    description: "Looking for an energetic, female vocalist playlist.",
+    description: "Looking for an upbeat, female vocalist playlist.",
     requester_id: madison.id,
   })
 

@@ -79,6 +79,9 @@ function NavBar({member, setMember}) {
             <Nav.Item className='navpages'>
               <Nav.Link href='/browserequests'>Browse Requests</Nav.Link>
             </Nav.Item>
+            <Nav.Item className='navpages'>
+              <Nav.Link href='/playlistcreators'>Playlist Creators</Nav.Link>
+            </Nav.Item>
             <Nav.Item className='navlogin'>
               <h3 className="navH1">|</h3>
             </Nav.Item>
