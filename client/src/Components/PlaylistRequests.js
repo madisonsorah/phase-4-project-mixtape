@@ -32,13 +32,13 @@ function PlaylistRequests({member, setMember}) {
             <NavBar member={member} setMember={setMember}/>
             {member ? (
                 <div>
-                    <div className="requestedPlaylistsDiv">
-                        <h2 className="createdPlaylistsH2">Playlist Requests</h2>
-                        <p className="createdPlaylistsP">Create a personalized playlist for a MixTape member or submit a request.</p>
-                        <div className="submitDiv">
-                        <Link className="submitRequest" to='/submitrequest'>Submit Playlist Request</Link>
+                    <div className='requestedPlaylistsDiv'>
+                        <h2 className='createdPlaylistsH2'>Playlist Requests</h2>
+                        <p className='createdPlaylistsP'>Create a personalized playlist for a MixTape member or submit a request.</p>
+                        <div className='submitDiv'>
+                        <Link className='submitRequest' to='/submitrequest'>Submit Playlist Request</Link>
                         </div>
-                        <input className='searchBar' value={search} placeholder="Search for Request" onChange={(e) => setSearch(e.target.value)}></input>
+                        <input className='searchBar' value={search} placeholder='Search for Request' onChange={(e) => setSearch(e.target.value)}></input>
                     </div>
                     <div className='createdPlaylistsContainer'>
                     {displayedPlaylistRequests}
@@ -47,10 +47,10 @@ function PlaylistRequests({member, setMember}) {
                 </div>
             ) : (
                 <div>
-                    <div className="requestedPlaylistsDiv">
-                        <h2 className="createdPlaylistsH2">Playlist Requests</h2>
-                        <p className="createdPlaylistsP">Create a personalized playlist for a MixTape member.</p>
-                        <input className='searchBar' value={search} placeholder="Search for Request" onChange={(e) => setSearch(e.target.value)}></input>
+                    <div className='requestedPlaylistsDiv'>
+                        <h2 className='createdPlaylistsH2'>Playlist Requests</h2>
+                        <p className='createdPlaylistsP'>Create a personalized playlist for a MixTape member.</p>
+                        <input className='searchBar' value={search} placeholder='Search for Request' onChange={(e) => setSearch(e.target.value)}></input>
                     </div>
                     <div className='createdPlaylistsContainer'>
                     {displayedPlaylistRequests} 

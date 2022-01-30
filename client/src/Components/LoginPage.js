@@ -13,17 +13,17 @@ function LoginPage ({member, setMember}) {
   function handleSubmit(e) {
     e.preventDefault();
     fetch('/login', {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({ username, password }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((member) => setMember(member));
-        navigate("/account", { replace: true });
+        navigate('/account', { replace: true });
       } else {
-        setErrorMessage("Incorrect username or password.")
+        setErrorMessage('Incorrect username or password.')
       }
     });
   }
@@ -31,7 +31,7 @@ function LoginPage ({member, setMember}) {
   return (
     <div className='loginPage'>
       <NavBar member={member} setMember={setMember}/>
-      <div className="loginFormDiv">
+      <div className='loginFormDiv'>
       <Form onSubmit={handleSubmit}>
         <Form.Group className='mb-3' controlId='formBasicEmail'>
           <Form.Label>Username:</Form.Label>

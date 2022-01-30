@@ -93,11 +93,11 @@ function MemberProfile({member, setMember}) {
     return (
         <div> 
             <NavBar member={member} setMember={setMember} />
-            <div className="memberPageFloatContainer">
-              <div className="memberPageFloatLeft">
+            <div className='memberPageFloatContainer'>
+              <div className='memberPageFloatLeft'>
                   {displayedMemberProfile}
               </div>
-              <div className="memberPageFloatRight">
+              <div className='memberPageFloatRight'>
                 <div>
                     <h1>Created Playlists</h1>
                     {displayedCreatedPlaylists}

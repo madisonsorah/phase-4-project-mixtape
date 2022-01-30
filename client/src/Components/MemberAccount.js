@@ -40,7 +40,7 @@ function MemberAccount({member, setMember}) {
       <Card.Img variant='top' src={createdPlaylist.cover_url}/>
       <Card.Body>
         <Card.Title>{createdPlaylist.title}</Card.Title>
-        <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>"{createdPlaylist.description}"</Card.Text>
+        <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>'{createdPlaylist.description}'</Card.Text>
         <a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a>
       </Card.Body>
     </Card>
@@ -53,7 +53,7 @@ function MemberAccount({member, setMember}) {
       <Card.Img variant='top' src={receivedPlaylist.cover_url}/>
       <Card.Body>
         <Card.Title>{receivedPlaylist.title}</Card.Title>
-        <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>"{receivedPlaylist.description}"</Card.Text>
+        <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>'{receivedPlaylist.description}'</Card.Text>
         <a className='receivedPlaylistURL' href={receivedPlaylist.playlist_url}>Link to Playlist</a>
       </Card.Body>
     </Card>
@@ -66,7 +66,7 @@ function MemberAccount({member, setMember}) {
       <Card.Img variant='top'/>
       <Card.Body>
         <Card.Title>Active Request</Card.Title>
-        <Card.Text>"{requestedPlaylist.description}"</Card.Text>
+        <Card.Text>'{requestedPlaylist.description}'</Card.Text>
         <Button variant='primary' onClick={() => handleDeleteRequest(requestedPlaylist.id)}>Delete</Button>
       </Card.Body>
     </Card>
@@ -84,7 +84,7 @@ function MemberAccount({member, setMember}) {
               <p className='accountPageP'>{member.email}</p>
               <Link to={`/profile/${member.id}`}>My Profile Page</Link>
             </div>
-            <div className="accountPlaylists">
+            <div className='accountPlaylists'>
             <div className='homePageCreatedContainer'>
               <div className='playlistContainer'>
                 <h4 className='homePageh2'>Created Playlists</h4>

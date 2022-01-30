@@ -34,7 +34,7 @@ function SignUp({member, setMember}) {
         r.json().then((member) => setMember(member));
         navigate('/account', { replace: true })
       } else {
-        setErrorMessage("An account with these credentials already exists.")
+        setErrorMessage('An account with these credentials already exists.')
       }
     });
   }
@@ -42,7 +42,7 @@ function SignUp({member, setMember}) {
   return (
     <div className='signUpPage'>
       <NavBar member={member} setMember={setMember}/>
-      <div className="signUpFormDiv">
+      <div className='signUpFormDiv'>
       <Form onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <Form.Label>First Name</Form.Label>

@@ -13,6 +13,8 @@ body {
   visibility: hidden
 }
 
+/* NavBar */
+
 .navbar {
   background-color: #000;
   position: fixed;
@@ -74,16 +76,12 @@ body {
   margin-right: 50px;
 }
 
-form {
-  margin: auto;
-  width: 600px;
-  padding: 100px;
-}
-
 .form-label {
   color: white !important;
   font-weight: bold;
 }
+
+/* HomePage */
 
 .homePageDiv {
   margin: auto;
@@ -458,4 +456,10 @@ form {
 .loginFormDiv {
   margin-top: 100px;
   height: 800px;
+}
+
+form {
+  margin: auto;
+  width: 600px;
+  padding: 100px;
 }

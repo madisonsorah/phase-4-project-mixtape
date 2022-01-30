@@ -46,7 +46,7 @@ function NavBar({member, setMember}) {
               <Nav.Link href='/playlistcreators'>Playlist Creators</Nav.Link>
             </Nav.Item>
             <Nav.Item className='navlogin'>
-              <h3 className="navH1">|</h3>
+              <h3 className='navH1'>|</h3>
             </Nav.Item>
             <Nav.Item className='navlogin'>
               <Nav.Link href='/account'>Account</Nav.Link>
@@ -83,7 +83,7 @@ function NavBar({member, setMember}) {
               <Nav.Link href='/playlistcreators'>Playlist Creators</Nav.Link>
             </Nav.Item>
             <Nav.Item className='navlogin'>
-              <h3 className="navH1">|</h3>
+              <h3 className='navH1'>|</h3>
             </Nav.Item>
             <Nav.Item className='navlogin'>
               <Nav.Link href='/memberlogin' >Log In</Nav.Link>

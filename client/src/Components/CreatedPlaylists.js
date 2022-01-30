@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import NavBar from './NavBar';
 import CreatedPlaylistsCard from './CreatedPlaylistsCard';
-import SearchBar from './SearchBar';
 
 function CreatedPlaylists ({member, setMember}) {
     const [search, setSearch] = useState('');
@@ -28,10 +27,10 @@ function CreatedPlaylists ({member, setMember}) {
     return (
     <div>
         <NavBar member={member} setMember={setMember}/>
-        <div className="createdPlaylistsDiv">
-            <h2 className="createdPlaylistsH2">Created Playlists</h2>
-            <p className="createdPlaylistsP">Explore thousands of mixes created by passionate creators.</p>
-            <input className='searchBar' value={search} placeholder="Search for Playlists" onChange={(e) => setSearch(e.target.value)}></input>
+        <div className='createdPlaylistsDiv'>
+            <h2 className='createdPlaylistsH2'>Created Playlists</h2>
+            <p className='createdPlaylistsP'>Explore thousands of mixes created by passionate creators.</p>
+            <input className='searchBar' value={search} placeholder='Search for Playlists' onChange={(e) => setSearch(e.target.value)}></input>
         </div>
         <div className='createdPlaylistsContainer'>
         {displayedCreatedPlaylists}
