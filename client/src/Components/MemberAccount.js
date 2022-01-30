@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import NavBar from './NavBar';
 import {Card} from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 function MemberAccount({member, setMember}) {
   const [myCreatedPlaylists, setMyCreatedPlaylists] = useState([]);
@@ -34,36 +35,42 @@ function MemberAccount({member, setMember}) {
   };
 
   const createdPlaylists = myCreatedPlaylists.map((createdPlaylist) => (
+    <div className='playlistCards'>
     <Card className='memberAccountCard' key={createdPlaylist.id} style={{ width: '18rem' }}>
       <Card.Img variant='top' src={createdPlaylist.cover_url}/>
       <Card.Body>
         <Card.Title>{createdPlaylist.title}</Card.Title>
-        <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>{createdPlaylist.description}</Card.Text>
+        <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>"{createdPlaylist.description}"</Card.Text>
         <a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a>
       </Card.Body>
     </Card>
+    </div>
   ));
 
   const receivedPlaylists = myReceivedPlaylists.map((receivedPlaylist) => (
+    <div className='playlistCards'>
     <Card className='memberAccountCard' key={receivedPlaylist.id} style={{ width: '18rem' }}>
       <Card.Img variant='top' src={receivedPlaylist.cover_url}/>
       <Card.Body>
         <Card.Title>{receivedPlaylist.title}</Card.Title>
-        <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>{receivedPlaylist.description}</Card.Text>
+        <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>"{receivedPlaylist.description}"</Card.Text>
         <a className='receivedPlaylistURL' href={receivedPlaylist.playlist_url}>Link to Playlist</a>
       </Card.Body>
     </Card>
+    </div>
   ));
 
   const requestedPlaylists = myRequestedPlaylists.map((requestedPlaylist) => (
+    <div className='playlistCards'>
     <Card className='memberAccountCard' key={requestedPlaylist.id} style={{ width: '18rem' }}>
       <Card.Img variant='top'/>
       <Card.Body>
         <Card.Title>Active Request</Card.Title>
-        <Card.Text>{requestedPlaylist.description}</Card.Text>
+        <Card.Text>"{requestedPlaylist.description}"</Card.Text>
         <Button variant='primary' onClick={() => handleDeleteRequest(requestedPlaylist.id)}>Delete</Button>
       </Card.Body>
     </Card>
+    </div>
   ));
 
     return (
@@ -71,23 +78,31 @@ function MemberAccount({member, setMember}) {
         <NavBar member={member} setMember={setMember}/>
          {member ? (
            <div>
-            <div>
-              <h1>Hello, {member.first_name}!</h1>
-              <img alt='member avatar' src={member.avatar_url}></img>
-              <p>{member.username}</p>
-              <p>{member.email}</p>
+            <div className='welcomeDiv'>
+              <h1 className='accountPageWelcomeHeader'>Hello, {member.first_name}!</h1>
+              <p className='accountPageP'>{member.username}</p>
+              <p className='accountPageP'>{member.email}</p>
+              <Link to={`/profile/${member.id}`}>My Profile Page</Link>
             </div>
-            <div>
-              <h1>Created Playlists</h1>
-              {createdPlaylists}
+            <div className="accountPlaylists">
+            <div className='homePageCreatedContainer'>
+              <div className='playlistContainer'>
+                <h4 className='homePageh2'>Created Playlists</h4>
+                {createdPlaylists}
+              </div>
             </div>
-            <div>
-              <h1>Received Playlists</h1>
-              {receivedPlaylists}
+            <div className='homePageCreatedContainer'>
+              <div className='playlistContainer'>
+                <h4 className='homePageh2'>Received Playlists</h4>
+                {receivedPlaylists}
+              </div>
             </div>
-            <div>
-              <h1>Open Playlist Requests</h1>
-              {requestedPlaylists}
+            <div className='homePageCreatedContainer'>
+              <div className='playlistContainer'>
+                <h4 className='homePageh2'>Open Playlist Requests</h4>
+                {requestedPlaylists}
+              </div>
+            </div>
             </div>
             </div>
           ) : (

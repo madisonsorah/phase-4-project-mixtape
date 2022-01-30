@@ -93,22 +93,26 @@ function MemberProfile({member, setMember}) {
     return (
         <div> 
             <NavBar member={member} setMember={setMember} />
-            <div>
-                {displayedMemberProfile}
-            </div>
-            <div>
-                <h1>Created Playlists</h1>
-                {displayedCreatedPlaylists}
-            </div>
-            <div>
-                <h1>Received Playlists</h1>
-                {displayedReceivedPlaylists}
-            </div>
-            <div>
-                <h1>Open Playlist Requests</h1>
-                {displayedRequestedPlaylists}
-            </div>
+            <div className="memberPageFloatContainer">
+              <div className="memberPageFloatLeft">
+                  {displayedMemberProfile}
+              </div>
+              <div className="memberPageFloatRight">
+                <div>
+                    <h1>Created Playlists</h1>
+                    {displayedCreatedPlaylists}
+                </div>
+                <div>
+                    <h1>Received Playlists</h1>
+                    {displayedReceivedPlaylists}
+                </div>
+                <div>
+                    <h1>Open Playlist Requests</h1>
+                    {displayedRequestedPlaylists}
+                </div>
+              </div>
         </div>
+      </div>
     )
 }
 

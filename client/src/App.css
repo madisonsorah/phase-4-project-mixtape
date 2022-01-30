@@ -92,11 +92,20 @@ form {
 
 .memberAccountCard {
   align-items: center;
-  color: #000;
-  background-color: #fff;
-  border-color: #fff;
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
   margin: 20px;
   height: 200px;
+}
+
+.createdPlaylistCard {
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  margin: 20px;
+  height: 300px;
 }
 
 .coverImage {
@@ -109,30 +118,21 @@ form {
   text-decoration: none;
   font-size: x-large;
   font-weight: bold;
-  color: #000;
+  color: #fff;
 }
 
 .playlistTitle:hover {
   text-decoration: underline;
   font-size: x-large;
   font-weight: bold;
-  color: #000;
+  color: #fff;
 }
 
 .playlistContainer {
   display: inline-block;
-  height: 500px;
-  width: 100%;
-  margin: 30px;
-  background-color: #fff;
-  color: #000;
-}
-
-.playlistContainer {
-  display: inline-block;
+  margin-top: 50px;
   height: 300px;
   width: 100%;
-  margin: 30px;
   background-color: #fff;
   color: #000;
 }
@@ -140,6 +140,7 @@ form {
 .playlistCards {
   display: inline-block;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .createdPlaylistURL {
@@ -163,11 +164,11 @@ form {
 }
 
 .playlistDescription {
-  color: #000;
+  color: #ffff;
 }
 
 .fulfilledRequestP {
-  color: #000;
+  color: #fff;
   font-weight: 700;
   font-size: medium;
   padding-top: 10px;
@@ -276,6 +277,11 @@ form {
   border-color: #000;
 }
 
+.createdPlaylistButton:hover {
+  background-color: #000;
+  border-color: #000;
+}
+
 .searchBar {
   padding-top: 5px;
   background-color: #000;
@@ -291,7 +297,6 @@ form {
 }
 
 .createdPlaylistsP {
-  padding-bottom: 10px;
   color: #fff;
 }
 
@@ -311,5 +316,146 @@ form {
   color: #000;
 }
 
+.errorMessage {
+  padding-top: 10px;
+  font-size: small;
+  color: rgb(255, 0, 0)
+}
 
+.submitRequest {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: 700;
+}
 
+.submitRequest:hover {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: 700;
+}
+
+.submitDiv {
+  padding-bottom: 20px;
+}
+
+.requestedPlaylistsDiv {
+  background-color: #000;
+  width: 100%;
+  height: 325px;
+  text-align: center;
+}
+
+.memberListMember {
+  margin: 10px;
+  padding: 20px;
+  display: block;
+  text-align: center;
+  float: left;
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.memberListMember:hover {
+  background-color: #000;
+}
+
+.memberListAvatar {
+  width: 180px;
+  height: 150px;
+  margin: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.memberListLink {
+  font-weight: 700;
+  font-size: medium;
+  margin-top: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.memberListLink:hover {
+  font-weight: 700;
+  font-size: medium;
+  margin-top: 20px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.accountPageWelcomeHeader {
+  color: #fff;
+  padding-top: 50px;
+  font-weight: bold;
+}
+
+.accountPageP {
+  color: #fff;
+}
+
+.accountPageAvatar {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  display: block;
+}
+
+.floatLeft {
+  display: inline-block;
+  margin: 20px;
+}
+
+.floatRight {
+  display: inline-block;
+}
+
+.accountPlaylists {
+  text-align: center;
+}
+
+.memberPageFloatContainer {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  padding-top: 120px;
+}
+
+.memberPageFloatLeft {
+  float: left;
+  width: 20%;
+  margin-top: 25px;
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 48px;
+  background-color: #000;
+  color: #fff;
+  overflow-wrap: break-word;
+} 
+
+.memberPageFloatRight {
+  float: right;
+  margin-top: 25px;
+  width: 73%;
+  background-color: #fff;
+} 
+
+.signUpPage {
+  background-color: #000;
+  height: 100%;
+}
+
+.loginPage {
+  background-color: #000;
+  height: 100%;
+}
+
+.signUpFormDiv {
+  margin-top: 100px;
+  height: 800px;
+}
+
+.loginFormDiv {
+  margin-top: 100px;
+  height: 800px;
+}

@@ -20,15 +20,17 @@ function PlaylistRequestsCard({playlistRequest, member}) {
   }
   
   return (
-    <Card style={{ width: '18rem' }}>
+    <div className='playlistCards'>
+    <Card className='memberAccountCard' style={{ width: '18rem' }}>
       <Card.Img variant='top'/>
       <Card.Body>
-        <Card.Title>Open Request</Card.Title>
-        <Card.Text>{playlistRequest.description}</Card.Text>
-        <Button onClick={member ? handleLoggedIn : handleNotLoggedIn} variant='primary'>Submit Playlist</Button>
-        {error ? (<p>{error}</p>) : null}
+        <Card.Title className='playlistTitle'>Open Request</Card.Title>
+        <Card.Text className='playlistDescription'>{playlistRequest.description}</Card.Text>
+        <Button className='createdPlaylistButton' onClick={member ? handleLoggedIn : handleNotLoggedIn} variant='primary'>Submit Playlist</Button>
+        {error ? (<p className='errorMessage'>{error}</p>) : null}
       </Card.Body>
     </Card>
+    </div>
     )
 }
 

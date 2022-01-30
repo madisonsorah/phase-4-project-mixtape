@@ -26,8 +26,9 @@ function LoginPage ({member, setMember}) {
   }
 
   return (
-    <div>
+    <div className='loginPage'>
       <NavBar member={member} setMember={setMember}/>
+      <div className="loginFormDiv">
       <Form onSubmit={handleSubmit}>
         <Form.Group className='mb-3' controlId='formBasicEmail'>
           <Form.Label>Username:</Form.Label>
@@ -51,6 +52,7 @@ function LoginPage ({member, setMember}) {
         </Form.Group>
         <Button variant='primary' type='submit'>Submit</Button>
       </Form>
+      </div>
     </div>
   )
 }

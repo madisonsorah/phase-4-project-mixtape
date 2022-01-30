@@ -21,9 +21,9 @@ function PlaylistCreators({member, setMember}) {
     }
     
     const renderMembers = searchedMembers().map((member) => (
-        <div>
-            <img src={member.avatar_url}></img>
-            <Link to={`/profile/${member.id}`}>{member.username}</Link>
+        <div className="memberListMember">
+            <img className="memberListAvatar" src={member.avatar_url}></img>
+            <Link className="memberListLink" to={`/profile/${member.id}`}>{member.username}</Link>
         </div>
     ))
     
@@ -31,12 +31,15 @@ function PlaylistCreators({member, setMember}) {
         <div>
             <NavBar member={member} setMember={setMember}/>
             <div>
-                <div>
-                    <h1>Playlist Creators</h1>
-                    <h3 className='memberListSubHead'>Explore playlists by creator.</h3>
-                    <input value={search} placeholder='Search for Members' onChange={(e) => setSearch(e.target.value)}></input>
-                    {renderMembers}
+                <div className="createdPlaylistsDiv">
+                    <h2 className="createdPlaylistsH2">Playlist Creators</h2>
+                    <p className="createdPlaylistsP">Explore playlists and requests by creator.</p>
+                    <input className='searchBar' value={search} placeholder="Search for Creators" onChange={(e) => setSearch(e.target.value)}></input>
                 </div>
+                <div className='createdPlaylistsContainer'>
+                {renderMembers}
+                </div>
+                <div className='homepageFooter'></div>
             </div>
         </div>
     )

@@ -37,8 +37,9 @@ function SignUp({member, setMember}) {
   }
 
   return (
-    <div>
+    <div className='signUpPage'>
       <NavBar member={member} setMember={setMember}/>
+      <div className="signUpFormDiv">
       <Form onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <Form.Label>First Name</Form.Label>
@@ -85,6 +86,7 @@ function SignUp({member, setMember}) {
         />
         <Button type='submit'>Sign Up</Button>
       </Form>
+      </div>
     </div>
   );
 }
