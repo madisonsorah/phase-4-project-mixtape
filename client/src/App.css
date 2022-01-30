@@ -88,39 +88,43 @@ form {
 .homePageDiv {
   margin: auto;
   padding-top: 100px;
-  color: rgb(231, 231, 231);
 }
 
 .memberAccountCard {
-  color: #fff;
-  background-color: #000;
-  border-radius: 25px;
-  border-color: #000;
+  align-items: center;
+  color: #000;
+  background-color: #fff;
   margin: 20px;
-  height: 300px;
+  height: 200px;
 }
 
 .coverImage {
-  width: 50px;
-  height: 50px;
+  width: 250px;
+  height: 200px;
+  margin: 20px;
 }
 
 .playlistTitle {
   text-decoration: none;
   font-size: x-large;
   font-weight: bold;
-  color: rgb(194, 41, 186);
+  color: #000;
 }
 
 .playlistTitle:hover {
   text-decoration: underline;
   font-size: x-large;
   font-weight: bold;
-  color: rgb(194, 41, 186);
+  color: #000;
 }
 
 .playlistContainer {
   display: inline-block;
+  height: 500px;
+  width: 1000px;
+  margin: 30px;
+  background-color: #fff;
+  color: #000;
 }
 
 .playlistCards {
@@ -132,7 +136,7 @@ form {
   text-decoration: none;
   font-size: large;
   font-weight: bold;
-  color:#fff;
+  color:#000;
 }
 
 .createdPlaylistURL:hover {
@@ -144,16 +148,16 @@ form {
 
 .receivedPlaylistURL {
   text-decoration:none;
-  color: black;
+  color: #000;
   font-weight: 700;
 }
 
 .playlistDescription {
-  color: #fff;
+  color: #000;
 }
 
 .fulfilledRequestP {
-  color: #fff;
+  color: #000;
   font-weight: 700;
   font-size: medium;
   padding-top: 10px;
@@ -180,7 +184,12 @@ form {
 
 .welcomeUsername2 {
   color: #000;
-  font-size: x-large;
+  font-size: large;
+}
+
+.welcomeUsername2:hover {
+  color: #000;
+  font-size: large;
 }
 
 .welcomeUsername:hover {
@@ -189,6 +198,12 @@ form {
 
 .homePageh2 {
   font-weight: 700;
+  color: #000;
+}
+
+.homePageh4 {
+  font-weight: 700;
+  color: #000;
 }
 
 .homePageFloatContainer {
@@ -216,18 +231,6 @@ form {
 .homePageSignUp:hover {
   font-weight: 700;
   text-decoration: underline;
-}
-
-.homePageCreatedContainer {
-  height: 400px;
-  background-color: #fff;
-  color: #000;
-}
-
-.homePageRequestedContainer {
-  height: 400px;
-  background-color: #fff;
-  color: #000;
 }
 
 

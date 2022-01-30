@@ -37,7 +37,6 @@ function HomePage({member, setMember}) {
       const requestedPlaylists = allPlaylistRequests.map((requestedPlaylist) => (
         <div className='playlistCards'>
         <Card className='memberAccountCard' key={requestedPlaylist.id} style={{ width: '18rem' }}>
-          <Card.Img variant='top'/>
           <Card.Body>
             <Card.Title className='playlistTitle'>Active Request</Card.Title>
             <Card.Text className='playlistDescription'>{requestedPlaylist.description}</Card.Text>
@@ -53,14 +52,14 @@ function HomePage({member, setMember}) {
           <div className='homePageFloatContainer'>
             <h1 className='homePageWelcomeHeader'>Welcome back to MixTape, <Link className="welcomeUsername" to="/account">{member.username}</Link>!</h1>
             <div className='homePageCreatedContainer'>
-              <h4 className='homePageh2'>Recently Created Playlists</h4>
               <div className='playlistContainer'>
+              <h4 className='homePageh2'>Recently Created Playlists</h4>
               {createdPlaylists}
               </div>
             </div>
             <div className='homePageRequestedContainer'>
-              <h4 className='homePageh2'>Recently Submitted Requests</h4>
               <div className='playlistContainer'>
+              <h4 className='homePageh2'>Recently Submitted Requests</h4>
               {requestedPlaylists}
               </div>
             </div>
@@ -68,16 +67,22 @@ function HomePage({member, setMember}) {
         ) : (
           <div className='homePageFloatContainer'>
             <h1 className='homePageWelcomeHeader2'>Welcome to MixTape!</h1>
-            <Link className="welcomeUsername2" to='/login'>Login</Link> or <Link className="welcomeUsername2" to='/signup'>Sign Up</Link>
+            <h6>Join our local community of audio lovers and share personalized playlists.</h6>
             <div>
-              <h4 className='homePageh2'>Recently Created Playlists</h4>
+            <Link className="welcomeUsername2" to='/login'>Login</Link>
+            </div>
+            <div>
+            <Link className="welcomeUsername2" to='/signup'>Sign Up</Link>
+            </div>  
+            <div>
               <div className='playlistContainer'>
+              <h4 className='homePageh4'>Recently Created Playlists</h4>
               {createdPlaylists}
               </div>
             </div>
             <div>
-              <h4 className='homePageh2'>Recently Submitted Requests</h4>
               <div className='playlistContainer'>
+              <h4 className='homePageh4'>Recently Submitted Requests</h4>
               {requestedPlaylists}
               </div>
             </div>

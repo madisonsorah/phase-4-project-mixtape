@@ -38,7 +38,7 @@ lyrik = Member.create!(
 Playlist.create!(
   {
     title: "Cloud Puff",
-    cover_url: "https://www.antonball.dev/static/7c1f1aa09bb3d5adbbcb5c77cf4c352b/c85cb/rectangle.webp",
+    cover_url: "XX",
     playlist_url: "XX",
     description: "Looking for a playlist with soft, dreamy vibes.",
     requester_id: madison.id,
@@ -48,7 +48,7 @@ Playlist.create!(
 Playlist.create!(
   {
     title: "Otakus Only",
-    cover_url: "https://www.antonball.dev/static/7c1f1aa09bb3d5adbbcb5c77cf4c352b/c85cb/rectangle.webp",
+    cover_url: "XX",
     playlist_url: "XX",
     description: "I'd love a mix with anime intro songs.",
     requester_id: lyrik.id,
