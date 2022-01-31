@@ -1,11 +1,11 @@
 body {
-  background-color: #fff;
-  font-family: Helvetica, Arial, sans-serif;
+  background-color: rgb(42, 0, 97);
+  font-family: 13px/20px DM Sans,sans-serif;
   background-repeat: no-repeat;
 }
 
 #log-body {
-  background-color: azure;
+  background-color: rgb(42, 0, 97);
 }
 
 #log-body .navbar {
@@ -47,6 +47,7 @@ body {
 .navH1 {
   color: #fff !important;
   padding-top: 3px;
+  font-weight: 200;
 }
 
 .navlogin {
@@ -62,12 +63,12 @@ body {
 
 .nav-link {
   color: #fff !important;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .nav-link:hover {
   color: rgb(194, 41, 186) !important;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 #logo {
@@ -78,7 +79,7 @@ body {
 
 .form-label {
   color: white !important;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 /* HomePage */
@@ -116,12 +117,12 @@ body {
   color: #fff;
   padding-top: 50px;
   padding-bottom: 50px;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .homePageWelcomeHeader2 {
   color: #fff;
-  font-weight: bold;
+  font-weight: 300;
   padding-top: 20px;
 }
 
@@ -132,11 +133,13 @@ body {
 .welcomeUsername2 {
   color: #fff;
   font-size: large;
+  font-weight: 300;
 }
 
 .welcomeUsername2:hover {
-  color: #fff;
+  color: rgb(194, 41, 186);
   font-size: large;
+  font-weight: 300;
 }
 
 .welcomeUsername:hover {
@@ -147,16 +150,17 @@ body {
   color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-weight: 300;
 }
 
 .homePageh2 {
-  font-weight: 700;
+  font-weight: 300;
   color: #000;
 }
 
 .homePageh4 {
-  font-weight: 700;
-  color: #000;
+  font-weight: 300;
+  color: #fff;
 }
 
 .homePageFloatContainer {
@@ -192,7 +196,7 @@ body {
   background-color: #000;
   border-color: #000;
   margin: 20px;
-  height: 200px;
+  height: 280px;
 }
 
 .createdPlaylistCard {
@@ -201,7 +205,7 @@ body {
   background-color: #000;
   border-color: #000;
   margin: 20px;
-  height: 300px;
+  height: 280px;
 }
 
 .coverImage {
@@ -211,16 +215,28 @@ body {
 }
 
 .playlistTitle {
+  margin-top: 30px;
+  margin-bottom: 10px;
   text-decoration: none;
   font-size: x-large;
-  font-weight: bold;
+  font-weight: 300;
   color: rgb(194, 41, 186);
 }
 
 .playlistTitle:hover {
+  margin-top: 30px;
+  margin-bottom: 10px;
   text-decoration: underline;
   font-size: x-large;
-  font-weight: bold;
+  font-weight: 300;
+  color: rgb(194, 41, 186);
+}
+
+.playlistRequestTitle {
+  margin-top: 30px;
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: 300;
   color: rgb(194, 41, 186);
 }
 
@@ -229,7 +245,7 @@ body {
   margin-top: 50px;
   height: 400px;
   width: 100%;
-  background-color: #fff;
+  background-color: rgb(42, 0, 97);
   color: #000;
 }
 
@@ -241,31 +257,32 @@ body {
 
 .createdPlaylistURL {
   text-decoration: none;
-  font-size: large;
-  font-weight: bold;
+  font-size: medium;
+  font-weight: 300;
   color:#fff;
 }
 
 .createdPlaylistURL:hover {
   text-decoration: underline;
-  font-size: large;
-  font-weight: bold;
+  font-size: medium;
+  font-weight: 300;
   color:#fff;
 }
 
 .receivedPlaylistURL {
   text-decoration:none;
   color: #000;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .playlistDescription {
   color: #ffff;
+  font-weight: 300;
 }
 
 .fulfilledRequestP {
   color: #fff;
-  font-weight: 700;
+  font-weight: 300;
   font-size: medium;
   padding-top: 10px;
 }
@@ -288,7 +305,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-left: 115px;
-  background-color: #fff;
+  background-color: rgb(42, 0, 97);
   color: #000;
 }
 
@@ -302,20 +319,23 @@ body {
 .createdPlaylistsH2 {
   padding-top: 120px;
   padding-bottom: 10px;
-  font-weight: 700;
+  font-weight: 300;
   color: #fff;
 }
 
 .createdPlaylistsP {
   color: #fff;
+  font-weight: 300;
 }
 
 .playlistCreator {
   color: #fff;
+  font-weight: 300;
 }
 
 .playlistCreator:hover {
   color: #fff;
+  font-weight: 300;
 }
 
 .createdPlaylistsDiv {
@@ -345,8 +365,8 @@ body {
 
 .requestedPlaylistButton {
   text-decoration: none;
-  font-size: large;
-  font-weight: bold;
+  font-size: medium;
+  font-weight: 300;
   color:#fff;
   background-color: #000;
   border-color: #000;
@@ -354,8 +374,8 @@ body {
 
 .requestedPlaylistButton:hover {
   text-decoration: underline;
-  font-size: large;
-  font-weight: bold;
+  font-size: medium;
+  font-weight: 300;
   color:#fff;
   background-color: #000;
   border-color: #000;
@@ -388,13 +408,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-left: 115px;
-  background-color: #fff;
+  background-color: rgb(42, 0, 97);
   color: #000;
 }
 
 .memberListMember {
   margin: 10px;
-  padding: 20px;
+  height: 280px;
+  padding: 30px;
   display: block;
   text-align: center;
   float: left;
@@ -415,15 +436,15 @@ body {
 }
 
 .memberListLink {
-  font-weight: 700;
-  font-size: medium;
+  font-weight: 300;
+  font-size: large;
   margin-top: 20px;
   color: #fff;
   text-decoration: none;
 }
 
 .memberListLink:hover {
-  font-weight: 700;
+  font-weight: 300;
   font-size: medium;
   margin-top: 20px;
   color: #fff;
@@ -493,32 +514,81 @@ body {
 
 /* SignUpPage */
 
-.signUpPage {
+.signUpForm {
+  margin: auto;
+  margin-bottom: 50px;
+  width: 600px;
+  height: 750px;
+  padding: 80px;
   background-color: #000;
+}
+
+.signUpPage {
+  background-color: rgb(42, 0, 97);
   height: 100%;
 }
 
 .signUpFormDiv {
-  margin-top: 100px;
-  height: 800px;
+  margin-top: 150px;
+  margin-bottom: 20px;
+}
+
+.signUpButton {
+  background-color: #fff;
+  color: #000;
+  margin-top: 20px;
+}
+
+.signUpButton:hover {
+  background-color: #fff;
+  color: #000;
+  margin-top: 20px;
+}
+
+.signUpHeader {
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signUpLabel {
+  margin-top: 10px;
 }
 
 /* LoginPage */
 
 .loginPage {
-  background-color: #000;
+  background-color: rgb(42, 0, 97);
   height: 100%;
 }
 
 .loginFormDiv {
-  margin-top: 100px;
-  height: 800px;
+  margin-top: 220px;
 }
 
-form {
+.loginForm {
   margin: auto;
-  width: 600px;
+  width: 500px;
   padding: 100px;
+  background-color: #000;
+}
+
+.loginButton {
+  background-color: #fff;
+  color: #000;
+}
+
+.loginButton:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.memberLoginHeader {
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* CreatedPlaylistsPage */

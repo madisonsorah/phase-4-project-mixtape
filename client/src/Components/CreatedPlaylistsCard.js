@@ -15,7 +15,6 @@ function CreatedPlaylistsCard({createdPlaylist}) {
   return (
     <div className='playlistCards'>
     <Card className='createdPlaylistCard' style={{ width: '18rem' }}>
-      <Card.Img variant='top' src={createdPlaylist.cover_url}/>
       <Card.Body>
         <Link className='playlistTitle' to={`/playlist/${createdPlaylist.id}`}>{createdPlaylist.title}</Link>
         <p>Creator: <Link className='playlistCreator' to={`/profile/${playlistCreator.id}`}>{playlistCreator.username}</Link></p>

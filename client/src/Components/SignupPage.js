@@ -43,51 +43,51 @@ function SignUp({member, setMember}) {
     <div className='signUpPage'>
       <NavBar member={member} setMember={setMember}/>
       <div className='signUpFormDiv'>
-      <Form onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
-        <Form.Label>First Name</Form.Label>
+      <Form className='signUpForm' onSubmit={handleSubmit}>
+        <h3 className='signUpHeader'>Sign Up</h3>
+        <Form.Label className='signUpLabel'>First Name</Form.Label>
         <Form.Control
           type='text'
           autoComplete='off'
           value={first_name}
           onChange={(e) => setFirstName(e.target.value)}
         />
-        <Form.Label>Last Name</Form.Label>
+        <Form.Label className='signUpLabel'>Last Name</Form.Label>
         <Form.Control
           type='text'
           autoComplete='off'
           value={last_name}
           onChange={(e) => setLastName(e.target.value)}
         />
-        <Form.Label>Email</Form.Label>
+        <Form.Label className='signUpLabel'>Email</Form.Label>
         <Form.Control
           type='text'
           autoComplete='off'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Form.Label>Username</Form.Label>
+        <Form.Label className='signUpLabel'>Username</Form.Label>
         <Form.Control
           type='text'
           autoComplete='off'
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <Form.Label>Password</Form.Label>
+        <Form.Label className='signUpLabel'>Password</Form.Label>
         <Form.Control
           type='password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           autoComplete='current-password'
         />
-        <Form.Label>Password Confirmation</Form.Label>
+        <Form.Label className='signUpLabel'>Password Confirmation</Form.Label>
         <Form.Control
           type='password'
           value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           autoComplete='current-password'
         />
-        <Button type='submit'>Sign Up</Button>
+        <Button className='signUpButton' type='submit'>Sign Up</Button>
         {errorMessage ? (<p className='errorMessage'>{errorMessage}</p>) : null}
       </Form>
       </div>

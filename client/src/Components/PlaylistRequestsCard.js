@@ -32,9 +32,9 @@ function PlaylistRequestsCard({playlistRequest, member}) {
     <Card className='memberAccountCard' style={{ width: '18rem' }}>
       <Card.Img variant='top'/>
       <Card.Body>
-        <Card.Title className='playlistTitle'>Open Request</Card.Title>
+        <Card.Title className='playlistRequestTitle'>Open Request</Card.Title>
         <p>Requested by: <Link className='playlistRequester' to={`/profile/${playlistRequester.id}`}>{playlistRequester.username}</Link></p>
-        <Card.Text className='playlistDescription'>{playlistRequest.description}</Card.Text>
+        <Card.Text className='playlistDescription'>"{playlistRequest.description}"</Card.Text>
         <Button className='requestedPlaylistButton' onClick={member ? handleLoggedIn : handleNotLoggedIn} variant='primary'>Submit Playlist</Button>
         {error ? (<p className='errorMessage'>{error}</p>) : null}
       </Card.Body>

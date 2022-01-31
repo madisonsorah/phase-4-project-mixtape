@@ -32,7 +32,8 @@ function LoginPage ({member, setMember}) {
     <div className='loginPage'>
       <NavBar member={member} setMember={setMember}/>
       <div className='loginFormDiv'>
-      <Form onSubmit={handleSubmit}>
+      <Form className='loginForm' onSubmit={handleSubmit}>
+        <h3 className='memberLoginHeader'>Member Login</h3>
         <Form.Group className='mb-3' controlId='formBasicEmail'>
           <Form.Label>Username:</Form.Label>
           <Form.Control 
@@ -53,7 +54,7 @@ function LoginPage ({member, setMember}) {
           value={password}
           onChange={(e) => setPassword(e.target.value)} />
         </Form.Group>
-        <Button variant='primary' type='submit'>Submit</Button>
+        <Button className="loginButton" variant='primary' type='submit'>Submit</Button>
         {errorMessage ? (<p className='errorMessage'>{errorMessage}</p>) : null}
       </Form>
       </div>
