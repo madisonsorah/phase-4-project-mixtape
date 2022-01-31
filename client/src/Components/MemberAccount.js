@@ -84,6 +84,7 @@ function MemberAccount({member, setMember}) {
             <div className='accountPageFloatContainer'>
               <div className='memberPageFloatLeft'>
                 <h4>Account Details</h4>
+                <img className="profileAvatar" src={member.avatar_url}/>
                 <p className='playlistDescription'>{member.username}</p>
                 <p className='playlistDescription'>{member.email}</p>
                 <p className='playlistDescription'>{member.bio}</p>

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import PlaylistRequestsCard from './PlaylistRequestsCard';
 import NavBar from './NavBar';
-import SearchBar from './SearchBar';
+import mixtapesearchicon from '../images/mixtapesearchicon.png'
 
 function PlaylistRequests({member, setMember}) {
     const [search, setSearch] = useState('')
@@ -51,6 +51,7 @@ function PlaylistRequests({member, setMember}) {
                         <h2 className='createdPlaylistsH2'>Playlist Requests</h2>
                         <p className='createdPlaylistsP'>Create a personalized playlist for a MixTape member.</p>
                         <input className='searchBar' value={search} placeholder='Search for Request' onChange={(e) => setSearch(e.target.value)}></input>
+                        <img className='searchIcon' src={mixtapesearchicon}></img>
                     </div>
                     <div className='createdPlaylistsContainer'>
                     {displayedPlaylistRequests} 

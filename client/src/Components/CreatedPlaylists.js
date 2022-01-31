@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import NavBar from './NavBar';
 import CreatedPlaylistsCard from './CreatedPlaylistsCard';
+import mixtapesearchicon from '../images/mixtapesearchicon.png'
 
 function CreatedPlaylists ({member, setMember}) {
     const [search, setSearch] = useState('');
@@ -31,6 +32,7 @@ function CreatedPlaylists ({member, setMember}) {
             <h2 className='createdPlaylistsH2'>Created Playlists</h2>
             <p className='createdPlaylistsP'>Explore thousands of mixes created by passionate creators.</p>
             <input className='searchBar' value={search} placeholder='Search for Playlists' onChange={(e) => setSearch(e.target.value)}></input>
+            <img className='searchIcon' src={mixtapesearchicon}></img>
         </div>
         <div className='createdPlaylistsContainer'>
         {displayedCreatedPlaylists}

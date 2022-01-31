@@ -1,11 +1,11 @@
 body {
-  background-color: rgb(42, 0, 97);
+  background-color: #000;
   font-family: 13px/20px DM Sans,sans-serif;
   background-repeat: no-repeat;
 }
 
 #log-body {
-  background-color: rgb(42, 0, 97);
+  background-color: #000;
 }
 
 #log-body .navbar {
@@ -193,7 +193,7 @@ body {
   align-items: center;
   color: #fff;
   background-color: #000;
-  border-color: #000;
+  border-color: rgb(194, 41, 186);
   margin: 20px;
   height: 280px;
 }
@@ -202,7 +202,7 @@ body {
   align-items: center;
   color: #fff;
   background-color: #000;
-  border-color: #000;
+  border-color: rgb(194, 41, 186);
   margin: 20px;
   height: 280px;
 }
@@ -244,7 +244,7 @@ body {
   margin-top: 50px;
   height: 400px;
   width: 100%;
-  background-color: rgb(42, 0, 97);
+  background-color: #000;
   color: #000;
 }
 
@@ -294,6 +294,13 @@ body {
 .createdPlaylistButton:hover {
   background-color: #000;
   border-color: #000;
+  text-decoration: underline;
+}
+
+.createdPlaylistButton:active {
+  background-color: #000;
+  border-color: #000;
+  text-decoration: underline;
 }
 
 /* CreatedPlaylists */
@@ -304,7 +311,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-left: 115px;
-  background-color: rgb(42, 0, 97);
+  background-color: #000;
   color: #000;
 }
 
@@ -358,7 +365,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-left: 115px;
-  background-color: rgb(42, 0, 97);
+  background-color: #000;
   color: #fff;
 }
 
@@ -372,6 +379,15 @@ body {
 }
 
 .requestedPlaylistButton:hover {
+  text-decoration: underline;
+  font-size: medium;
+  font-weight: 300;
+  color:#fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+.requestedPlaylistButton:active {
   text-decoration: underline;
   font-size: medium;
   font-weight: 300;
@@ -415,7 +431,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-left: 115px;
-  background-color: rgb(42, 0, 97);
+  background-color: #000;
   color: #000;
 }
 
@@ -427,7 +443,7 @@ body {
   text-align: center;
   float: left;
   background-color: #000;
-  border: 1px solid #000;
+  border: 1px solid rgb(194, 41, 186);
 }
 
 .memberListMember:hover {
@@ -452,7 +468,7 @@ body {
 
 .memberListLink:hover {
   font-weight: 300;
-  font-size: medium;
+  font-size: large;
   margin-top: 20px;
   color: #fff;
   text-decoration: underline;
@@ -501,7 +517,7 @@ body {
   display: inline-block;
   height: 400px;
   width: 100%;
-  background-color: rgb(42, 0, 97);
+  background-color: #000;
   color: #000;
 }
 
@@ -531,9 +547,10 @@ body {
   float: left;
   width: 20%;
   margin-top: 25px;
-  margin-left: 20px;
+  margin-left: 100px;
   padding: 30px;
   background-color: #000;
+  border: 1px solid rgb(194, 41, 186);
   color: #fff;
   overflow-wrap: break-word;
 } 
@@ -557,7 +574,7 @@ body {
 }
 
 .signUpPage {
-  background-color: rgb(42, 0, 97);
+  background-color: #000;
   height: 100%;
 }
 
@@ -578,6 +595,12 @@ body {
   margin-top: 20px;
 }
 
+.signUpButton:active {
+  background-color: #fff;
+  color: #000;
+  margin-top: 20px;
+}
+
 .signUpHeader {
   color: #fff;
   font-weight: 300;
@@ -592,7 +615,7 @@ body {
 /* LoginPage */
 
 .loginPage {
-  background-color: rgb(42, 0, 97);
+  background-color: #000;
   height: 100%;
 }
 
@@ -617,6 +640,11 @@ body {
   color: #000;
 }
 
+.loginButton:active {
+  background-color: #fff;
+  color: #000;
+}
+
 .memberLoginHeader {
   color: #fff;
   font-weight: 300;
@@ -627,7 +655,7 @@ body {
 /* SubmitPlaylist */
 
 .submitPlaylistPage {
-  background-color: rgb(42, 0, 97);
+  background-color: #000;
   height: 100%;
 }
 
@@ -654,6 +682,12 @@ body {
   margin-top: 10px;
 }
 
+.submitPlaylistButton:active {
+  background-color: #fff;
+  color: #000;
+  margin-top: 10px;
+}
+
 .submitPlaylistHeader {
   color: #fff;
   font-weight: 300;
@@ -668,7 +702,7 @@ body {
 /* SubmitRequest */
 
 .submitRequestPage {
-  background-color: rgb(42, 0, 97);
+  background-color: #000;
   height: 100%;
 }
 
@@ -693,6 +727,13 @@ body {
 .submitRequestButton:hover {
   background-color: #fff;
   color: #000;
+  margin-top: 10px;
+}
+
+.submitRequestButton:active {
+  background-color: #fff;
+  color: #000;
+  margin-top: 10px;
 }
 
 .submitRequestHeader {
@@ -703,3 +744,11 @@ body {
 }
 
 /* CreatedPlaylistPage */
+
+.searchIcon {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 7px;
+}

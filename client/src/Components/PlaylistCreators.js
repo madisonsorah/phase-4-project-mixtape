@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import NavBar from './NavBar';
+import mixtapesearchicon from '../images/mixtapesearchicon.png'
 
 function PlaylistCreators({member, setMember}) {
     const [allMembers, setAllMembers] = useState([])
@@ -35,6 +36,7 @@ function PlaylistCreators({member, setMember}) {
                     <h2 className='createdPlaylistsH2'>Playlist Creators</h2>
                     <p className='createdPlaylistsP'>Explore playlists and requests by creator.</p>
                     <input className='searchBar' value={search} placeholder='Search for Creators' onChange={(e) => setSearch(e.target.value)}></input>
+                    <img className='searchIcon' src={mixtapesearchicon}></img>
                 </div>
                 <div className='creatorsContainer'>
                 {renderMembers}

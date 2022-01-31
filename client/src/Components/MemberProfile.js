@@ -86,7 +86,7 @@ function MemberProfile({member, setMember}) {
               <Card.Body>
                 <Card.Title className='playlistTitle'>Open Request</Card.Title>
                 <Card.Text>"{requestedPlaylist.description}"</Card.Text>
-                <Button onClick={member ? handleLoggedIn : handleNotLoggedIn} variant='primary'>Submit Playlist</Button>
+                <Button className='createdPlaylistButton' onClick={member ? handleLoggedIn : handleNotLoggedIn} variant='primary'>Submit Playlist</Button>
                 {error ? (<p>{error}</p>) : null}
               </Card.Body>
             </Card>
