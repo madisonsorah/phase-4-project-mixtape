@@ -95,22 +95,29 @@ body {
 
 .welcomeDiv {
   background-color: #000;
-  width: 100%;
+  margin-left: 300px;
+  width: 1000px;
   height: 250px;
   text-align: center;
+  border-bottom: 1px solid rgb(95, 19, 91);
 }
 
 .welcomeDiv1 {
   background-color: #000;
-  width: 100%;
+  margin-left: 300px;
+  width: 1000px;
   height: 200px;
   text-align: center;
+  border-bottom: 1px solid rgb(95, 19, 91);
 }
 
 .homepageFooter {
   background-color: #000;
-  width: 100%;
   height: 250px;
+  margin-top: 50px;
+  margin-left: 300px;
+  width: 1000px;
+  border-top: 1px solid rgb(95, 19, 91);
 }
 
 .homePageWelcomeHeader {
@@ -193,16 +200,35 @@ body {
   align-items: center;
   color: #fff;
   background-color: #000;
-  border-color: rgb(194, 41, 186);
+  border-color: rgb(95, 19, 91);
   margin: 20px;
   height: 280px;
+}
+
+.memberAccountCard:hover {
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+  border-color: rgb(95, 19, 91);
+  margin: 20px;
+  height: 280px;
+  background-color: rgb(95, 19, 91);
 }
 
 .createdPlaylistCard {
   align-items: center;
   color: #fff;
   background-color: #000;
-  border-color: rgb(194, 41, 186);
+  border-color: rgb(95, 19, 91);
+  margin: 20px;
+  height: 280px;
+}
+
+.createdPlaylistCard:hover {
+  align-items: center;
+  color: #fff;
+  background-color: rgb(95, 19, 91);
+  border-color: rgb(95, 19, 91);
   margin: 20px;
   height: 280px;
 }
@@ -262,6 +288,20 @@ body {
 }
 
 .createdPlaylistURL:hover {
+  text-decoration: underline;
+  font-size: medium;
+  font-weight: 300;
+  color:#fff;
+}
+
+.url {
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 300;
+  color:#fff;
+}
+
+.url:hover {
   text-decoration: underline;
   font-size: medium;
   font-weight: 300;
@@ -346,9 +386,11 @@ body {
 
 .createdPlaylistsDiv {
   background-color: #000;
-  width: 100%;
   height: 300px;
   text-align: center;
+  width: 1000px;
+  margin-left: 300px;
+  border-bottom: 1px solid rgb(95, 19, 91);
 }
 
 .errorMessage {
@@ -402,9 +444,11 @@ body {
 
 .requestedPlaylistsDiv {
   background-color: #000;
-  width: 100%;
   height: 325px;
   text-align: center;
+  width: 1000px;
+  margin-left: 300px;
+  border-bottom: 1px solid rgb(95, 19, 91);
 }
 
 .playlistRequester {
@@ -443,11 +487,18 @@ body {
   text-align: center;
   float: left;
   background-color: #000;
-  border: 1px solid rgb(194, 41, 186);
+  border: 1px solid rgb(95, 19, 91);
 }
 
 .memberListMember:hover {
-  background-color: #000;
+  margin: 10px;
+  height: 280px;
+  padding: 30px;
+  display: block;
+  text-align: center;
+  float: left;
+  background-color: rgb(95, 19, 91);
+  border: 1px solid rgb(95, 19, 91);
 }
 
 .memberListAvatar {
@@ -478,9 +529,11 @@ body {
 
 .accountWelcomeDiv {
   background-color: #000;
-  width: 100%;
-  height: 150px;
+  width: 1000px;
+  margin-left: 300px;
+  height: 120px;
   text-align: center;
+  border-bottom: 1px solid rgb(95, 19, 91);
 }
 
 .accountPageWelcomeHeader {
@@ -550,7 +603,7 @@ body {
   margin-left: 100px;
   padding: 30px;
   background-color: #000;
-  border: 1px solid rgb(194, 41, 186);
+  border: 1px solid rgb(95, 19, 91);
   color: #fff;
   overflow-wrap: break-word;
 } 
@@ -571,6 +624,7 @@ body {
   height: 750px;
   padding: 80px;
   background-color: #000;
+  border: 1px solid rgb(95, 19, 91);
 }
 
 .signUpPage {
@@ -584,20 +638,23 @@ body {
 }
 
 .signUpButton {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
   margin-top: 20px;
 }
 
 .signUpButton:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
   margin-top: 20px;
 }
 
 .signUpButton:active {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
   margin-top: 20px;
 }
 
@@ -620,7 +677,7 @@ body {
 }
 
 .loginFormDiv {
-  margin-top: 220px;
+  margin-top: 150px;
 }
 
 .loginForm {
@@ -628,21 +685,28 @@ body {
   width: 500px;
   padding: 100px;
   background-color: #000;
+  border: 1px solid rgb(95, 19, 91);
 }
 
 .loginButton {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-top: 5px;
 }
 
 .loginButton:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-top: 5px;
 }
 
 .loginButton:active {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-top: 5px;
 }
 
 .memberLoginHeader {
@@ -672,19 +736,22 @@ body {
 }
 
 .submitPlaylistButton {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .submitPlaylistButton:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
   margin-top: 10px;
 }
 
 .submitPlaylistButton:active {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
   margin-top: 10px;
 }
 
@@ -716,23 +783,26 @@ body {
   width: 500px;
   padding: 100px;
   background-color: #000;
+  border: 1px solid rgb(95, 19, 91);
 }
 
 .submitRequestButton {
-  background-color: #fff;
-  color: #000;
-  margin-top: 10px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .submitRequestButton:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
   margin-top: 10px;
 }
 
 .submitRequestButton:active {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
   margin-top: 10px;
 }
 

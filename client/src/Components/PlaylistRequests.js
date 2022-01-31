@@ -39,6 +39,7 @@ function PlaylistRequests({member, setMember}) {
                         <Link className='submitRequest' to='/submitrequest'>Submit Playlist Request</Link>
                         </div>
                         <input className='searchBar' value={search} placeholder='Search for Request' onChange={(e) => setSearch(e.target.value)}></input>
+                        <img className='searchIcon' src={mixtapesearchicon}></img>
                     </div>
                     <div className='requestedPlaylistsContainer'>
                     {displayedPlaylistRequests}

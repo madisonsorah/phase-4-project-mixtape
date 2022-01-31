@@ -62,7 +62,7 @@ function MemberProfile({member, setMember}) {
               <Card.Body>
                 <Card.Title className='playlistTitle'>{createdPlaylist.title}</Card.Title>
                 <Card.Text><p className='fulfilledRequestP'>Request:</p>"{createdPlaylist.description}"</Card.Text>
-                <a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a>
+                <a className='url' href={createdPlaylist.playlist_url}>Link to Playlist</a>
               </Card.Body>
             </Card>
             </div>
@@ -74,7 +74,7 @@ function MemberProfile({member, setMember}) {
               <Card.Body>
                 <Card.Title className='playlistTitle'>{receivedPlaylist.title}</Card.Title>
                 <Card.Text><p className='fulfilledRequestP'>Request:</p>"{receivedPlaylist.description}"</Card.Text>
-                <a className='receivedPlaylistURL' href={receivedPlaylist.playlist_url}>Link to Playlist</a>
+                <a className='url' href={receivedPlaylist.playlist_url}>Link to Playlist</a>
               </Card.Body>
             </Card>
             </div>
