@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import {Link} from 'react-router-dom';
 import CreatedPlaylistsCard from './CreatedPlaylistsCard';
 import PlaylistRequestsCard from './PlaylistRequestsCard';
+import cassetteTapeOuterPink from '../images/cassetteTapeOuterPink.png'
 
 function HomePage({member, setMember}) {
   const [allCreatedPlaylists, setAllCreatedPlaylists] = useState([]);
@@ -37,6 +38,7 @@ function HomePage({member, setMember}) {
             <div className='welcomeDiv1'>
             <h1 className='homePageWelcomeHeader2'>Welcome back to MixTape, <Link className='welcomeUsername' to='/account'>{member.first_name}</Link>.</h1>
             <h6 className='joinCommunity'>Catch up on new playlists and requests below.</h6>
+            <img className="cassette" src={cassetteTapeOuterPink}></img>
             </div>
               <div className='playlistContainer'>
               <h4 className='homePageh2'>Recently Created Playlists</h4>
@@ -53,6 +55,7 @@ function HomePage({member, setMember}) {
             <div className='welcomeDiv'>
             <h1 className='homePageWelcomeHeader'>Welcome to MixTape</h1>
             <h6 className='joinCommunity'>Join our local community of audio lovers and share personalized playlists.</h6>
+            <img className="cassette" src={cassetteTapeOuterPink}></img>
             <div>
             <Link className='welcomeUsername2' to='/memberlogin'>Login</Link>
             </div>

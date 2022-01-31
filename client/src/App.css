@@ -84,6 +84,12 @@ body {
 
 /* HomePage */
 
+.cassette {
+  width: 190px;
+  height: 90px;
+  margin-bottom: 20px;
+}
+
 .homePageDiv {
   margin: auto;
   padding-top: 100px;
@@ -97,7 +103,7 @@ body {
   background-color: #000;
   margin-left: 300px;
   width: 1000px;
-  height: 250px;
+  height: 350px;
   text-align: center;
   border-bottom: 1px solid rgb(95, 19, 91);
 }
@@ -106,7 +112,7 @@ body {
   background-color: #000;
   margin-left: 300px;
   width: 1000px;
-  height: 200px;
+  height: 350px;
   text-align: center;
   border-bottom: 1px solid rgb(95, 19, 91);
 }
@@ -474,7 +480,7 @@ body {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 115px;
+  margin-left: 500px;
   background-color: #000;
   color: #000;
 }
@@ -612,7 +618,32 @@ body {
   float: right;
   margin-top: 25px;
   width: 73%;
+  background-color: #000;
   background-color: #fff;
+} 
+
+.playlistContainer2 {
+  margin-top: 25px;
+  width: 73%;
+  margin-top: 50px;
+  height: 400px;
+  width: 100%;
+  background-color: #000;
+  color: #000;
+}
+
+.memberPageFloatLeft2 {
+  float: left;
+  width: 20%;
+  height: 200px;
+  margin-right: 200px;
+  margin-top: 25px;
+  margin-left: 400px;
+  padding: 30px;
+  background-color: #000;
+  border: 1px solid rgb(95, 19, 91);
+  color: #fff;
+  overflow-wrap: break-word;
 } 
 
 /* SignUpPage */
@@ -821,4 +852,14 @@ body {
   display: inline-block;
   margin-left: 10px;
   margin-bottom: 7px;
+}
+
+.createdPlaylistsContainer2 {
+  margin: 50px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 500px;
+  background-color: #000;
+  color: #000;
 }

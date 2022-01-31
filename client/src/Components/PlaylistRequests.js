@@ -54,7 +54,7 @@ function PlaylistRequests({member, setMember}) {
                         <input className='searchBar' value={search} placeholder='Search for Request' onChange={(e) => setSearch(e.target.value)}></input>
                         <img className='searchIcon' src={mixtapesearchicon}></img>
                     </div>
-                    <div className='createdPlaylistsContainer'>
+                    <div className='createdPlaylistsContainer2'>
                     {displayedPlaylistRequests} 
                     </div>
                     <div className='homepageFooter'></div>

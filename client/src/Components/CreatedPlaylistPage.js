@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import NavBar from './NavBar';
-import {cassetteTapeOuterPink} from '../images/cassetteTapeOuterPink.png'
+import cassetteTapeOuterPink from '../images/cassetteTapeOuterPink.png'
 
 function CreatedPlaylistPage({member, setMember}) {
     let {id} = useParams();
@@ -31,16 +31,16 @@ function CreatedPlaylistPage({member, setMember}) {
             <NavBar member={member} setMember={setMember} />
             <div className='homePageDiv'>
                 <div className='accountPageFloatContainer'>
-                    <div className='memberPageFloatLeft'>
-                        <img className='gamePageImage' src={cassetteTapeOuterPink} alt={createdPlaylist.title}></img>
+                    <div className='memberPageFloatLeft2'>
+                        <img className='cassette' src={cassetteTapeOuterPink}></img>
                     </div>
-                    <div className='memberPageFloatRight'>
+                    <div className='playlistContainer2'>
                         <h2 className='playlistTitle'>{createdPlaylist.title}</h2>
                         <p className= 'playlistDescription'>Request:</p>
                         <p className='playlistDescription'>{createdPlaylist.description}</p>
                         <a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a>
-                        <h4 className='playlistCreator'>Creator: {playlistCreator.username}</h4>
-                        <h4 className='playlistCreator'>Receiver: {playlistReceiver.username}</h4>
+                        <h4 className='playlistDescription'>Creator: {playlistCreator.username}</h4>
+                        <h4 className='playlistDescription'>Receiver: {playlistReceiver.username}</h4>
                     </div>
                 </div>
             </div>
