@@ -35,26 +35,23 @@ function HomePage({member, setMember}) {
         {member ? (
           <div className='homePageFloatContainer'>
             <div className='welcomeDiv1'>
-            <h1 className='homePageWelcomeHeader'>Welcome back to MixTape, <Link className='welcomeUsername' to='/account'>{member.username}</Link></h1>
+            <h1 className='homePageWelcomeHeader2'>Welcome back to MixTape, <Link className='welcomeUsername' to='/account'>{member.first_name}</Link>.</h1>
+            <h6 className='joinCommunity'>Catch up on new playlists and requests below.</h6>
             </div>
-            <div className='homePageCreatedContainer'>
               <div className='playlistContainer'>
               <h4 className='homePageh2'>Recently Created Playlists</h4>
               {createdPlaylists}
-              </div>
             </div>
-            <div className='homePageRequestedContainer'>
               <div className='playlistContainer'>
               <h4 className='homePageh2'>Recently Submitted Requests</h4>
               {requestedPlaylists}
               </div>
-            </div>
             <div className='homepageFooter'></div>
           </div>
         ) : (
           <div className='homePageFloatContainer'>
             <div className='welcomeDiv'>
-            <h1 className='homePageWelcomeHeader2'>Welcome to MixTape</h1>
+            <h1 className='homePageWelcomeHeader'>Welcome to MixTape</h1>
             <h6 className='joinCommunity'>Join our local community of audio lovers and share personalized playlists.</h6>
             <div>
             <Link className='welcomeUsername2' to='/memberlogin'>Login</Link>

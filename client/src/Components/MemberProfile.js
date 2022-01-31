@@ -50,67 +50,72 @@ function MemberProfile({member, setMember}) {
         const displayedMemberProfile = (
             <div key={memberProfile.id}>
               <img src={memberProfile.avatar_url}/>
-              <h1>{memberProfile.username}</h1>
-              <h3>{memberProfile.first_name} {memberProfile.last_name}</h3>
-              <p>{memberProfile.bio}</p>
+              <h1 className='playlistDescription'>{memberProfile.username}</h1>
+              <h3 className='playlistDescription'>{memberProfile.first_name} {memberProfile.last_name}</h3>
+              <p className='playlistDescription'>{memberProfile.bio}</p>
             </div>
           );
         
         const displayedCreatedPlaylists = createdPlaylists.map((createdPlaylist) => (
-            <Card className='memberAccountCard' key={createdPlaylist.id} style={{ width: '18rem' }}>
-              <Card.Img variant='top' src={createdPlaylist.cover_url}/>
+          <div className='playlistCards'>
+            <Card className='createdPlaylistCard' key={createdPlaylist.id} style={{ width: '18rem' }}>
               <Card.Body>
-                <Card.Title>{createdPlaylist.title}</Card.Title>
-                <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>{createdPlaylist.description}</Card.Text>
+                <Card.Title className='playlistTitle'>{createdPlaylist.title}</Card.Title>
+                <Card.Text><p className='fulfilledRequestP'>Request:</p>"{createdPlaylist.description}"</Card.Text>
                 <a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a>
               </Card.Body>
             </Card>
+            </div>
           ));
         
           const displayedReceivedPlaylists = receivedPlaylists.map((receivedPlaylist) => (
-            <Card className='memberAccountCard' key={receivedPlaylist.id} style={{ width: '18rem' }}>
-              <Card.Img variant='top' src={receivedPlaylist.cover_url}/>
+            <div className='playlistCards'>
+            <Card className='createdPlaylistCard' key={receivedPlaylist.id} style={{ width: '18rem' }}>
               <Card.Body>
-                <Card.Title>{receivedPlaylist.title}</Card.Title>
-                <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>{receivedPlaylist.description}</Card.Text>
+                <Card.Title className='playlistTitle'>{receivedPlaylist.title}</Card.Title>
+                <Card.Text><p className='fulfilledRequestP'>Request:</p>"{receivedPlaylist.description}"</Card.Text>
                 <a className='receivedPlaylistURL' href={receivedPlaylist.playlist_url}>Link to Playlist</a>
               </Card.Body>
             </Card>
+            </div>
           ));
         
           const displayedRequestedPlaylists = requestedPlaylists.map((requestedPlaylist) => (
-            <Card className='memberAccountCard' key={requestedPlaylist.id} style={{ width: '18rem' }}>
-              <Card.Img variant='top'/>
+            <div className='playlistCards'>
+            <Card className='createdPlaylistCard' key={requestedPlaylist.id} style={{ width: '18rem' }}>
               <Card.Body>
-                <Card.Title>Active Request</Card.Title>
-                <Card.Text>{requestedPlaylist.description}</Card.Text>
+                <Card.Title className='playlistTitle'>Open Request</Card.Title>
+                <Card.Text>"{requestedPlaylist.description}"</Card.Text>
                 <Button onClick={member ? handleLoggedIn : handleNotLoggedIn} variant='primary'>Submit Playlist</Button>
                 {error ? (<p>{error}</p>) : null}
               </Card.Body>
             </Card>
+            </div>
           ));
 
     return (
-        <div> 
+        <div className='homePageDiv'> 
             <NavBar member={member} setMember={setMember} />
-            <div className='memberPageFloatContainer'>
+            <div className='accountPageFloatContainer'>
               <div className='memberPageFloatLeft'>
                   {displayedMemberProfile}
               </div>
               <div className='memberPageFloatRight'>
-                <div>
-                    <h1>Created Playlists</h1>
+                <div className='accountPlaylists'>
+                  <div className='accountPlaylistContainer'>
+                    <h4 className='homePageh2'>Created Playlists</h4>
                     {displayedCreatedPlaylists}
-                </div>
-                <div>
-                    <h1>Received Playlists</h1>
+                  </div>
+                  <div className='accountPlaylistContainer'>
+                    <h4 className='homePageh2'>Received Playlists</h4>
                     {displayedReceivedPlaylists}
-                </div>
-                <div>
-                    <h1>Open Playlist Requests</h1>
+                  </div>
+                  <div className='accountPlaylistContainer'>
+                    <h4 className='homePageh2'>Open Playlist Requests</h4>
                     {displayedRequestedPlaylists}
                 </div>
               </div>
+            </div>
         </div>
       </div>
     )

@@ -36,12 +36,12 @@ function MemberAccount({member, setMember}) {
 
   const createdPlaylists = myCreatedPlaylists.map((createdPlaylist) => (
     <div className='playlistCards'>
-    <Card className='memberAccountCard' key={createdPlaylist.id} style={{ width: '18rem' }}>
-      <Card.Img variant='top' src={createdPlaylist.cover_url}/>
+    <Card className='createdPlaylistCard' style={{ width: '18rem' }}>
       <Card.Body>
-        <Card.Title>{createdPlaylist.title}</Card.Title>
-        <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>'{createdPlaylist.description}'</Card.Text>
-        <a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a>
+        <Link className='playlistTitle' to={`/playlist/${createdPlaylist.id}`}>{createdPlaylist.title}</Link>
+        <p className='fulfilledRequestP'>Request:</p>
+        <p className='playlistDescription'>"{createdPlaylist.description}"</p>
+        <Button className='createdPlaylistButton' variant='primary'><a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a></Button>
       </Card.Body>
     </Card>
     </div>
@@ -49,12 +49,12 @@ function MemberAccount({member, setMember}) {
 
   const receivedPlaylists = myReceivedPlaylists.map((receivedPlaylist) => (
     <div className='playlistCards'>
-    <Card className='memberAccountCard' key={receivedPlaylist.id} style={{ width: '18rem' }}>
-      <Card.Img variant='top' src={receivedPlaylist.cover_url}/>
+    <Card className='createdPlaylistCard' style={{ width: '18rem' }}>
       <Card.Body>
-        <Card.Title>{receivedPlaylist.title}</Card.Title>
-        <Card.Text><p className='fulfilledRequestP'>Fulfilled Request</p>'{receivedPlaylist.description}'</Card.Text>
-        <a className='receivedPlaylistURL' href={receivedPlaylist.playlist_url}>Link to Playlist</a>
+        <Link className='playlistTitle' to={`/playlist/${receivedPlaylist.id}`}>{receivedPlaylist.title}</Link>
+        <p className='fulfilledRequestP'>Request:</p>
+        <p className='playlistDescription'>"{receivedPlaylist.description}"</p>
+        <Button className='createdPlaylistButton' variant='primary'><a className='createdPlaylistURL' href={receivedPlaylist.playlist_url}>Link to Playlist</a></Button>
       </Card.Body>
     </Card>
     </div>
@@ -62,12 +62,12 @@ function MemberAccount({member, setMember}) {
 
   const requestedPlaylists = myRequestedPlaylists.map((requestedPlaylist) => (
     <div className='playlistCards'>
-    <Card className='memberAccountCard' key={requestedPlaylist.id} style={{ width: '18rem' }}>
+    <Card key={requestedPlaylist.id} className='memberAccountCard' style={{ width: '18rem' }}>
       <Card.Img variant='top'/>
       <Card.Body>
-        <Card.Title>Active Request</Card.Title>
-        <Card.Text>'{requestedPlaylist.description}'</Card.Text>
-        <Button variant='primary' onClick={() => handleDeleteRequest(requestedPlaylist.id)}>Delete</Button>
+        <Card.Title className='playlistRequestTitle'>Open Request</Card.Title>
+        <Card.Text className='playlistDescription'>"{requestedPlaylist.description}"</Card.Text>
+        <Button className='requestedPlaylistButton' variant='primary' onClick={() => handleDeleteRequest(requestedPlaylist.id)}>Delete</Button>
       </Card.Body>
     </Card>
     </div>
@@ -78,33 +78,35 @@ function MemberAccount({member, setMember}) {
         <NavBar member={member} setMember={setMember}/>
          {member ? (
            <div>
-            <div className='welcomeDiv'>
-              <h1 className='accountPageWelcomeHeader'>Hello, {member.first_name}!</h1>
-              <p className='accountPageP'>{member.username}</p>
-              <p className='accountPageP'>{member.email}</p>
-              <Link to={`/profile/${member.id}`}>My Profile Page</Link>
+            <div className='accountWelcomeDiv'>
+              <h1 className='homePageWelcomeHeader'>Welcome back, {member.first_name}.</h1>
             </div>
-            <div className='accountPlaylists'>
-            <div className='homePageCreatedContainer'>
-              <div className='playlistContainer'>
-                <h4 className='homePageh2'>Created Playlists</h4>
-                {createdPlaylists}
+            <div className='accountPageFloatContainer'>
+              <div className='memberPageFloatLeft'>
+                <h4>Account Details</h4>
+                <p className='playlistDescription'>{member.username}</p>
+                <p className='playlistDescription'>{member.email}</p>
+                <p className='playlistDescription'>{member.bio}</p>
+                <Link className='submitRequest' to={`/profile/${member.id}`}>My Profile Page</Link>
+              </div>
+              <div className='memberPageFloatRight'>
+                <div className='accountPlaylists'>
+                    <div className='accountPlaylistContainer'>
+                      <h4 className='homePageh2'>Created Playlists</h4>
+                        {createdPlaylists}
+                    </div>
+                    <div className='accountPlaylistContainer'>
+                      <h4 className='homePageh2'>Received Playlists</h4>
+                        {receivedPlaylists}
+                  </div>
+                    <div className='accountPlaylistContainer'>
+                      <h4 className='homePageh2'>Open Playlist Requests</h4>
+                        {requestedPlaylists}
+                  </div>
+                </div>
               </div>
             </div>
-            <div className='homePageCreatedContainer'>
-              <div className='playlistContainer'>
-                <h4 className='homePageh2'>Received Playlists</h4>
-                {receivedPlaylists}
-              </div>
-            </div>
-            <div className='homePageCreatedContainer'>
-              <div className='playlistContainer'>
-                <h4 className='homePageh2'>Open Playlist Requests</h4>
-                {requestedPlaylists}
-              </div>
-            </div>
-            </div>
-            </div>
+          </div>
           ) : (
             <h1>Please Login or Sign Up</h1>
           )}
