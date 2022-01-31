@@ -40,7 +40,7 @@ function PlaylistRequests({member, setMember}) {
                         </div>
                         <input className='searchBar' value={search} placeholder='Search for Request' onChange={(e) => setSearch(e.target.value)}></input>
                     </div>
-                    <div className='createdPlaylistsContainer'>
+                    <div className='requestedPlaylistsContainer'>
                     {displayedPlaylistRequests}
                     </div>
                     <div className='homepageFooter'></div>

@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import NavBar from './NavBar';
-import {Card} from 'react-bootstrap';
-import {Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import CreatedPlaylistsCard from './CreatedPlaylistsCard';
+import PlaylistRequestsCard from './PlaylistRequestsCard';
 
 function HomePage({member, setMember}) {
   const [allCreatedPlaylists, setAllCreatedPlaylists] = useState([]);
@@ -21,29 +21,13 @@ function HomePage({member, setMember}) {
       }, []);
 
       const createdPlaylists = allCreatedPlaylists.map((createdPlaylist) => (
-        <div className='playlistCards'>
-          <Card className='memberAccountCard' style={{ width: '18rem' }}>
-          <Card.Body>
-            <Link className='playlistTitle' to={`/playlist/${createdPlaylist.id}`}>{createdPlaylist.title}</Link>
-            <p className='playlistDescription'>Fulfilled Request</p>
-            <p className='playlistDescription'>{createdPlaylist.description}</p>
-            <Button className='createdPlaylistButton' variant='primary'><a className='createdPlaylistURL' href={createdPlaylist.playlist_url}>Link to Playlist</a></Button>
-          </Card.Body>
-        </Card>
-        </div>
-      ));
+        <CreatedPlaylistsCard createdPlaylist={createdPlaylist} key={createdPlaylist.id}/>
+    ));
 
 
-      const requestedPlaylists = allPlaylistRequests.map((requestedPlaylist) => (
-        <div className='playlistCards'>
-        <Card className='memberAccountCard' key={requestedPlaylist.id} style={{ width: '18rem' }}>
-          <Card.Body>
-            <Card.Title className='playlistTitle'>Active Request</Card.Title>
-            <Card.Text className='playlistDescription'>{requestedPlaylist.description}</Card.Text>
-          </Card.Body>
-        </Card>
-        </div>
-      ));
+      const requestedPlaylists = allPlaylistRequests.map((playlistRequest) => (
+        <PlaylistRequestsCard playlistRequest={playlistRequest} key={playlistRequest.id} member={member}/>
+    ));
   
   return (
     <div className='homePage'>

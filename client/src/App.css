@@ -88,90 +88,6 @@ body {
   padding-top: 100px;
 }
 
-.memberAccountCard {
-  align-items: center;
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-  margin: 20px;
-  height: 200px;
-}
-
-.createdPlaylistCard {
-  align-items: center;
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-  margin: 20px;
-  height: 300px;
-}
-
-.coverImage {
-  width: 250px;
-  height: 200px;
-  margin: 20px;
-}
-
-.playlistTitle {
-  text-decoration: none;
-  font-size: x-large;
-  font-weight: bold;
-  color: #fff;
-}
-
-.playlistTitle:hover {
-  text-decoration: underline;
-  font-size: x-large;
-  font-weight: bold;
-  color: #fff;
-}
-
-.playlistContainer {
-  display: inline-block;
-  margin-top: 50px;
-  height: 300px;
-  width: 100%;
-  background-color: #fff;
-  color: #000;
-}
-
-.playlistCards {
-  display: inline-block;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.createdPlaylistURL {
-  text-decoration: none;
-  font-size: large;
-  font-weight: bold;
-  color:#fff;
-}
-
-.createdPlaylistURL:hover {
-  text-decoration: underline;
-  font-size: large;
-  font-weight: bold;
-  color:#fff;
-}
-
-.receivedPlaylistURL {
-  text-decoration:none;
-  color: #000;
-  font-weight: 700;
-}
-
-.playlistDescription {
-  color: #ffff;
-}
-
-.fulfilledRequestP {
-  color: #fff;
-  font-weight: 700;
-  font-size: medium;
-  padding-top: 10px;
-}
-
 .homePage {
   text-align: center;
 }
@@ -270,6 +186,90 @@ body {
   text-decoration: underline;
 }
 
+.memberAccountCard {
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  margin: 20px;
+  height: 200px;
+}
+
+.createdPlaylistCard {
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  margin: 20px;
+  height: 300px;
+}
+
+.coverImage {
+  width: 250px;
+  height: 200px;
+  margin: 20px;
+}
+
+.playlistTitle {
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(194, 41, 186);
+}
+
+.playlistTitle:hover {
+  text-decoration: underline;
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(194, 41, 186);
+}
+
+.playlistContainer {
+  display: inline-block;
+  margin-top: 50px;
+  height: 400px;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+
+.playlistCards {
+  display: inline-block;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.createdPlaylistURL {
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  color:#fff;
+}
+
+.createdPlaylistURL:hover {
+  text-decoration: underline;
+  font-size: large;
+  font-weight: bold;
+  color:#fff;
+}
+
+.receivedPlaylistURL {
+  text-decoration:none;
+  color: #000;
+  font-weight: 700;
+}
+
+.playlistDescription {
+  color: #ffff;
+}
+
+.fulfilledRequestP {
+  color: #fff;
+  font-weight: 700;
+  font-size: medium;
+  padding-top: 10px;
+}
+
 .createdPlaylistButton {
   background-color: #000;
   border-color: #000;
@@ -278,6 +278,18 @@ body {
 .createdPlaylistButton:hover {
   background-color: #000;
   border-color: #000;
+}
+
+/* CreatedPlaylists */
+
+.createdPlaylistsContainer {
+  margin: 50px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 115px;
+  background-color: #fff;
+  color: #000;
 }
 
 .searchBar {
@@ -298,20 +310,19 @@ body {
   color: #fff;
 }
 
+.playlistCreator {
+  color: #fff;
+}
+
+.playlistCreator:hover {
+  color: #fff;
+}
+
 .createdPlaylistsDiv {
   background-color: #000;
   width: 100%;
   height: 300px;
   text-align: center;
-}
-
-.createdPlaylistsContainer {
-  display: inline-block;
-  height: 600px;
-  width: 100%;
-  margin: 30px;
-  background-color: #fff;
-  color: #000;
 }
 
 .errorMessage {
@@ -320,16 +331,34 @@ body {
   color: rgb(255, 0, 0)
 }
 
-.submitRequest {
-  text-decoration: underline;
-  color: #fff;
-  font-weight: 700;
+/* PlaylistRequests */
+
+.requestedPlaylistsContainer {
+  margin: 50px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 115px;
+  background-color: #fff;
+  color: #000;
 }
 
-.submitRequest:hover {
+.requestedPlaylistButton {
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  color:#fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+.requestedPlaylistButton:hover {
   text-decoration: underline;
-  color: #fff;
-  font-weight: 700;
+  font-size: large;
+  font-weight: bold;
+  color:#fff;
+  background-color: #000;
+  border-color: #000;
 }
 
 .submitDiv {
@@ -341,6 +370,26 @@ body {
   width: 100%;
   height: 325px;
   text-align: center;
+}
+
+.playlistRequester {
+  color: #fff;
+}
+
+.playlistRequester:hover {
+  color: #fff;
+}
+
+/* PlaylistCreators */
+
+.creatorsContainer {
+  margin: 50px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 115px;
+  background-color: #fff;
+  color: #000;
 }
 
 .memberListMember {
@@ -381,6 +430,8 @@ body {
   text-decoration: underline;
 }
 
+/* AccountPage */
+
 .accountPageWelcomeHeader {
   color: #fff;
   padding-top: 50px;
@@ -411,6 +462,8 @@ body {
   text-align: center;
 }
 
+/* MemberProfile */
+
 .memberPageFloatContainer {
   margin: auto;
   width: 100%;
@@ -438,12 +491,9 @@ body {
   background-color: #fff;
 } 
 
-.signUpPage {
-  background-color: #000;
-  height: 100%;
-}
+/* SignUpPage */
 
-.loginPage {
+.signUpPage {
   background-color: #000;
   height: 100%;
 }
@@ -451,6 +501,13 @@ body {
 .signUpFormDiv {
   margin-top: 100px;
   height: 800px;
+}
+
+/* LoginPage */
+
+.loginPage {
+  background-color: #000;
+  height: 100%;
 }
 
 .loginFormDiv {
@@ -463,3 +520,10 @@ form {
   width: 600px;
   padding: 100px;
 }
+
+/* CreatedPlaylistsPage */
+
+
+/* SubmitPlaylist */
+
+/* SubmitRequest */

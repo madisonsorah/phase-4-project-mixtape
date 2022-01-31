@@ -36,7 +36,7 @@ function PlaylistCreators({member, setMember}) {
                     <p className='createdPlaylistsP'>Explore playlists and requests by creator.</p>
                     <input className='searchBar' value={search} placeholder='Search for Creators' onChange={(e) => setSearch(e.target.value)}></input>
                 </div>
-                <div className='createdPlaylistsContainer'>
+                <div className='creatorsContainer'>
                 {renderMembers}
                 </div>
                 <div className='homepageFooter'></div>

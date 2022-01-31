@@ -39,7 +39,7 @@ Playlist.create!(
   {
     title: "Cloud Puff",
     cover_url: "XX",
-    playlist_url: "XX",
+    playlist_url: "https://open.spotify.com/playlist/0d9JETjQH2IabRVc70Dngx?si=2ec043e39cb94f81",
     description: "Looking for a playlist with soft, dreamy vibes.",
     requester_id: madison.id,
     creator_id: lyrik.id
@@ -49,7 +49,7 @@ Playlist.create!(
     {
       title: "Disco Ball",
       cover_url: "XX",
-      playlist_url: "XX",
+      playlist_url: "https://open.spotify.com/playlist/1aAdDQv8ma4vhMlWSkJ1P0?si=a7591eccb8d44866",
       description: "Looking for an 80s-inspired disco playlist.",
       requester_id: madison.id,
       creator_id: lyrik.id
@@ -59,7 +59,7 @@ Playlist.create!(
     {
       title: "Otakus Only",
       cover_url: "XX",
-      playlist_url: "XX",
+      playlist_url: "https://open.spotify.com/playlist/6mCAnMaPMR9IckC45VNajv?si=ceae9393c8624f45",
       description: "I'd love a mix with anime intro songs.",
       requester_id: lyrik.id,
       creator_id: madison.id
@@ -69,7 +69,7 @@ Playlist.create!(
     {
       title: "Zen Ambience",
       cover_url: "XX",
-      playlist_url: "XX",
+      playlist_url: "https://open.spotify.com/playlist/18kUYJqysbVqdCKXCGRmlO?si=fc7b68269c0e4b56",
       description: "I'd love a chill playlist to work to.",
       requester_id: lyrik.id,
       creator_id: madison.id
