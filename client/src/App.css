@@ -435,8 +435,8 @@ body {
 }
 
 .memberListAvatar {
-  width: 180px;
-  height: 150px;
+  width: 200px;
+  height: 180px;
   margin: auto;
   margin-bottom: 20px;
   display: block;
@@ -514,6 +514,12 @@ body {
 
 /* MemberProfile */
 
+.profileAvatar {
+  width: 200px;
+  height: 180px;
+  margin-bottom: 20px;
+}
+
 .memberPageFloatContainer {
   margin: auto;
   width: 100%;
@@ -526,9 +532,7 @@ body {
   width: 20%;
   margin-top: 25px;
   margin-left: 20px;
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 48px;
+  padding: 30px;
   background-color: #000;
   color: #fff;
   overflow-wrap: break-word;

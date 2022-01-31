@@ -20,7 +20,7 @@ madison = Member.create!(
     email: "madisonsorah@gmail.com",
     password: "catsarecute1",
     bio: "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY. My favorite music genres are dance, disco and pop.",
-    avatar_url: "https://www.dropbox.com/s/7qu52q69z50yh1b/Screen%20Shot%202021-09-27%20at%203.11.26%20PM.jpg?dl=0"
+    avatar_url: "https://previews.dropbox.com/p/thumb/ABYApU8ZoVmGrdyuxDxEoMfJGr02oOXx1vCRR9szHP5gnaYnzU045uQaYb-hvZYwujUGyVDl2c7PiCZwWINR2NRNgJMZlVGGRKRmNoWRn31j2vi3mRSemwklY-RSs_AxmS6gEuxVkG7RkxRJTq4twrlT_piM-_cR8VBVxV3jy6Lg5PeAiKNxqC4-tVl-XwTXUGOMVThvI68uu7smpGUt5nTXIFDYvTcJCFGkwNPt43ntqQHfmq76DoFlki3CSI26YEL30r3ullGnlcA2S55vbu7RtvEJYht1SkMpwzun_CTdGe2FecJU08AEDHx0PY_wpTGAqGH0vpAz6ipqyYg_LYCdLbLrdAfr5Pk1c-v4HXNV2Q/p.jpeg"
   })
 
 lyrik = Member.create!(
@@ -31,7 +31,7 @@ lyrik = Member.create!(
     email: "kirylmitch@gmail.com",
     password: "Straigus1",
     bio: "I'm a gamer with a wide-ranging library for music.",
-    avatar_url: "https://www.dropbox.com/s/b9041qbd4rec9g8/steamuserimages-a.akamaihd.jpg?dl=0"
+    avatar_url: "https://previews.dropbox.com/p/thumb/ABbfWUpP5t5HMbwynOUAqzuhB3AvU9jLLHT04uc9OeTVkAojjOAoZBw0NsPVizzgTAO8l-7Q_T89VQHXNuyMvSbnlJN4BJ53uMAgYqtmx1BvqaFB8o8wQv1GBkbX9jzNIK3fXCjr05uKs4pl_1VAHV66Nq-zvEAZMjX-HGvnPbBykvvis7NaeYCZQUYwJCVpo3W9i65QYzH5A5iL9_MaTECE1qOgSFGr71rErTFeHM6DKRpfUfYmzsnDyWP8Su-lX1nPMBawEjWH_SOT0W9aQrA-h1TnB3Ak7WsMZP5rsRkxJBU4J0saSKZFvzSQbIO0ODEmyJwwoDD8_9Y5VLeObk0rmRdlQf3a43cPObPUavUiMQ/p.jpeg"
   })
 
 # Sample created/received playlists

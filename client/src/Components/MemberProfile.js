@@ -49,7 +49,7 @@ function MemberProfile({member, setMember}) {
         
         const displayedMemberProfile = (
             <div key={memberProfile.id}>
-              <img src={memberProfile.avatar_url}/>
+              <img className="profileAvatar" src={memberProfile.avatar_url}/>
               <h1 className='playlistDescription'>{memberProfile.username}</h1>
               <h3 className='playlistDescription'>{memberProfile.first_name} {memberProfile.last_name}</h3>
               <p className='playlistDescription'>{memberProfile.bio}</p>
