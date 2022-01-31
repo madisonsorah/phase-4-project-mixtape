@@ -24,22 +24,26 @@ function SubmitRequest({member, setMember}) {
   }
 
   return (
-    <div>
+    <div className='submitRequestPage'>
       <NavBar member={member} setMember={setMember}/>
-      <Form onSubmit={handleSubmitRequest}>
+      <div className='submitFormDiv'>
+      <Form className='submitRequestForm' onSubmit={handleSubmitRequest}>
+        <h3 className='submitRequestHeader'>Request a Playlist</h3>
         <Form.Group className='mb-3' controlId='formBasicEmail'>
           <Form.Label>Playlist Request:</Form.Label>
           <Form.Control 
           type='text'
-          placeholder='Enter a description for your playlist request'
+          placeholder='Enter a description for your request'
           autoComplete='off'
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           />
           <Form.Text className='text-muted'></Form.Text>
         </Form.Group>
-        <Button variant='primary' type='submit'>Request Playlist</Button>
+        <Button className='submitRequestButton' variant='primary' type='submit'>Request Playlist</Button>
       </Form>
+      </div>
+      <div className='homepageFooter'></div>
     </div>
   )
 }

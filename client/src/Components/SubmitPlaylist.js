@@ -31,11 +31,13 @@ function SubmitPlaylist({member, setMember}) {
   }
 
   return (
-    <div>
+    <div className='submitPlaylistPage'>
       <NavBar member={member} setMember={setMember}/>
-      <Form onSubmit={handleSubmitPlaylist}>
+      <div className='submitPlaylistFormDiv'>
+      <Form className='submitPlaylistForm' onSubmit={handleSubmitPlaylist}>
+        <h3 className='submitPlaylistHeader'>Submit a Playlist</h3>
         <Form.Group className='mb-3' controlId='formBasicEmail'>
-          <Form.Label>Playlist Title:</Form.Label>
+          <Form.Label className="submitLabel">Playlist Title:</Form.Label>
           <Form.Control 
           type='text'
           placeholder='Enter a title for your playlist'
@@ -43,7 +45,7 @@ function SubmitPlaylist({member, setMember}) {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           />
-          <Form.Label>Playlist Cover:</Form.Label>
+          <Form.Label className="submitLabel">Playlist Cover:</Form.Label>
           <Form.Control 
           type='text'
           placeholder='Enter a cover image URL for your playlist'
@@ -51,7 +53,7 @@ function SubmitPlaylist({member, setMember}) {
           value={cover_url}
           onChange={(e) => setCoverUrl(e.target.value)}
           />
-          <Form.Label>Playlist Link:</Form.Label>
+          <Form.Label className="submitLabel">Playlist Link:</Form.Label>
           <Form.Control 
           type='text'
           placeholder='Enter URL to your playlist'
@@ -61,8 +63,10 @@ function SubmitPlaylist({member, setMember}) {
           />
           <Form.Text className='text-muted'></Form.Text>
         </Form.Group>
-        <Button variant='primary' type='submit'>Submit Playlist</Button>
+        <Button className='submitPlaylistButton' variant='primary' type='submit'>Submit Playlist</Button>
       </Form>
+      </div>
+      <div className='homepageFooter'></div>
     </div>
   )
 }
